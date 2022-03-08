@@ -14,8 +14,6 @@ import SubFooter from "../../src/components/inferior/SubFooter";
 import Footer from "../../src/components/inferior/Footer";
 import FixedWhats from "../../src/components/FixedWhats";
 
-
-
 export default function Home({ areas, posts, textos, contact }) {
 	return (
 		<>
@@ -42,16 +40,17 @@ export default function Home({ areas, posts, textos, contact }) {
 }
 
 export async function getStaticProps() {
-	const responseAreas = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/servicos`)
+	console.log(process.env);
+	const responseAreas = await fetch(`${process.env.API_URL}/servicos`)
 	const areas = await responseAreas.json()
 
-	const responsePosts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
+	const responsePosts = await fetch(`${process.env.API_URL}/posts`)
 	const posts = await responsePosts.json()
 
-	const responseTextos = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/inicio`)
+	const responseTextos = await fetch(`${process.env.API_URL}/inicio`)
 	const textos = await responseTextos.json()
 
-	const responseContact = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/contatos`)
+	const responseContact = await fetch(`${process.env.API_URL}/contatos`)
 	const contact = await responseContact.json()
 
 	return {

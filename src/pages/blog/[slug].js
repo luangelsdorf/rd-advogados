@@ -151,7 +151,7 @@ export default function Post({ post, posts, areas, contact }) {
 
 
 export async function getStaticPaths() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
+  const response = await fetch(`${process.env.API_URL}/strapi/posts`)
   const posts = await response.json()
 
   const paths = posts.map((post) => ({
@@ -162,16 +162,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts?slug=${params.slug}`)
+  const res = await fetch(`${process.env.API_URL}/strapi/posts?slug=${params.slug}`)
   const post = await res.json()
 
-  const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
+  const resp = await fetch(`${process.env.API_URL}/strapi/posts`)
   const posts = await resp.json()
 
-  const resAreas = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/servicos`)
+  const resAreas = await fetch(`${process.env.API_URL}/strapi/servicos`)
   const areas = await resAreas.json()
 
-  const resRedes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/contatos`)
+  const resRedes = await fetch(`${process.env.API_URL}/strapi/contatos`)
   const contact = await resRedes.json()
 
   return {

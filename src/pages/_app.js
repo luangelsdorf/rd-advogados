@@ -1,7 +1,7 @@
-import '../public/css/global.css'
+import '../../public/css/global.css'
 import React, { useEffect } from "react";
 import { useRouter } from 'next/router';
-import { homePage } from "../public/js/pages";
+import { homePage } from "../../public/js/pages";
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
 
 export default function MyApp({ Component, pageProps }) {
