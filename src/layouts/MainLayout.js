@@ -7,18 +7,18 @@ import SubFooter from "../components/inferior/SubFooter";
 import Footer from "../components/inferior/Footer";
 
 export default function MainLayout({ children }) {
-    return (
-        <>
-            <TopHeader />
-            <FixedHeader />
-            <BannerSuperior title="Áreas de Atuação" subtitle={<span>Realizando a prestação de serviços jurídicos tanto para empresas como <br/> pessoas físicas, o BRC Advogados elabora soluções jurídicas eficazes e <br/> individualizadas para melhor atender os interesses de seus clientes.</span>} btn={false} />
+  return (
+    <>
+      <TopHeader />
+      <FixedHeader />
+      <BannerSuperior title="Áreas de Atuação" subtitle={<span>Realizando a prestação de serviços jurídicos tanto para empresas como <br /> pessoas físicas, o BRC Advogados elabora soluções jurídicas eficazes e <br /> individualizadas para melhor atender os interesses de seus clientes.</span>} btn={false} />
 
 
-                {children}
+      {children}
 
-            <BannerInferior />
-            <SubFooter />
-            <Footer />
-        </>
-    )
+      <BannerInferior />
+      <SubFooter />
+      <Footer />
+    </>
+  )
 }

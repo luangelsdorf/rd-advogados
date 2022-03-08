@@ -7,17 +7,17 @@ import SubFooter from "../components/inferior/SubFooter";
 import Footer from "../components/inferior/Footer";
 
 export default function BlogLayout({ children }) {
-    return (
-        <>
-            <TopHeader />
-            <FixedHeader />
-            <BannerSuperior  />
+  return (
+    <>
+      <TopHeader />
+      <FixedHeader />
+      <BannerSuperior />
 
-            {children}
+      {children}
 
-            <BannerInferior />
-            <SubFooter />
-            <Footer />
-        </>
-    )
+      <BannerInferior />
+      <SubFooter />
+      <Footer />
+    </>
+  )
 }
