@@ -49,7 +49,7 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
             {
               posts.map(card => {
                 return (
-                  <PostCard img={`https://brcadv.com/strapi${card.cover.url}`}
+                  <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${card.cover.url}`}
                     categoria={formatCategories(card.categorias)}
                     date={formatDate(card.date, card.locale, true)}
                     title={card.title}
@@ -75,19 +75,19 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
 }
 
 export async function getStaticProps() {
-  const responsePosts = await fetch('https://brcadv.com/strapi/posts')
+  const responsePosts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
   const posts = await responsePosts.json()
 
-  const resText = await fetch('https://brcadv.com/strapi/blog')
+  const resText = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/blog`)
   const textos = await resText.json()
 
-  const resAreas = await fetch('https://brcadv.com/strapi/servicos')
+  const resAreas = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/servicos`)
   const areas = await resAreas.json()
 
-  const resRedes = await fetch('https://brcadv.com/strapi/contatos')
+  const resRedes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/contatos`)
   const contact = await resRedes.json()
 
-  const resCat = await fetch('https://brcadv.com/strapi/categorias')
+  const resCat = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/categorias`)
   const cat = await resCat.json()
 
   return {

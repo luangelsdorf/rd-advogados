@@ -12,7 +12,7 @@ export default function HeadContentPost(props) {
       <script src="/js/main.js" type="module" />
       <script src="/js/pixel.js" />
       <script src="/js/tagmanager.js" />
-      <meta property="og:url" content={`https://brcadv.com${props.tags.url}`} />
+      <meta property="og:url" content={`${process.env.NEXT_PUBLIC_API_URL}${props.tags.url}`} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={props.title} />
       <meta property="og:description" content={props.tags.desc.substring(3, 125) + '...'} />

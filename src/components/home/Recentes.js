@@ -28,7 +28,7 @@ export default function Recentes({ posts, textos }) {
           {
             quantity.map(card => {
               return (
-                <PostCard img={`https://brcadv.com/strapi${posts[card].cover.url}`}
+                <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${posts[card].cover.url}`}
                   categoria={formatCategories(posts[card].categorias)}
                   date={formatDate(posts[card].date, posts[card].locale, true)}
                   title={posts[card].title}

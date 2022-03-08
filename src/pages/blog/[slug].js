@@ -16,7 +16,7 @@ export default function Post({ post, posts, areas, contact }) {
   let quantity = [0, 1, 2]
   let router = useRouter()
   let url = router.asPath
-  let img = `https://brcadv.com/strapi${post[0].cover.url}`
+  let img = `${process.env.NEXT_PUBLIC_API_URL}/strapi${post[0].cover.url}`
   let desc = post[0].body
   let ogTags = {
     url: url,
@@ -33,21 +33,21 @@ export default function Post({ post, posts, areas, contact }) {
     }
 
     if (target === 'facebook') {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=https://brcadv.com${window.location.pathname}`,
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
         'facebook-share-dialog',
         'width=800,height=600'
       );
     }
 
     if (target === 'twitter') {
-      window.open(`https://twitter.com/intent/tweet?text=https://brcadv.com${window.location.pathname}`,
+      window.open(`https://twitter.com/intent/tweet?text=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
         'twitter-share',
         'width=800,height=600'
       );
     }
 
     if (target === 'linkedin') {
-      window.open(`https://www.linkedin.com/cws/share?url=https://brcadv.com${window.location.pathname}`,
+      window.open(`https://www.linkedin.com/cws/share?url=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
         'linkedin-share',
         'width=800,height=600'
       );
@@ -79,7 +79,7 @@ export default function Post({ post, posts, areas, contact }) {
             </div>
             <div>
               <div className="img-placeholder mx-auto">
-                <img src={`https://brcadv.com/strapi${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                <img src={`${process.env.NEXT_PUBLIC_API_URL}/strapi${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
               </div>
               <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{ __html: post[0].body }} />
               <div className="fs-20 text-escuro">
@@ -125,7 +125,7 @@ export default function Post({ post, posts, areas, contact }) {
           {
             quantity.map(card => {
               return (
-                <PostCard img={`https://brcadv.com/strapi${posts[card].cover.url}`}
+                <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${posts[card].cover.url}`}
                   categoria={formatCategories(posts[card].categorias)}
                   date={formatDate(posts[card].date, posts[card].locale, true)}
                   title={posts[card].title}
@@ -151,7 +151,7 @@ export default function Post({ post, posts, areas, contact }) {
 
 
 export async function getStaticPaths() {
-  const response = await fetch('https://brcadv.com/strapi/posts')
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
   const posts = await response.json()
 
   const paths = posts.map((post) => ({
@@ -162,16 +162,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`https://brcadv.com/strapi/posts?slug=${params.slug}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts?slug=${params.slug}`)
   const post = await res.json()
 
-  const resp = await fetch('https://brcadv.com/strapi/posts')
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/posts`)
   const posts = await resp.json()
 
-  const resAreas = await fetch('https://brcadv.com/strapi/servicos')
+  const resAreas = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/servicos`)
   const areas = await resAreas.json()
 
-  const resRedes = await fetch('https://brcadv.com/strapi/contatos')
+  const resRedes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/strapi/contatos`)
   const contact = await resRedes.json()
 
   return {
