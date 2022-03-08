@@ -1,0 +1,124 @@
+#areas-de-atuacao {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.area-text {
+  white-space: break-spaces;
+  display: inline-block;
+  max-width: 710px;
+}
+
+.list-group-item {
+  padding: 1rem 1rem !important;
+}
+
+ul {
+  padding-right: 30px !important;
+}
+
+#consultivo-civel,
+#contencioso-civil,
+#direito-administrativo,
+#direito-e-saude,
+#direito-empresarial,
+#lgpd,
+#trabalhista-e-previdenciario {
+  color: var(--azul-escuro);
+}
+
+#banner-superior {
+  height: 550px;
+  background-size: cover;
+  background-position-y: -85px;
+  background-image: url("/img/banner-superior.png");
+}
+
+#banner-content {
+  max-width: 610px;
+}
+
+.top-header {
+  background-size: cover !important;
+}
+
+#select-interesse {
+  background-image: url("/img/caret-down.svg") !important;
+  background-size: 5% !important;
+}
+
+.estamos-prontos {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+nav.d-md-none .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="rgba%28214, 164, 97, 1%29" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>');
+  background-size: 16px;
+}
+
+nav.d-md-none .navbar-toggler {
+  transition: all 250ms ease;
+  transform: rotate(0deg);
+}
+
+nav.d-md-none .navbar-toggler.active {
+  transform: rotate(180deg);
+}
+
+.prontos-text {
+  width: 235px;
+  margin-right: 40px;
+}
+
+@media (min-width: 1920px) {
+  .top-header {
+    background-size: cover;
+  }
+}
+
+.top-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-image: url("/img/banner-superior.png");
+  background-repeat: no-repeat;
+  background-color: #003057;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .prontos-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #areas-de-atuacao {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  #banner-superior {
+    height: 425px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-header {
+    display: none;
+  }
+}
+
+@media (max-width: 1110px) {
+  #banner-superior {
+    background-size: auto 100%;
+    background-position-x: 75%;
+    background-position-y: initial;
+  }
+  .top-header {
+    background-image: none !important;
+    background-color: var(--azul-escuro) !important;
+  }
+}

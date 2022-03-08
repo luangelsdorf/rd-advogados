@@ -1,0 +1,131 @@
+img {
+  transition: all 400ms ease;
+}
+
+#banner-superior {
+  height: 550px;
+  /*background-image: url("/img/fundo-post.png");*/
+  background-color: #003057;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -85px;
+}
+
+.top-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  /*background-image: url("/img/fundo-post.png");*/
+  background-repeat: no-repeat;
+  background-color: #003057;
+  z-index: 5;
+}
+
+@media (min-width: 1920px) {
+  .top-header {
+    background-size: cover;
+  }
+}
+
+.post-date {
+  padding-right: 10px;
+}
+
+#post-date-row::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--dourado);
+  border-radius: 99px;
+}
+
+#post-date-row::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--dourado);
+  border-radius: 99px;
+}
+
+.post-container {
+  margin-top: -425px;
+}
+
+.post-body {
+  margin-bottom: 70px;
+  white-space: break-spaces;
+}
+
+.img-placeholder {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  max-width: 970px;
+  height: 450px;
+  background-color: #9b9b9b;
+}
+
+.social-btn-post {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin-top: 15px;
+  font-size: 13px !important;
+  color: #fff !important;
+}
+
+.twitter-btn {
+  background-color: #00a2f5 !important;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.facebook-btn {
+  background-color: #23599b !important;
+}
+
+.linkedin-btn {
+  background-color: #23599b !important;
+}
+
+hr {
+  margin: 115px 0 !important;
+}
+
+#related {
+  margin-bottom: 100px;
+}
+
+#banner-inferior {
+  margin-top: 150px;
+}
+
+blockquote {
+  margin-bottom: 0 !important;
+  position: relative;
+  margin-left: 50px !important;
+  font-size: 24px;
+  font-style: italic;
+}
+
+blockquote::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: var(--dourado);
+  border-radius: 99px;
+  position: absolute;
+  left: -25px;
+}
+
+#ver-todas {
+  min-width: 200px;
+}
+
+#ver-todas img {
+  opacity: 0;
+  margin-left: -11px;
+}
+
+#ver-todas:hover img {
+  opacity: 1;
+  margin-left: 11px;
+}
