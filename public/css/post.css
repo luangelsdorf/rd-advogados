@@ -129,3 +129,8 @@ blockquote::before {
   opacity: 1;
   margin-left: 11px;
 }
+
+#select-interesse {
+  background-image: url("/img/caret-down.svg") !important;
+  background-size: 5% !important;
+}

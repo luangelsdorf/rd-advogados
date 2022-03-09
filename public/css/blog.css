@@ -12,7 +12,7 @@
 
 #select-interesse {
   background-color: var(--orange);
-  color: white;
+  color: var(--white);
 }
 
 img {
