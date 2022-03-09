@@ -17,7 +17,7 @@ export default function TopHeader({ contact }) {
   let contato
   let btnText
 
-  if (router.asPath.startsWith('/pt')) {
+  if (lang === 'pt') {
     ptClass = 'active'
     enClass = ''
 

@@ -11,7 +11,7 @@
 }
 
 #select-interesse {
-  background-color: var(--dourado);
+  background-color: var(--orange);
   color: white;
 }
 
@@ -32,12 +32,12 @@ img {
 }
 
 .pag-btn:hover {
-  background-color: var(--azul-escuro);
+  background-color: var(--dark-green);
   color: white !important;
 }
 
 .pag-btn.active {
-  background-color: var(--dourado);
+  background-color: var(--orange);
   color: white !important;
 }
 
@@ -81,6 +81,6 @@ img {
   }
   .top-header {
     background-image: none !important;
-    background-color: var(--azul-escuro) !important;
+    background-color: var(--dark-green) !important;
   }
 }

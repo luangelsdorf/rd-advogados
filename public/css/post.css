@@ -35,7 +35,7 @@ img {
   content: "";
   width: 50px;
   height: 2px;
-  background-color: var(--dourado);
+  background-color: var(--orange);
   border-radius: 99px;
 }
 
@@ -43,7 +43,7 @@ img {
   content: "";
   width: 50px;
   height: 2px;
-  background-color: var(--dourado);
+  background-color: var(--orange);
   border-radius: 99px;
 }
 
@@ -110,7 +110,7 @@ blockquote::before {
   content: "";
   height: 100%;
   width: 2px;
-  background-color: var(--dourado);
+  background-color: var(--orange);
   border-radius: 99px;
   position: absolute;
   left: -25px;

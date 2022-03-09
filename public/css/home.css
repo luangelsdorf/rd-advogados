@@ -27,7 +27,7 @@
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: var(--dourado);
+  background-color: var(--orange);
 
   opacity: 0;
   transform: translateY(4px);
@@ -40,7 +40,7 @@
 }
 
 .area-card:hover a {
-  color: var(--azul-claro);
+  color: var(--green);
 }
 
 .area-card:hover .flecha {
@@ -54,7 +54,7 @@
 }
 
 .area-card:hover .ler-mais {
-  color: var(--azul-claro) !important;
+  color: var(--green) !important;
 }
 
 .my-15-50 {
@@ -71,7 +71,7 @@
 }
 
 .ler-mais {
-  color: var(--dourado);
+  color: var(--orange);
   transition: all 300ms ease;
 }
 
@@ -109,7 +109,7 @@
 .brc-square {
   width: 270px;
   height: 280px;
-  background-color: var(--azul-escuro);
+  background-color: var(--dark-green);
   position: absolute;
   top: 285px;
   left: 300px;
@@ -136,7 +136,7 @@
   right: 0;
   top: 130px;
   width: 45%;
-  background-color: var(--dourado);
+  background-color: var(--orange);
 }
 
 .overlay-bottom {
@@ -262,7 +262,7 @@ img {
   bottom: 70px;
   width: 70px;
   height: 2px;
-  background-color: var(--dourado);
+  background-color: var(--orange);
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Superior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -294,5 +294,5 @@ img {
 }
 
 .top-header .nav-link:focus {
-  color: var(--dourado) !important;
+  color: var(--orange) !important;
 }

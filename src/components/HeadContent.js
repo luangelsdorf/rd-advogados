@@ -12,6 +12,11 @@ export default function HeadContent(props) {
       <script src="/js/main.js" type="module" />
       <script src="/js/pixel.js" />
       <script src="/js/tagmanager.js" />
+
+      { /*Google Fonts*/}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet" />
     </Head>
   )
 }
