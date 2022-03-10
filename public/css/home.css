@@ -267,12 +267,39 @@ img {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Superior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
+@keyframes triangle-pulse {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
 #banner-superior {
-  height: 950px;
-  background-image: url("/img/banner-home.png");
+  height: calc(100vh - 6px);
+  background-image: var(--green-left), var(--green-top), var(--black-left), url("/img/banner-home-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -85px;
+}
+
+#banner-superior > svg {
+  position: absolute;
+  bottom: 61px;
+  z-index: 2;
+}
+
+#banner-superior > svg path:nth-child(2) {
+  animation: triangle-pulse 1s ease-in-out infinite alternate;
+}
+
+#banner-superior > svg path:nth-child(3) {
+  animation: triangle-pulse 1s 1s ease-in-out infinite alternate;
+}
+
+#banner-content {
+  max-width: 380px;
+  margin-bottom: 45px;
 }
 
 @media (min-width: 1920px) {
@@ -282,17 +309,3 @@ img {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-
-.top-header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background-image: url("/img/banner-home.png");
-  background-repeat: no-repeat;
-  background-color: #003057;
-  z-index: 5;
-}
-
-.top-header .nav-link:focus {
-  color: var(--orange) !important;
-}

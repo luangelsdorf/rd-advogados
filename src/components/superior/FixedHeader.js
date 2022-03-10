@@ -2,8 +2,27 @@ import React from 'react';
 import { hideNavigation } from "../../../public/js/modules";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useRef } from 'react';
 
 export default function FixedHeader({ contact }) {
+  const header = useRef(null);
+
+  function handleScroll() {
+    if (window.scrollY > 165) {
+      header.current.classList.add('active');
+    } else {
+      header.current.classList.remove('active');
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
+
   const lang = contact.locale.substring(0, 2)
   let router = useRouter()
   let path = router.asPath.slice(3)
@@ -46,12 +65,12 @@ export default function FixedHeader({ contact }) {
   }
 
   return (
-    <header className="fixed-header">
+    <header ref={header} className="fixed-header">
       <nav className="navbar navbar-fixed navbar-expand-lg navbar-light w-100">
         <div className="container">
           <Link href={`/${lang}#home`}>
             <a>
-              <img src="/img/logo.png" alt="Logo" />
+              <img src="/img/logo-horizontal.svg" alt="Logo" />
             </a>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
