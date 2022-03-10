@@ -349,8 +349,13 @@ a:hover {
 }
 
 .form-control {
-  background-color: #f9f9f9 !important;
-  border-color: #eee !important;
+  background-color: var(--snow);
+  border-color: var(--gray);
+  color: var(--carbon) !important;
+}
+
+.form-control::placeholder {
+  color: var(--carbon);
 }
 
 .form-control:focus {
@@ -358,9 +363,9 @@ a:hover {
 }
 
 .form-select {
-  background-color: #f9f9f9;
-  border-color: #eee;
-  color: inherit;
+  background-color: var(--snow);
+  border-color: var(--gray);
+  color: var(--carbon);
   height: 58px;
 }
 
@@ -546,9 +551,13 @@ a:hover {
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Inferior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 #banner-inferior {
+  position: relative;
   padding-top: 110px;
   padding-bottom: 110px;
-  background-image: url("/img/banner-inferior.png");
+  /* background-image: url("/img/banner-inferior.png"); */
+  background-image: linear-gradient(rgba(33, 82, 87, 0.5) 100%, transparent), linear-gradient(#0f4143 100%, transparent),
+    url("/img/contact-background.png");
+  background-blend-mode: normal, multiply, normal;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -561,10 +570,15 @@ a:hover {
 
 .consulta-body {
   padding: 45px;
+  background-color: var(--snow);
 }
 
 #msg {
   height: 90px;
+}
+
+.form-floating label {
+  color: var(--carbon);
 }
 
 .form-floating:first-child {
@@ -595,28 +609,24 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 85px;
-}
-
-.line-title::before {
-  content: "";
-  width: 70px;
-  height: 2px;
-  position: absolute;
-  left: -85px;
-  background-color: var(--orange);
 }
 
 .contato-text {
   padding-top: 30px;
   padding-bottom: 35px;
   margin-bottom: 35px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--green);
   display: inline-block;
 }
 
 .contatos-content {
   margin-bottom: 36px;
+}
+
+.contatos-content > span,
+.local-content > span {
+  color: var(--snow);
+  font-weight: bold;
 }
 
 #submit-btn img {

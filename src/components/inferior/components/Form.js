@@ -77,7 +77,7 @@ export default function Form({ areas, contact }) {
       <div className="consulta-header bg-dourado text-white playfair">
         <strong className="fs-24">{solicite}</strong>
       </div>
-      <div className="consulta-body bg-white">
+      <div className="consulta-body">
         <form onSubmit={handleSubmit}>
           <div className="form-floating">
             <input required="required" type="text" id="nome-e-sobrenome" placeholder="Nome e Sobrenome" className="form-control border-radius-0" onChange={(e) => { setName(e.target.value) }} />

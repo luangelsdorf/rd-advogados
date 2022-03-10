@@ -18,7 +18,7 @@ export default function FaleConosco({ contact }) {
           {contact.contactMessage}
         </span>
         <div className="contatos-content">
-          <span className="d-block text-dourado mb-3">{contato}</span>
+          <span className="d-block mb-3">{contato}</span>
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-xl-start">
             <div>
               <img src="/img/phone.svg" alt="Phone" />
@@ -31,7 +31,7 @@ export default function FaleConosco({ contact }) {
           </div>
         </div>
         <div className="local-content">
-          <span className="d-block text-dourado mb-3">{local}</span>
+          <span className="d-block mb-3">{local}</span>
           <div className="d-flex align-items-center justify-content-center justify-content-xl-start">
             <img src="/img/local.svg" alt="Local" />
             <span className="ps-3 break-spaces">{contact.local}</span>

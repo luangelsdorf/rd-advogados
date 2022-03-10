@@ -24,7 +24,6 @@ export default function Home({ areas, posts, textos, contact }) {
 			<BannerSuperior lang={textos.locale.substring(0, 2)} title={textos.bannerTitle} subtitle={textos.bannerSubtitle} btn={true} />
 
 			<div className="container-fluid p-0 position-relative home">
-				<img src="/img/parallax.png" className="parallax" loading="lazy" alt="" />
 				<SobreNos textos={textos} />
 				<NossaEquipe textos={textos} />
 				<Parallax textos={textos} />
