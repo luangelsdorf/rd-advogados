@@ -25,11 +25,11 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
   return (
     <>
       <FixedWhats />
-      <TopHeader contact={contact} />
-      <FixedHeader contact={contact} />
-      <BannerSuperior bannerClass="banner-areas" title={textos.bannerTitle} subtitle={'Advocacia especializada em solucionar problemas com os melhores resultados.'} btn={false} />
+      <TopHeader />
+      <FixedHeader />
+      <BannerSuperior bannerClass="banner-areas" title={'Áreas de Atuação'} subtitle={'Advocacia especializada em solucionar problemas com os melhores resultados.'} btn={false} />
 
-      <HeadContent page="areas" title={`${area.title} - BRC Advogados`} />
+      <HeadContent page="areas" title={`${area.title} - RD Advogados`} />
       <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">
         <img className="img-fluid position-absolute z-index-1" src="/img/themis.png" alt="Desenho" />
         <div className="container px-5 px-sm-0">
@@ -162,9 +162,9 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
         </div>
       </div>
 
-      <BannerInferior contact={contact} areas={areasDoc} />
-      <SubFooter areas={areasDoc} textos={textos} contact={contact} />
-      <Footer contact={contact} textos={textos} />
+      <BannerInferior />
+      <SubFooter />
+      <Footer />
     </>
   )
 }
@@ -178,22 +178,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  /* const res = await fetch(`${process.env.API_URL}/servicos?slug=${params.slug}`)
-  const area = await res.json() */
   const area = areasDoc.find(area => area.slug === params.slug);
 
-  const resAll = await fetch(`${process.env.API_URL}/servicos`)
+  /* const resAll = await fetch(`${process.env.API_URL}/servicos`)
   const areas = await resAll.json()
 
   const resText = await fetch(`${process.env.API_URL}/areas-de-atuacao`)
   const textos = await resText.json()
 
   const resRedes = await fetch(`${process.env.API_URL}/contatos`)
-  const contact = await resRedes.json()
+  const contact = await resRedes.json() */
 
   return {
     props: {
-      area, areasDoc, textos, contact
+      area, areasDoc, /* textos, contact */
     },
     revalidate: 1
   }

@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "bannerTitle": "Advocacia Especializada",
+  "bannerSubtitle": "Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.",
+  "aboutUsSubTitle": "QUEM SOMOS",
+  "aboutUsTitle": "O Escritório Bueno Rios\n& Consentino Advogados",
+  "aboutUsText": "<p>Localizado no Coração de São Paulo, na Avenida Paulista, é formado por advogados com reconhecida e comprovada capacidade jurídica originada de atuação em renomados escritórios de advocacia ao longo dos anos.</p><p><br></p><p>Utilizando-se de sua sólida formação acadêmica e vasta experiência, os advogados criam soluções jurídicas criativas, eficazes e individualizadas para melhor atender os interesses de seus Clientes.</p><p><br></p><p>O BRC Advogados possui como sua marca o atendimento individualizado, buscando criar estratégias que se adequem às necessidades de seus clientes, buscando sempre o atendimento célere, eficaz e universal.</p>",
+  "ourTeamSubTitle": "NOSSA EQUIPE",
+  "ourTeamTitle": "Conheça os Sócios",
+  "parallaxTitle": "Nós estamos prontos para atender você",
+  "parallaxSubTitle": "Converse com um de nossos advogados e encontraremos a melhor solução possível para seu caso!",
+  "areasSubTitle": "NOSSOS SERVIÇOS",
+  "areasTitle": "Áreas de Atuação",
+  "areasText_1": "Realizando a prestação de serviços jurídicos tanto para empresas como pessoas físicas, o BRC Advogados elabora soluções de forma singularizada, estruturando operações empresariais de alta",
+  "areasText_2": "complexidade, realizando assessoria jurídica cível, trabalhista e em LGPD, além da atuação em processos perante em todas as instâncias e tribunais espalhados pelo país.",
+  "ourTeamLucas": "Advogado formado pela Pontifícia Universidade Católica de São Paulo, especialista em Direito Processual Civil pela Coordenadoria Geral de Especialização, Aperfeiçoamento e Extensão da Pontifícia Universidade Católica de São Paulo, extensão em Propriedade Intelectual cursada na Harvard University. 10 anos de atuação em direito civil e empresarial.",
+  "ourTeamAndre": "Advogado formado pela Universidade Presbiteriana Mackenzie, pós graduado em Direito Administrativo pela PUC/SP, especialista em Direito Digital pela FGV/SP, possui ampla experiência no mundo da advocacia empresarial.",
+  "locale": "pt-BR",
+  "published_at": "2021-05-19T22:34:38.027Z",
+  "created_at": "2021-05-19T19:17:47.608Z",
+  "updated_at": "2022-03-09T17:08:34.329Z",
+  "localizations": [
+    {
+      "id": 2,
+      "locale": "en",
+      "published_at": "2021-05-20T03:24:11.849Z"
+    }
+  ]
+}

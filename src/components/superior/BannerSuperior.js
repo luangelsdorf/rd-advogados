@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BannerSuperior({ title, subtitle, btn, post, lang, bannerClass }) {
+export default function BannerSuperior({ title, subtitle, btn, post, bannerClass }) {
   let displayBtn
   if (btn) {
     displayBtn = 'inline-flex'
@@ -15,14 +15,6 @@ export default function BannerSuperior({ title, subtitle, btn, post, lang, banne
     displayContainer = 'flex'
   }
 
-  let btnText
-  if (lang === 'pt') {
-    btnText = 'Conheça Nossos Serviços'
-  }
-  else {
-    btnText = 'See Our Services'
-  }
-
   return (
     <div className="container-fluid p-0 position-relative d-flex justify-content-center" id="banner-superior">
       {
@@ -35,7 +27,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, lang, banne
           <strong className="playfair fs-72 d-block mb-4 break-spaces">{title}</strong>
           <span className="lh-24 d-block mb-4 break-spaces">{subtitle}</span>
           <div className="d-flex gap-3 flex-wrap">
-            <a href="#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{btnText}</a>
+            <a href="#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{'Conheça Nossos Serviços'}</a>
             <a href="#areas-de-atuacao" className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>Veja Quem Somos</a>
           </div>
         </div>

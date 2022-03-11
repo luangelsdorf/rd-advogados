@@ -16,29 +16,40 @@ import postsDoc from '../../posts.json';
 
 export default function Blog({ posts, textos, areas, contact, cat }) {
 
+  const categories = [
+    {
+      id: '1',
+      name: 'Direito do Consumidor'
+    },
+    {
+      id: '2',
+      name: 'Direito Previdenciário'
+    }
+  ]
+
   return (
     <>
-      <HeadContent title="Blog - BRC Advogados" page="blog" />
+      <HeadContent title="Blog - RD Advogados" page="blog" />
 
       <FixedWhats />
-      <TopHeader contact={contact} />
-      <FixedHeader contact={contact} />
-      <BannerSuperior title={textos.bannerTitle} subtitle={textos.bannerSubTitle} btn={false} />
+      <TopHeader />
+      <FixedHeader />
+      <BannerSuperior title={'Nosso Blog'} subtitle={'Aqui você confere novidades sobre decisões\n e assuntos de interesse de todo cidadão.'} btn={false} />
 
       <div className="container-fluid px-0">
         <div className="container">
           <div className="row gy-4 text-center align-items-center" id="posts-heading">
             <div className="col-12 col-lg-6 text-center text-lg-start">
-              <span className="line-title w-max-content">{textos.pageSubTitle}</span>
+              <span className="line-title w-max-content">{'CONFIRA NOSSOS CONTEÚDOS'}</span>
               <div className="d-flex flex-column text-escuro">
-                <strong className="playfair fs-44">{textos.pageTitle}</strong>
+                <strong className="playfair fs-44">{'Notícias e Artigos'}</strong>
               </div>
             </div>
             <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
               <select onChange={filterPosts} defaultValue="" className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
                 <option value="" disabled="disabled">Selecione seu Interesse</option>
                 {
-                  cat.map(category => {
+                  categories.map(category => {
                     return (
                       <option key={category.id} value={category.name}>{category.name}</option>
                     )
@@ -75,13 +86,13 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
 
       <Pagination />
 
-      <BannerInferior contact={contact} areas={areas} />
-      <SubFooter areas={areas} textos={textos} contact={contact} />
-      <Footer contact={contact} textos={textos} />
+      <BannerInferior />
+      <SubFooter />
+      <Footer />
     </>
   )
 }
-
+/* 
 export async function getStaticProps() {
   const responsePosts = await fetch(`${process.env.API_URL}/posts`)
   const posts = await responsePosts.json()
@@ -104,4 +115,4 @@ export async function getStaticProps() {
     },
     revalidate: 1
   }
-}
+} */

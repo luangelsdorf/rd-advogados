@@ -9,11 +9,11 @@ export default function BannerInferior({ areas, contact }) {
         <div className="row gy-5 align-items-center">
           <div className="col-xl-1" />
           <div className="col-12 col-xl-4 text-center text-xl-start">
-            <FaleConosco contact={contact} />
+            <FaleConosco />
           </div>
           <div className="col-xl-1" />
           <div className="col-12 col-xl-5">
-            <Form contact={contact} areas={areas} />
+            <Form />
           </div>
           <div className="col-xl-1" />
         </div>

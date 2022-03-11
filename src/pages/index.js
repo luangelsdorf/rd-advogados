@@ -17,11 +17,11 @@ import FixedWhats from "../../src/components/FixedWhats";
 export default function Home({ areas, posts, textos, contact }) {
 	return (
 		<>
-			<HeadContent title="BRC Advogados" page="home" />
+			<HeadContent title="RD Advogados" page="home" />
 			<FixedWhats />
-			<TopHeader contact={contact} />
-			<FixedHeader contact={contact} />
-			<BannerSuperior lang={textos.locale.substring(0, 2)} title={textos.bannerTitle} subtitle={textos.bannerSubtitle} btn={true} />
+			<TopHeader />
+			<FixedHeader />
+			<BannerSuperior title={'Advocacia Especializada'} subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'} btn={true} />
 
 			<div className="container-fluid p-0 position-relative home">
 				<SobreNos textos={textos} />
@@ -31,15 +31,14 @@ export default function Home({ areas, posts, textos, contact }) {
 				<Recentes textos={textos} posts={posts} />
 			</div>
 
-			<BannerInferior contact={contact} areas={areas} />
-			<SubFooter areas={areas} textos={textos} contact={contact} />
-			<Footer contact={contact} textos={textos} />
+			<BannerInferior />
+			<SubFooter />
+			<Footer />
 		</>
 	)
 }
 
 export async function getStaticProps() {
-	console.log(process.env);
 	const responseAreas = await fetch(`${process.env.API_URL}/servicos`)
 	const areas = await responseAreas.json()
 

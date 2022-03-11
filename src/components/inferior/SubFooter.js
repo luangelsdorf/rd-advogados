@@ -9,13 +9,13 @@ export default function SubFooter({ textos, areas, contact }) {
       <div className="container">
         <div className="row gy-5">
           <div className="col-12 col-lg-6 col-xl-3 d-none d-md-block">
-            <Qualidades textos={textos} contact={contact} />
+            <Qualidades />
           </div>
           <div className="col-12 col-lg-6 col-xl-5 d-none d-md-block">
-            <ListaAreas areas={areas} textos={textos} />
+            <ListaAreas />
           </div>
           <div className="col-12 col-xl-4">
-            <NewsLetter textos={textos} />
+            <NewsLetter />
           </div>
         </div>
       </div>

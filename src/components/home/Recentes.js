@@ -1,7 +1,7 @@
 import React from 'react';
 import PostCard from "./PostCard";
 import { formatCategories, formatDate } from "../../../public/js/modules";
-import Link from 'next/head'
+import Link from 'next/link'
 
 export default function Recentes({ posts, textos }) {
 

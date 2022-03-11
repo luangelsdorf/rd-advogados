@@ -17,7 +17,7 @@ export default function Post({ post, posts, areas, contact }) {
   let quantity = [0, 1, 2]
   let router = useRouter()
   let url = router.asPath
-  let img = post.cover.url
+  let img = post.cover
   let desc = post.body
   let ogTags = {
     url: url,
@@ -34,21 +34,21 @@ export default function Post({ post, posts, areas, contact }) {
     }
 
     if (target === 'facebook') {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
         'facebook-share-dialog',
         'width=800,height=600'
       );
     }
 
     if (target === 'twitter') {
-      window.open(`https://twitter.com/intent/tweet?text=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
+      window.open(`https://twitter.com/intent/tweet?text=${window.location.href}`,
         'twitter-share',
         'width=800,height=600'
       );
     }
 
     if (target === 'linkedin') {
-      window.open(`https://www.linkedin.com/cws/share?url=${process.env.NEXT_PUBLIC_API_URL}${window.location.pathname}`,
+      window.open(`https://www.linkedin.com/cws/share?url=${window.location.href}`,
         'linkedin-share',
         'width=800,height=600'
       );
@@ -57,10 +57,10 @@ export default function Post({ post, posts, areas, contact }) {
 
   return (
     <>
-      <HeadContentPost tags={ogTags} post={true} title={`${post.title} - BRC Advogados`} page="post" />
+      <HeadContentPost tags={ogTags} post={true} title={`${post.title} - RD Advogados`} page="post" />
       <FixedWhats />
-      <TopHeader contact={contact} />
-      <FixedHeader contact={contact} />
+      <TopHeader />
+      <FixedHeader />
       <BannerSuperior />
 
       <div className="container post-container position-relative">
@@ -68,7 +68,7 @@ export default function Post({ post, posts, areas, contact }) {
           <div className="col-1" />
 
           <div className="col-10">
-            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: 530 + 'px' }}>{post.title}</strong>
+            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: '600px' }}>{post.title}</strong>
             <div className="flex-center" id="post-date-row">
               <svg width="12" height="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" className="fs-13 text-white mb-1 mx-2 svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
               <span className="post-date fs-13 text-white">10 de março de 2022</span>
@@ -112,7 +112,7 @@ export default function Post({ post, posts, areas, contact }) {
             </div>
           </div>
           <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
-            <Link href={`/${contact.locale.substring(0, 2)}/blog`}>
+            <Link href={`/blog`}>
               <a className="btn btn-primary btn-h-50 d-inline-flex justify-content-center" id="ver-todas">Ver Todas as Publicações<img src="/img/seta.svg" alt="Seta" /></a>
             </Link>
           </div>
@@ -143,9 +143,9 @@ export default function Post({ post, posts, areas, contact }) {
 
       </div>
 
-      <BannerInferior contact={contact} areas={areas} />
-      <SubFooter areas={areas} contact={contact} textos={contact} />
-      <Footer contact={contact} />
+      <BannerInferior />
+      <SubFooter />
+      <Footer />
     </>
   )
 }
@@ -162,18 +162,18 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = postList.find(post => post.id === params.id)
 
-  const resp = await fetch(`${process.env.API_URL}/posts`)
+  /* const resp = await fetch(`${process.env.API_URL}/posts`)
   const posts = await resp.json()
 
   const resAreas = await fetch(`${process.env.API_URL}/servicos`)
   const areas = await resAreas.json()
 
   const resRedes = await fetch(`${process.env.API_URL}/contatos`)
-  const contact = await resRedes.json()
+  const contact = await resRedes.json() */
 
   return {
     props: {
-      post, posts, areas, contact
+      post,/*  posts, areas, contact */
     },
     revalidate: 1
   }

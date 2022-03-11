@@ -553,6 +553,10 @@ a:hover {
   color: var(--orange) !important;
 }
 
+#navBarTop {
+  background-color: var(--green);
+}
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Inferior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 #banner-inferior {
@@ -891,9 +895,6 @@ footer {
 @media (max-width: 992px) {
   .fixed-header {
     background-color: var(--snow) !important;
-  }
-  .fixed-header .nav-link {
-    color: white !important;
   }
   .fixed-header .nav-link:focus {
     color: var(--orange) !important;
