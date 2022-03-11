@@ -13,6 +13,7 @@ import BannerInferior from "../../src/components/inferior/BannerInferior";
 import SubFooter from "../../src/components/inferior/SubFooter";
 import Footer from "../../src/components/inferior/Footer";
 import FixedWhats from "../../src/components/FixedWhats";
+import Galeria from "../components/home/Galeria";
 
 export default function Home({ areas, posts, textos, contact }) {
 	return (
@@ -24,9 +25,9 @@ export default function Home({ areas, posts, textos, contact }) {
 			<BannerSuperior title={'Advocacia Especializada'} subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'} btn={true} />
 
 			<div className="container-fluid p-0 position-relative home">
-				<SobreNos textos={textos} />
+				<SobreNos />
+				<Galeria />
 				<NossaEquipe textos={textos} />
-				<Parallax textos={textos} />
 				<Areas textos={textos} areas={areas} />
 				<Recentes textos={textos} posts={posts} />
 			</div>

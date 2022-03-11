@@ -90,6 +90,14 @@
   background-color: var(--white);
 }
 
+#sobre-nos strong {
+  color: var(--granite);
+}
+
+.sobre-nos-text {
+  color: var(--granite);
+}
+
 .mr-30 {
   margin-right: 30px;
 }
@@ -124,95 +132,26 @@
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Nossa Equipe -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 #nossa-equipe {
-  padding-top: 185px;
-  padding-bottom: 185px;
-  background-color: #f9f9f9;
+  position: relative;
 }
 
-#nossa-equipe::before {
+#nossa-equipe::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 130px;
-  width: 45%;
-  background-color: var(--orange);
-}
-
-.overlay-bottom {
+  z-index: -1;
+  top: 0;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  height: 600px;
+  background-color: var(--green);
 }
 
-.socio-img {
-  height: max-content;
+#nossa-equipe strong {
+  color: var(--white);
+  margin-top: 8px;
 }
 
-img {
-  transition: all 400ms ease;
-}
-
-.socio-img:hover img {
-  transform: scale(1.15);
-}
-
-.socio-img:hover .grad-curto {
-  background: transparent;
-}
-
-.grad-curto {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  height: 100px;
-  z-index: 2;
-
-  transition: all 400ms ease;
-}
-
-.grad-longo {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-  height: 200px;
-  z-index: 1;
-}
-
-.desenho {
-  position: absolute;
-  bottom: 0;
-  left: -60px;
-}
-
-.z-index-3 {
-  z-index: 3;
-}
-
-#collapse-andre {
-  height: 72px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-#collapse-andre.active {
-  height: auto;
-}
-
-#collapse-lucas {
-  height: 72px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-#collapse-lucas.active {
-  height: auto;
-}
-
-#expand-andre svg,
-#expand-lucas svg {
-  transition: all 450ms ease;
-}
-
-#expand-andre svg.active,
-#expand-lucas svg.active {
-  transform: rotate(180deg);
+.team-title {
+  padding: 110px 0;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Parallax -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
