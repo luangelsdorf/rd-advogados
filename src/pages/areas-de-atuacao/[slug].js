@@ -44,7 +44,7 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
                     </a>
                   </h5>
                 </div>
-                <div class="collapse services" id="trab">
+                <div className="collapse services" id="trab">
                   <ul>
                     {
                       sortedAreas.direitoTrab.map(area => {
@@ -68,7 +68,7 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
                     </a>
                   </h5>
                 </div>
-                <div class="collapse services" id="civil">
+                <div className="collapse services" id="civil">
                   <ul>
                     {
                       sortedAreas.direitoCivil.map(area => {
@@ -92,7 +92,7 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
                     </a>
                   </h5>
                 </div>
-                <div class="collapse services" id="prev">
+                <div className="collapse services" id="prev">
                   <ul>
                     {
                       sortedAreas.direitoPrev.map(area => {

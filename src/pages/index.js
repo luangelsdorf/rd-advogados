@@ -29,7 +29,7 @@ export default function Home({ areas, posts, textos, contact }) {
 				<SobreNos />
 				<Galeria />
 				<NossaEquipe />
-				<Areas textos={textos} areas={areas} />
+				<Areas />
 				<CallToAction />
 				<Recentes />
 			</div>
@@ -41,7 +41,7 @@ export default function Home({ areas, posts, textos, contact }) {
 	)
 }
 
-export async function getStaticProps() {
+/* export async function getStaticProps() {
 	const responseAreas = await fetch(`${process.env.API_URL}/servicos`)
 	const areas = await responseAreas.json()
 
@@ -60,4 +60,4 @@ export async function getStaticProps() {
 		},
 		revalidate: 1
 	}
-}
+} */
