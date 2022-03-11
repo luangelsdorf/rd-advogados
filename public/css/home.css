@@ -10,8 +10,47 @@
   margin: 200px 0;
 }
 
-#areas-de-atuacao strong {
+#areas-de-atuacao span {
+  color: var(--carbon);
+}
+
+#areas-de-atuacao span + strong {
   color: var(--granite);
+  margin-bottom: 40px;
+}
+
+.our-services strong {
+  color: var(--granite);
+}
+
+.our-services small {
+  color: var(--carbon);
+}
+
+.our-services img {
+  margin-right: 40px;
+}
+
+.our-services > div {
+  padding: 20px 0;
+}
+
+.our-services > div:first-child {
+  padding-top: 60px;
+}
+
+.our-services > div:nth-child(2) {
+  border-top: 2px solid var(--snow);
+  border-bottom: 2px solid var(--snow);
+}
+
+.our-services button {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Sobre Nós -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

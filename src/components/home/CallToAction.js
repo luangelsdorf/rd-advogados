@@ -10,7 +10,7 @@ export default function CallToAction() {
             <span className="text-white">Escritório especializado em Direito do Trabalho, Direito Civil e Direito Previdenciário.</span>
           </div>
           <div className="col-12 col-xl-3 offset-xl-1 d-flex align-items-center justify-content-start justify-content-lg-end">
-            <button className="btn btn-secondary">Fale com um Advogado</button>
+            <a href="#banner-inferior" className="btn btn-secondary">Fale com um Advogado</a>
           </div>
         </div>
       </div>

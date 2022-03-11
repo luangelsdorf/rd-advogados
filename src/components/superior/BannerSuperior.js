@@ -28,7 +28,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           <span className="lh-24 d-block mb-4 break-spaces">{subtitle}</span>
           <div className="d-flex gap-3 flex-wrap">
             <a href="#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{'Conheça Nossos Serviços'}</a>
-            <a href="#areas-de-atuacao" className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>Veja Quem Somos</a>
+            <a href="#sobre-nos" className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>Veja Quem Somos</a>
           </div>
         </div>
       </div>
