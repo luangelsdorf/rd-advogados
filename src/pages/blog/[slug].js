@@ -57,10 +57,6 @@ export default function Post({ post, posts, areas, contact }) {
 
   return (
     <>
-      {/*Load Facebook SDK for JavaScript*/}
-      <div id="fb-root" />
-      <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0&appId=223759669479290&autoLogAppEvents=1" nonce="f8cnNIhN" />
-
       <HeadContentPost tags={ogTags} post={true} title={`${post[0].title} - BRC Advogados`} page="post" />
       <FixedWhats />
       <TopHeader contact={contact} />

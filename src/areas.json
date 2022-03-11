@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "title": "Consultivo Cível",
+    "description": "<p>Com ampla experiência no Consultivo Cível, atuamos na elaboração de consultas, pareceres e contratos para atender as mais diversas demandas de nossos Clientes, realizando uma avaliação de riscos e responsabilidades contratuais e extracontratuais;</p><p><br></p><p>Com a criação, revisão e negociação de minutas jurídicas, atuamos de forma preventiva para proteger os interesses de nossos clientes para que possam sempre alcançar os objetivos pretendidos com seus negócios.</p><p><br></p><p>Realizamos também assessoria extrajudicial na área de família, estruturando operações de reorganização patrimonial, planejamento sucessório, testamentos, pactos antenupciais, criação de holdings patrimoniais com o objetivo de proteger os bens e o futuro dos Clientes.</p><p><br></p><p>Nossa atuação consultiva abrange áreas de tecnologia, imobiliário, locação, consumidor, construção civil e engenharia, biotecnologia e diversos áreas do consultivo cível.</p>",
+    "slug": "consultivo-civel",
+    "preview": "Atuamos na elaboração de consultas e pareceres e contratos para atender as mais diversas demandas de nossos clientes.",
+    "icon": "consultivo-civel",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:09:34.856Z",
+    "updated_at": "2021-05-20T23:46:03.465Z",
+    "localizations": [
+      {
+        "id": 8,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Direito Empresarial",
+    "description": "<p>Assessoria jurídica em negócios empresariais, elaborando instrumentos societários (contratos e estatutos sociais, atas de assembleias gerais, acordos de sócios, etc.), contratos empresariais e representação legal de sócios em reunião e assembleias;</p><p><br></p><p>Construção de parcerias empresariais (consórcios, sociedades de propósito específico, joint-ventures em geral), além da realização de operações de incorporações, fusões e cisões – totais e parciais – de empresas, transformações de tipos societários e reestruturações societárias em geral.</p><p><br></p><p>Além disso, oferecemos assessoria Jurídica sobre propriedade intelectual (marcas, patentes, desenho industrial etc.), realizando registros perante o Instituto Nacional da Propriedade Industrial (INPI), além de contrato relativos à cessão, transferência e uso de propriedade intelectual.</p>",
+    "slug": "direito-empresarial",
+    "preview": "Assessoria Jurídica sobre propriedade intelectual - marcas, patentes, desenho industrial - junto ao INPI.",
+    "icon": "direito-empresarial",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:10:05.394Z",
+    "updated_at": "2021-05-20T23:46:25.152Z",
+    "localizations": [
+      {
+        "id": 9,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "LGPD",
+    "description": "<p>Oferecemos assessoria para análise e implementação completa de uma solução jurídica de proteção de dados para vossa empresa, auxiliando na criação de um Sistema de Gestão de Programa de Privacidade e Proteção de Dados (DPMS) buscando a adequação do Cliente à LGPD em organizações, independentemente do porte, área de atuação e nível de regulação.</p><p><br></p><p>Com o objetivo de criar soluções de adaptação à legislação de proteção de dados, oferecemos serviços de auditoria, workshops e criação de manuais de atuação para o Cliente.</p><p><br></p><p>Realizando a adequação dos processos às diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD) e, também atuamos na resolução de conflitos relacionados à Proteção de Dados.</p>",
+    "slug": "lgpd",
+    "preview": "Oferecemos assessoria para análise e implementação completa de uma solução jurídica de proteção de dados.",
+    "icon": "lgpd",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:10:33.954Z",
+    "updated_at": "2021-05-20T23:46:37.066Z",
+    "localizations": [
+      {
+        "id": 10,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Direito Administrativo",
+    "description": "<p>Prestamos consultoria em Direito Administrativo perante a administração pública, auxiliando o Cliente no desenvolvimento de suas atividades em consonância com a legislação brasileira, atuando perante Agências Reguladoras e demais órgãos de fiscalização, nas esferas municipais estaduais e federal.</p><p><br></p><p>Assessoria preventiva e contenciosa envolvendo a administração pública, no âmbito administrativo e judicial, realizando auditorias legais para investigar e apurar contingências regulatórias e administrativas.</p><p><br></p><p>Atuamos em licitações públicas, realizando a análise de editais, conferência de documentos, apresentação de impugnações, interposição de recursos e acompanhamento em sessões públicas.</p>",
+    "slug": "direito-administrativo",
+    "preview": "Auxiliamos o cliente no desenvolvimento de suas atividades em consonância com a legislação brasileira.",
+    "icon": "direito-administrativo",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:10:55.793Z",
+    "updated_at": "2021-05-20T23:46:45.161Z",
+    "localizations": [
+      {
+        "id": 11,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Contencioso Civil",
+    "description": "<p>Com atuação voltada para o contencioso estratégico, prestamos serviços desde a fase pré-contenciosa, consistente na análise de pontos fortes e sensíveis e na definição de estratégias, até a fase contenciosa judicial propriamente dita.</p><p><br></p><p>A condução dos casos se dá de forma personalizada, buscando uma análise completa do assunto e uma reflexão crítica dos argumentos que suportam a posição do Cliente.</p><p><br></p><p>Atuação em divórcios, reconhecimento de união estável e inventários, tanto seara extrajudicial como judicial, realizando análise/levantamento de documentos e apresentando estratégias para melhor solucionar os conflitos existentes.</p><p><br></p><p>Nossa atuação contenciosa abrange demandas que envolvem imobiliário, família, consumidor, contratos, tequinologia construção civil e responsabilidade civil.</p>",
+    "slug": "contencioso-civil",
+    "preview": "Com atuação está voltada para o contencioso estratégico, prestamos serviços desde a fase pré-contenciosa.",
+    "icon": "contencioso-civil",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:11:37.463Z",
+    "updated_at": "2021-05-20T23:47:01.499Z",
+    "localizations": [
+      {
+        "id": 12,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Trabalhista e Previdenciário",
+    "description": "<p>Com atuação contenciosa voltada tanto para a defesa de interesses de empregados como empresas, buscamos sempre a melhor solução e estratégia para os conflitos laborais, procurando atingir da melhor maneira possível os interesses almejados pelos clientes.</p><p><br></p><p>Nossos serviços são direcionados para prevenção e redução dos riscos trabalhistas, atuamos na seara contenciosa trabalhista, na defesa interesses na esfera judicial (Justiça do Trabalho) e administrativa (DRT, Ministério Público do Trabalho).</p><p><br></p><p>Realizamos atuação administrativa junto à Previdência Social, realizando requerimentos de benefícios previdenciários, justificação administrativa para prova de tempo de serviço, requerimentos de revisão de benefícios e requerimentos administrativos.</p><p><br></p><p>Nossa atuação contenciosa envolve atuação judicial perante a Previdência Social em ações relacionadas a aposentadoria por tempo de serviço, por idade, por invalidez, auxílio-doença e revisão de benefícios.</p>",
+    "slug": "trabalhista-e-previdenciario",
+    "preview": "Atuação voltada tanto para a defesa de interesses de empregados e empresas, busca-se sempre a melhor solução.",
+    "icon": "trabalhista-e-previdenciario",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:11:55.478Z",
+    "updated_at": "2021-05-20T23:47:16.461Z",
+    "localizations": [
+      {
+        "id": 13,
+        "locale": "en"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Direito e Saúde",
+    "description": "<p>Com vasta experiência na atuação junto a profissionais da saúde, oferecemos soluções jurídicas na área da saúde.</p><p><br></p><p>Auxiliamos o seu paciente na obtenção de liminares para liberação de procedimentos e medicamentos em face Planos de Saúde e SUS.</p><p><br></p><p>Oferecemos ainda, consultoria administrativa/empresarial para profissionais da área da saúde, como a realização processo registral de empresas/clínicas perante conselhos de classe (CRM, CRP e COREN), além de atuação em processos éticos-disciplinares.</p>",
+    "slug": "direito-e-saude",
+    "preview": "Auxiliamos na obtenção de liminares para liberação de procedimentos e medicamentos em Planos de Saúde e SUS",
+    "icon": "direito-e-saude",
+    "locale": "pt-BR",
+    "created_at": "2021-05-16T03:12:18.191Z",
+    "updated_at": "2021-05-20T23:47:26.417Z",
+    "localizations": [
+      {
+        "id": 14,
+        "locale": "en"
+      }
+    ]
+  }
+]

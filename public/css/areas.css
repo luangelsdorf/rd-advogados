@@ -6,7 +6,10 @@
 .area-text {
   white-space: break-spaces;
   display: inline-block;
-  max-width: 710px;
+}
+
+.area-text p {
+  margin-bottom: 24px;
 }
 
 .list-group-item {
@@ -30,8 +33,17 @@ ul {
 #banner-superior {
   height: 550px;
   background-size: cover;
-  background-position-y: -85px;
-  background-image: url("/img/banner-superior.png");
+  background-image: url("/img/banner-areas.png");
+}
+
+.banner-areas {
+  justify-content: center;
+}
+
+.banner-areas span {
+  max-width: 380px;
+  margin: auto;
+  text-align: center;
 }
 
 #banner-content {
@@ -50,10 +62,15 @@ ul {
 .estamos-prontos {
   padding-top: 35px;
   padding-bottom: 35px;
+  padding: 35px 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 50px;
+}
+
+.estamos-prontos small {
+  color: var(--snow);
 }
 
 nav.d-md-none .navbar-toggler-icon {
@@ -70,11 +87,6 @@ nav.d-md-none .navbar-toggler.active {
   transform: rotate(180deg);
 }
 
-.prontos-text {
-  width: 235px;
-  margin-right: 40px;
-}
-
 @media (min-width: 1920px) {
   .top-header {
     background-size: cover;
@@ -85,9 +97,7 @@ nav.d-md-none .navbar-toggler.active {
   position: absolute;
   width: 100%;
   top: 0;
-  background-image: url("/img/banner-superior.png");
-  background-repeat: no-repeat;
-  background-color: #003057;
+  background-color: var(--green);
   z-index: 5;
 }
 
@@ -121,4 +131,40 @@ nav.d-md-none .navbar-toggler.active {
     background-image: none !important;
     background-color: var(--dark-green) !important;
   }
+}
+
+.area-category {
+  padding: 24px 0;
+}
+
+.area-category {
+  border-top: 2px solid var(--snow);
+}
+
+.area-category + .services ul {
+  border-top: 2px solid var(--snow);
+}
+
+.area-category + .services ul a {
+  color: var(--granite);
+  line-height: 34px;
+}
+
+.area-category h5 {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.category-list {
+  padding-right: 35px;
+}
+
+.area-category li > a {
+  color: var(--granite);
+}
+
+li::before {
+  content: "- ";
+  color: var(--orange);
+  font-weight: bold;
 }
