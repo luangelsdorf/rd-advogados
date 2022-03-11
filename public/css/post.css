@@ -4,8 +4,7 @@ img {
 
 #banner-superior {
   height: 550px;
-  /*background-image: url("/img/fundo-post.png");*/
-  background-color: #003057;
+  background-color: var(--green);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -85px;
@@ -15,9 +14,7 @@ img {
   position: absolute;
   width: 100%;
   top: 0;
-  /*background-image: url("/img/fundo-post.png");*/
-  background-repeat: no-repeat;
-  background-color: #003057;
+  background-color: var(--green);
   z-index: 5;
 }
 
@@ -54,6 +51,11 @@ img {
 .post-body {
   margin-bottom: 70px;
   white-space: break-spaces;
+  color: var(--granite);
+}
+
+.post-body + div {
+  color: var(--granite);
 }
 
 .img-placeholder {
@@ -99,11 +101,11 @@ hr {
 }
 
 blockquote {
-  margin-bottom: 0 !important;
   position: relative;
   margin-left: 50px !important;
   font-size: 24px;
-  font-style: italic;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 blockquote::before {

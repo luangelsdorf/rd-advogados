@@ -11,6 +11,8 @@ import Pagination from "../../../src/components/blog/Pagination";
 import FixedWhats from "../../../src/components/FixedWhats";
 import { formatCategories, filterPosts, formatDate } from "../../../public/js/modules";
 import { useRouter } from "next/router";
+import Link from 'next/link';
+import postsDoc from '../../posts.json';
 
 export default function Blog({ posts, textos, areas, contact, cat }) {
 
@@ -46,21 +48,27 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
             </div>
           </div>
           <div className="row justify-content-center justify-content-md-start gy-5">
-            {
-              posts.map(card => {
-                return (
-                  <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${card.cover.url}`}
-                    categoria={formatCategories(card.categorias)}
-                    date={formatDate(card.date, card.locale, true)}
-                    title={card.title}
-                    body={card.body.substring(0, 125) + '...'}
-                    href={`/${textos.locale.substring(0, 2)}/blog/${card.slug}`}
-                    key={`card-${card.id}`}
-                    lang={textos.locale.substring(0, 2)}
-                  />
-                )
-              })
-            }
+            <div className="col-10 col-md-6 col-xl-4">
+              <Link href="/blog/1">
+                <a>
+                  <img src="/img/post-card-1.png" className="img-fluid" alt="Card" />
+                </a>
+              </Link>
+            </div>
+            <div className="col-10 col-md-6 col-xl-4">
+              <Link href="/blog/2">
+                <a>
+                  <img src="/img/post-card-2.png" className="img-fluid" alt="Card" />
+                </a>
+              </Link>
+            </div>
+            <div className="col-10 col-md-6 col-xl-4">
+              <Link href="/blog/3">
+                <a>
+                  <img src="/img/post-card-3.png" className="img-fluid" alt="Card" />
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -75,19 +83,19 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
 }
 
 export async function getStaticProps() {
-  const responsePosts = await fetch(`${process.env.API_URL}/strapi/posts`)
+  const responsePosts = await fetch(`${process.env.API_URL}/posts`)
   const posts = await responsePosts.json()
 
-  const resText = await fetch(`${process.env.API_URL}/strapi/blog`)
+  const resText = await fetch(`${process.env.API_URL}/blog`)
   const textos = await resText.json()
 
-  const resAreas = await fetch(`${process.env.API_URL}/strapi/servicos`)
+  const resAreas = await fetch(`${process.env.API_URL}/servicos`)
   const areas = await resAreas.json()
 
-  const resRedes = await fetch(`${process.env.API_URL}/strapi/contatos`)
+  const resRedes = await fetch(`${process.env.API_URL}/contatos`)
   const contact = await resRedes.json()
 
-  const resCat = await fetch(`${process.env.API_URL}/strapi/categorias`)
+  const resCat = await fetch(`${process.env.API_URL}/categorias`)
   const cat = await resCat.json()
 
   return {

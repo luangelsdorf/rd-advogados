@@ -6,8 +6,7 @@
 #banner-superior {
   height: 550px;
   background-size: cover;
-  background-position-y: -85px;
-  background-image: url("/img/banner-superior.png");
+  background-image: url("/img/banner-blog.png");
 }
 
 #select-interesse {
@@ -54,9 +53,7 @@ img {
   position: absolute;
   width: 100%;
   top: 0;
-  background-image: url("/img/banner-superior.png");
-  background-repeat: no-repeat;
-  background-color: #003057;
+  background-color: var(--green);
   z-index: 5;
   background-size: cover;
 }

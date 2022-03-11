@@ -1,5 +1,5 @@
 import '../../public/css/global.css';
-import '../../public/css/areas.css';
+import '../../public/css/post.css';
 import React, { useEffect } from "react";
 import { useRouter } from 'next/router';
 import { homePage } from "../../public/js/pages";

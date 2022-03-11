@@ -1,23 +1,24 @@
-import HeadContentPost from "../../../src/components/HeadContentPost";
-import TopHeader from "../../../src/components/superior/TopHeader";
-import FixedHeader from "../../../src/components/superior/FixedHeader";
-import BannerSuperior from "../../../src/components/superior/BannerSuperior";
-import PostCard from "../../../src/components/home/PostCard";
-import BannerInferior from "../../../src/components/inferior/BannerInferior";
-import SubFooter from "../../../src/components/inferior/SubFooter";
-import Footer from "../../../src/components/inferior/Footer";
+import HeadContentPost from "../../components/HeadContentPost";
+import TopHeader from "../../components/superior/TopHeader";
+import FixedHeader from "../../components/superior/FixedHeader";
+import BannerSuperior from "../../components/superior/BannerSuperior";
+import PostCard from "../../components/home/PostCard";
+import BannerInferior from "../../components/inferior/BannerInferior";
+import SubFooter from "../../components/inferior/SubFooter";
+import Footer from "../../components/inferior/Footer";
 import React from "react";
 import Link from 'next/link';
-import FixedWhats from "../../../src/components/FixedWhats";
+import FixedWhats from "../../components/FixedWhats";
 import { formatCategories, formatDate } from "../../../public/js/modules";
 import { useRouter } from "next/router";
+import postList from '../../posts.json'
 
 export default function Post({ post, posts, areas, contact }) {
   let quantity = [0, 1, 2]
   let router = useRouter()
   let url = router.asPath
-  let img = `${process.env.NEXT_PUBLIC_API_URL}/strapi${post[0].cover.url}`
-  let desc = post[0].body
+  let img = post.cover.url
+  let desc = post.body
   let ogTags = {
     url: url,
     img: img,
@@ -54,10 +55,9 @@ export default function Post({ post, posts, areas, contact }) {
     }
   }
 
-
   return (
     <>
-      <HeadContentPost tags={ogTags} post={true} title={`${post[0].title} - BRC Advogados`} page="post" />
+      <HeadContentPost tags={ogTags} post={true} title={`${post.title} - BRC Advogados`} page="post" />
       <FixedWhats />
       <TopHeader contact={contact} />
       <FixedHeader contact={contact} />
@@ -68,18 +68,18 @@ export default function Post({ post, posts, areas, contact }) {
           <div className="col-1" />
 
           <div className="col-10">
-            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: 530 + 'px' }}>{post[0].title}</strong>
+            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: 530 + 'px' }}>{post.title}</strong>
             <div className="flex-center" id="post-date-row">
               <svg width="12" height="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" className="fs-13 text-white mb-1 mx-2 svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
-              <span className="post-date fs-13 text-white">{formatDate(post[0].date, post[0].locale, false)}</span>
+              <span className="post-date fs-13 text-white">10 de março de 2022</span>
             </div>
             <div>
               <div className="img-placeholder mx-auto">
-                <img src={`${process.env.NEXT_PUBLIC_API_URL}/strapi${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                <img src={post.cover} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
               </div>
-              <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{ __html: post[0].body }} />
-              <div className="fs-20 text-escuro">
-                <span className="d-block">Gostou do texto?</span>
+              <div className="fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{ __html: post.body }} />
+              <div className="fs-20">
+                <strong className="d-block">Gostou do conteúdo?</strong>
                 <span className="d-block">Compartilhe nas Redes Sociais:</span>
                 <button id="facebook" role="link" className="btn social-btn-post facebook-btn btn-h-45" onClick={handleClick}>
                   <img height="16" width="16" className="mb-1 me-2" src="/img/icons/facebook-f.svg" alt="Logo Facebook" />
@@ -118,22 +118,27 @@ export default function Post({ post, posts, areas, contact }) {
           </div>
         </div>
         <div className="row g-5 m-0 w-100 justify-content-center">
-          {
-            quantity.map(card => {
-              return (
-                <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${posts[card].cover.url}`}
-                  categoria={formatCategories(posts[card].categorias)}
-                  date={formatDate(posts[card].date, posts[card].locale, true)}
-                  title={posts[card].title}
-                  body={posts[card].body.substring(0, 125) + '...'}
-                  href={`/${contact.locale.substring(0, 2)}/blog/${posts[card].slug}`}
-                  lang={contact.locale.substring(0, 2)}
-                  key={`card-${posts[card].id}`}
-                />
-
-              )
-            })
-          }
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/1">
+              <a>
+                <img src="/img/post-card-1.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/2">
+              <a>
+                <img src="/img/post-card-2.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/3">
+              <a>
+                <img src="/img/post-card-3.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
         </div>
 
       </div>
@@ -147,27 +152,23 @@ export default function Post({ post, posts, areas, contact }) {
 
 
 export async function getStaticPaths() {
-  const response = await fetch(`${process.env.API_URL}/strapi/posts`)
-  const posts = await response.json()
-
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug },
+  const paths = postList.map((post) => ({
+    params: { id: post.id },
   }))
 
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${process.env.API_URL}/strapi/posts?slug=${params.slug}`)
-  const post = await res.json()
+  const post = postList.find(post => post.id === params.id)
 
-  const resp = await fetch(`${process.env.API_URL}/strapi/posts`)
+  const resp = await fetch(`${process.env.API_URL}/posts`)
   const posts = await resp.json()
 
-  const resAreas = await fetch(`${process.env.API_URL}/strapi/servicos`)
+  const resAreas = await fetch(`${process.env.API_URL}/servicos`)
   const areas = await resAreas.json()
 
-  const resRedes = await fetch(`${process.env.API_URL}/strapi/contatos`)
+  const resRedes = await fetch(`${process.env.API_URL}/contatos`)
   const contact = await resRedes.json()
 
   return {
