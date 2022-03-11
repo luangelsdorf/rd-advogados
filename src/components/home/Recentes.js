@@ -1,6 +1,7 @@
 import React from 'react';
 import PostCard from "./PostCard";
 import { formatCategories, formatDate } from "../../../public/js/modules";
+import Link from 'next/head'
 
 export default function Recentes({ posts, textos }) {
 
@@ -25,23 +26,27 @@ export default function Recentes({ posts, textos }) {
       </div>
       <div className="container">
         <div className="row gy-5 justify-content-center justify-content-md-start">
-          {
-            quantity.map(card => {
-              return (
-                <PostCard img={`${process.env.NEXT_PUBLIC_API_URL}/strapi${posts[card].cover.url}`}
-                  categoria={formatCategories(posts[card].categorias)}
-                  date={formatDate(posts[card].date, posts[card].locale, true)}
-                  title={posts[card].title}
-                  body={posts[card].body.substring(0, 125) + '...'}
-                  href={`/${textos.locale.substring(0, 2)}/blog/${posts[card].slug}`}
-                  lang={textos.locale.substring(0, 2)}
-
-                  key={`card-${posts[card].id}`}
-                />
-
-              )
-            })
-          }
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/1">
+              <a>
+                <img src="/img/post-card-1.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/2">
+              <a>
+                <img src="/img/post-card-2.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
+          <div className="col-10 col-md-6 col-xl-4">
+            <Link href="/blog/3">
+              <a>
+                <img src="/img/post-card-3.png" className="img-fluid" alt="Card" />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
