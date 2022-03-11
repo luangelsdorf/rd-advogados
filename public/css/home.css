@@ -6,80 +6,12 @@
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Áreas de Atuação -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.fundo-areas {
-  background-image: url("/img/pattern.png");
-  background-color: #f9f9f9;
-  padding-top: 225px;
-  padding-bottom: 225px;
+#areas-de-atuacao {
+  margin: 200px 0;
 }
 
-.area-card {
-  display: block;
-  padding: 40px 30px 47px;
-  position: relative;
-  box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
-}
-
-.area-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--orange);
-
-  opacity: 0;
-  transform: translateY(4px);
-  transition: all 350ms ease;
-}
-
-.area-card:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.area-card:hover a {
-  color: var(--green);
-}
-
-.area-card:hover .flecha {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.ler-mais:hover .flecha {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.area-card:hover .ler-mais {
-  color: var(--green) !important;
-}
-
-.my-15-50 {
-  margin-top: 15px;
-  margin-bottom: 50px;
-}
-
-.pres-text {
-  max-width: 372px;
-}
-
-.mr-40 {
-  margin-right: 40px;
-}
-
-.ler-mais {
-  color: var(--orange);
-  transition: all 300ms ease;
-}
-
-.flecha {
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 400ms ease;
+#areas-de-atuacao strong {
+  color: var(--granite);
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Sobre Nós -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -154,24 +86,11 @@
   padding: 110px 0;
 }
 
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Parallax -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Call To Action -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.parallax-container {
-  height: 400px;
-  background-color: rgba(0, 48, 87, 0.75);
-  background-image: linear-gradient(to bottom, rgba(0, 70, 128, 0.5), transparent);
+#cta .container {
+  padding: 50px 0;
 }
-
-.my-20-30 {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-#parallax-text {
-  width: 450px;
-}
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 

@@ -14,6 +14,7 @@ import SubFooter from "../../src/components/inferior/SubFooter";
 import Footer from "../../src/components/inferior/Footer";
 import FixedWhats from "../../src/components/FixedWhats";
 import Galeria from "../components/home/Galeria";
+import CallToAction from "../components/home/CallToAction";
 
 export default function Home({ areas, posts, textos, contact }) {
 	return (
@@ -27,9 +28,10 @@ export default function Home({ areas, posts, textos, contact }) {
 			<div className="container-fluid p-0 position-relative home">
 				<SobreNos />
 				<Galeria />
-				<NossaEquipe textos={textos} />
+				<NossaEquipe />
 				<Areas textos={textos} areas={areas} />
-				<Recentes textos={textos} posts={posts} />
+				<CallToAction />
+				<Recentes />
 			</div>
 
 			<BannerInferior />
