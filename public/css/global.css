@@ -688,21 +688,21 @@ a:hover {
 .social-btn {
   height: 30px;
   width: 30px;
-  background-color: var(--green);
+  background-color: var(--orange);
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all 150ms ease;
 }
 
 .social-btn:hover {
-  color: white !important;
-  background-color: var(--orange);
+  background-color: var(--dark-orange);
 }
 
 .list-title {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--green);
 }
 
 .newsletter {
@@ -715,13 +715,12 @@ a:hover {
   padding-right: 37px;
 }
 
-.news-submit {
-  color: var(--dark-green);
-  width: 48px;
+.newsletter > div > span {
+  color: var(--white);
 }
 
-.news-submit:hover {
-  color: var(--orange) !important;
+.news-submit {
+  color: var(--white);
 }
 
 .news-input {

@@ -61,8 +61,8 @@ export default function NewsLetter({ textos }) {
   return (
     <div className="newsletter mx-3 mx-sm-0">
       <div>
-        <span className="playfair fs-20 text-dourado d-none d-md-block">Newsletter</span>
-        <span className="playfair fs-20 text-dourado d-md-none d-block">{subscribeText}</span>
+        <span className="playfair fs-20 d-none d-md-block">Newsletter</span>
+        <span className="playfair fs-20 d-md-none d-block">{subscribeText}</span>
         <span className="text-white d-none d-md-inline-block my-4">{newsText}</span>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
