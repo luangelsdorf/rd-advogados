@@ -135,6 +135,10 @@ h5 {
   color: var(--orange) !important;
 }
 
+.text-granite {
+  color: var(--granite) !important;
+}
+
 .text-normal {
   color: var(--text) !important;
 }

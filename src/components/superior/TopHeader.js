@@ -30,13 +30,13 @@ export default function TopHeader({ contact }) {
         </div>
       </div>
       <nav className="navbar navbar-top navbar-expand-xl navbar-light w-100">
-        <div className="container">
+        <div className="container p-0">
           <Link href={`/#home`}>
             <a>
-              <img src="/img/logo-symbol.svg" className="img-fluid" alt="Logo" />
+              <img src="/img/logo-symbol.svg" className="img-fluid p-3 p-md-0" alt="Logo" />
             </a>
           </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
+          <button className="navbar-toggler m-3 m-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse justify-content-center" id="navBarTop">

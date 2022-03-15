@@ -4,7 +4,7 @@ export default function FaleConosco({ contact }) {
   return (
     <>
       <span className="line-title w-max-content">{'NOSSOS CONTATOS'}</span>
-      <div className="d-flex flex-column text-white">
+      <div className="d-flex flex-column text-white align-items-center align-items-md-start">
         <strong className="playfair fs-44">{'Fale Conosco'}</strong>
         <span className=" contato-text" style={{ display: 'inlineBlock', maxWidth: '310px' }}>
           <p className="mb-3">{'Para entrar em contato com nossos profissionais utilize o formulário.'}</p>
