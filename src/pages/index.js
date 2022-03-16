@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeadContent from "../../src/components/HeadContent";
 import MainLayout from "../../src/layouts/MainLayout";
 import SobreNos from "../../src/components/home/SobreNos";
@@ -15,15 +15,22 @@ import Footer from "../../src/components/inferior/Footer";
 import FixedWhats from "../../src/components/FixedWhats";
 import Galeria from "../components/home/Galeria";
 import CallToAction from "../components/home/CallToAction";
+import { areasQuery } from "../utils/queries";
 
-export default function Home({ areas, posts, textos, contact }) {
+export default function Home({ content }) {
+
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
 			<FixedWhats />
 			<TopHeader />
 			<FixedHeader />
-			<BannerSuperior title={'Advocacia Especializada'} subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'} btn={true} />
+			<BannerSuperior
+				content={content.data.attributes.heroSlides}
+				title={'Advocacia Especializada'}
+				subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'}
+				btn={true}
+			/>
 
 			<div className="container-fluid p-0 position-relative home">
 				<SobreNos />
@@ -39,6 +46,28 @@ export default function Home({ areas, posts, textos, contact }) {
 			<Footer />
 		</>
 	)
+}
+
+export async function getStaticProps() {
+	const qs = require('qs')
+	const query = qs.stringify({
+		populate: [
+			'heroSlides.cover',
+			'heroSlides.filledButton',
+			'heroSlides.outlinedButton',
+		],
+	}, {
+		encode: false,
+		encodeValuesOnly: true,
+	});
+
+	const res = await fetch(`http://localhost:1337/api/home-site?${query}`);
+	const content = await res.json();
+	return {
+		props: {
+			content
+		}
+	}
 }
 
 /* export async function getStaticProps() {

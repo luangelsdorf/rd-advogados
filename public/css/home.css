@@ -166,15 +166,43 @@
 
 #banner-superior {
   height: calc(100vh - 6px);
-  background-image: var(--green-left), var(--green-top), var(--black-left), url("/img/banner-home-1.png");
+  background-image: var(--green-left), var(--green-top), var(--black-left);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#banner-superior img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
 }
 
 #banner-superior > svg {
   position: absolute;
   bottom: 61px;
   z-index: 2;
+}
+
+#banner-superior .buttons {
+  display: flex;
+  position: absolute;
+  bottom: 120px;
+  z-index: 2;
+}
+
+#banner-superior .buttons button {
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+#banner-superior .buttons button:first-child {
+  margin-right: 12px;
 }
 
 #banner-superior > svg path:nth-child(2) {
@@ -188,6 +216,69 @@
 #banner-content {
   max-width: 380px;
   margin-bottom: 45px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.swipe-right * {
+  animation-name: fade-right;
+}
+
+.swipe-left * {
+  animation-name: fade-left;
+}
+
+.banner img,
+.banner strong,
+.banner span,
+.banner a {
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.banner strong {
+  animation-delay: 50ms;
+}
+.banner span {
+  animation-delay: 150ms;
+}
+.banner a {
+  animation-delay: 250ms;
+}
+
+.banner:not(.active) {
+  display: none;
+}
+
+@keyframes fade-right {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
+
+.banner:not(.active) {
+  display: none;
 }
 
 @media (min-width: 1920px) {

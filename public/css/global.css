@@ -34,6 +34,10 @@
   --black-left: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 73.96%);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--body);
   color: var(--text);
@@ -271,6 +275,27 @@ h5 {
   color: var(--orange);
 }
 
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+  color: var(--white);
+}
+
+.btn-check:focus + .btn-transparent,
+.btn-transparent:focus {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--orange);
+}
+
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+  color: var(--white);
+}
+
 a {
   text-decoration: none;
   color: var(--white);
@@ -417,6 +442,33 @@ a:hover {
 .bottom-banner-img {
   height: 750px;
 }
+/* 
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 125px;
+}
+
+.dots > div {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--dark);
+  filter: opacity(0.65);
+  margin-right: 8px;
+  transition: all 250ms ease;
+}
+
+.dots > div:last-child {
+  margin-right: 0;
+}
+
+.dots > div.active {
+  background-color: var(--snow);
+  filter: none;
+} */
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Post Card -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
@@ -808,6 +860,7 @@ footer {
   }
   .fs-72 {
     font-size: 44px !important;
+    line-height: initial !important;
   }
   .fs-44 {
     font-size: 27px !important;

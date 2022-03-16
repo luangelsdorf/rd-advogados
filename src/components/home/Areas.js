@@ -5,7 +5,7 @@ import AreaCard from "./AreaCard";
 export default function Areas({ areas, textos }) {
 
   return (
-    <div className="container-fluid px-0" id="areas-de-atuacao">
+    <div className="container-fluid" id="areas-de-atuacao">
       <div className="container">
         <div className="row g-5">
           <div className="col-12 col-xl-5 offset-xl-1">
