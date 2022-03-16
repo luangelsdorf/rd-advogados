@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "phone": "51 3031 7222",
+      "email": "contato@rdsa.adv.br",
+      "location": "Rua Quinze de Janeiro, nº 184, sala 203, Bairro Centro - Canoas / RS | CEP 92010-300",
+      "createdAt": "2022-03-13T23:40:21.889Z",
+      "updatedAt": "2022-03-13T23:40:21.889Z",
+      "socialMedia": {
+        "id": 1,
+        "facebook": "https://www.facebook.com/RDAdvogadoscanoas/",
+        "instagram": "https://www.instagram.com/rossiedorneles/"
+      }
+    }
+  },
+  "meta": {}
+}

@@ -1,6 +1,4 @@
 import React from 'react';
-import data from '../../../src/data/data.json';
-import AreaCard from "./AreaCard";
 
 export default function Areas({ areas, textos }) {
 

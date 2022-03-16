@@ -66,20 +66,6 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
         ) : null
       }
 
-      {/*       <div className="banner active" id="3">
-        <img src="/img/banner-home-1.png" alt="" />
-        <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
-          <div id="banner-content">
-            <strong className="playfair fs-72 d-block mb-4 break-spaces">{title}</strong>
-            <span className="lh-24 d-block mb-4 break-spaces">{subtitle}</span>
-            <div className="d-flex gap-3 flex-wrap">
-              <a href="#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{'Conheça Nossos Serviços'}</a>
-              <a href="#sobre-nos" className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>Veja Quem Somos</a>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {
         content.map(banner => {
           return (
@@ -91,7 +77,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
                   <span className="lh-24 d-block mb-4 break-spaces">{banner.subtitle}</span>
                   <div className="d-flex gap-3 flex-wrap">
                     <a href={banner.filledButton.link} className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
-                    <a href={banner.filledButton.link} className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
+                    <a href={banner.outlinedButton.link} className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a>
                   </div>
                 </div>
               </div>

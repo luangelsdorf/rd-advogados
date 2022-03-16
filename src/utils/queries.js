@@ -1,6 +1,6 @@
 import qs from 'qs';
 
-export const areasQuery = qs.stringify({
+export const areas = qs.stringify({
   populate: [
     'hero',
     'cta',
@@ -13,7 +13,7 @@ export const areasQuery = qs.stringify({
   encodeValuesOnly: true,
 });
 
-export const homePageQuery = qs.stringify({
+export const homePage = qs.stringify({
   populate: [
     'heroSlides.cover',
     'heroSlides.filledButton',
@@ -36,7 +36,7 @@ export const homePageQuery = qs.stringify({
   encodeValuesOnly: true,
 });
 
-export const homeBlogQuery = qs.stringify({
+export const homeBlog = qs.stringify({
   populate: [
     'hero.cover',
     'heading.title',
@@ -46,7 +46,7 @@ export const homeBlogQuery = qs.stringify({
   encodeValuesOnly: true,
 });
 
-export const footerQuery = qs.stringify({
+export const footer = qs.stringify({
   populate: [
     'contact.title',
   ],
@@ -55,6 +55,9 @@ export const footerQuery = qs.stringify({
   encodeValuesOnly: true,
 });
 
-export const contactQuery = qs.stringify({
+export const info = qs.stringify({
   populate: '*'
-})
+}, {
+  encode: false,
+  encodeValuesOnly: true,
+});

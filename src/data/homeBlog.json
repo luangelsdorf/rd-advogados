@@ -1,0 +1,91 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "createdAt": "2022-03-13T23:57:27.238Z",
+      "updatedAt": "2022-03-15T13:21:30.712Z",
+      "hero": {
+        "id": 1,
+        "title": "Nosso Blog",
+        "text": "Aqui você confere novidades sobre decisões\n e assuntos de interesse de todo cidadão.",
+        "cover": {
+          "data": {
+            "id": 22,
+            "attributes": {
+              "name": "banner-blog.jpeg",
+              "alternativeText": "banner-blog.jpeg",
+              "caption": "banner-blog.jpeg",
+              "width": 3000,
+              "height": 2000,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_banner-blog.jpeg",
+                  "hash": "thumbnail_banner_blog_c4980f2e13",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 234,
+                  "height": 156,
+                  "size": 9.2,
+                  "path": null,
+                  "url": "/uploads/thumbnail_banner_blog_c4980f2e13.jpeg"
+                },
+                "large": {
+                  "name": "large_banner-blog.jpeg",
+                  "hash": "large_banner_blog_c4980f2e13",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 1000,
+                  "height": 667,
+                  "size": 89.73,
+                  "path": null,
+                  "url": "/uploads/large_banner_blog_c4980f2e13.jpeg"
+                },
+                "medium": {
+                  "name": "medium_banner-blog.jpeg",
+                  "hash": "medium_banner_blog_c4980f2e13",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 750,
+                  "height": 500,
+                  "size": 57.49,
+                  "path": null,
+                  "url": "/uploads/medium_banner_blog_c4980f2e13.jpeg"
+                },
+                "small": {
+                  "name": "small_banner-blog.jpeg",
+                  "hash": "small_banner_blog_c4980f2e13",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 500,
+                  "height": 333,
+                  "size": 30.04,
+                  "path": null,
+                  "url": "/uploads/small_banner_blog_c4980f2e13.jpeg"
+                }
+              },
+              "hash": "banner_blog_c4980f2e13",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "size": 560.94,
+              "url": "/uploads/banner_blog_c4980f2e13.jpeg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:12:24.628Z",
+              "updatedAt": "2022-03-15T13:12:24.628Z"
+            }
+          }
+        }
+      },
+      "heading": {
+        "id": 1,
+        "title": {
+          "id": 1,
+          "subtitle": "CONFIRA NOSSOS CONTEÚDOS",
+          "title": "Notícias e Artigos"
+        }
+      }
+    }
+  },
+  "meta": {}
+}

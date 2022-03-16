@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import HeadContent from "../../src/components/HeadContent";
-import MainLayout from "../../src/layouts/MainLayout";
 import SobreNos from "../../src/components/home/SobreNos";
 import NossaEquipe from "../../src/components/home/NossaEquipe";
-import Parallax from "../../src/components/home/Parallax";
 import Areas from "../../src/components/home/Areas";
 import Recentes from "../../src/components/home/Recentes";
 import TopHeader from "../../src/components/superior/TopHeader";
@@ -15,9 +13,9 @@ import Footer from "../../src/components/inferior/Footer";
 import FixedWhats from "../../src/components/FixedWhats";
 import Galeria from "../components/home/Galeria";
 import CallToAction from "../components/home/CallToAction";
-import { areasQuery } from "../utils/queries";
+import { fetchAPI } from "../utils/fetchers";
 
-export default function Home({ content }) {
+export default function Home({ home, footer, infos }) {
 
 	return (
 		<>
@@ -26,7 +24,7 @@ export default function Home({ content }) {
 			<TopHeader />
 			<FixedHeader />
 			<BannerSuperior
-				content={content.data.attributes.heroSlides}
+				content={home.data.attributes.heroSlides}
 				title={'Advocacia Especializada'}
 				subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'}
 				btn={true}
@@ -49,23 +47,14 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
-	const qs = require('qs')
-	const query = qs.stringify({
-		populate: [
-			'heroSlides.cover',
-			'heroSlides.filledButton',
-			'heroSlides.outlinedButton',
-		],
-	}, {
-		encode: false,
-		encodeValuesOnly: true,
-	});
 
-	const res = await fetch(`http://localhost:1337/api/home-site?${query}`);
-	const content = await res.json();
+	const home = await fetchAPI('home-site', 'homePage');
+	const footer = await fetchAPI('rodape', 'footer');
+	const infos = await fetchAPI('info', 'info');
+
 	return {
 		props: {
-			content
+			home, footer, infos
 		}
 	}
 }

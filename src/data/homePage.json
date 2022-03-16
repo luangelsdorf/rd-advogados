@@ -1,0 +1,567 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "createdAt": "2022-03-15T22:49:13.334Z",
+      "updatedAt": "2022-03-16T17:22:02.957Z",
+      "heroSlides": [
+        {
+          "id": 1,
+          "title": "Advocacia Especializada",
+          "subtitle": "Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.",
+          "outlinedButton": {
+            "id": 4,
+            "text": "Veja Quem Somos",
+            "link": "/#sobre-nos"
+          },
+          "filledButton": {
+            "id": 3,
+            "text": "Conheça Nossos Serviços",
+            "link": "/#areas-de-atuacao"
+          },
+          "cover": {
+            "data": {
+              "id": 25,
+              "attributes": {
+                "name": "banner-home-1.png",
+                "alternativeText": "banner-home-1.png",
+                "caption": "banner-home-1.png",
+                "width": 4233,
+                "height": 2822,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_banner-home-1.png",
+                    "hash": "thumbnail_banner_home_1_06f588b245",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 234,
+                    "height": 156,
+                    "size": 92.59,
+                    "path": null,
+                    "url": "/uploads/thumbnail_banner_home_1_06f588b245.png"
+                  },
+                  "large": {
+                    "name": "large_banner-home-1.png",
+                    "hash": "large_banner_home_1_06f588b245",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 1000,
+                    "height": 667,
+                    "size": 1187.14,
+                    "path": null,
+                    "url": "/uploads/large_banner_home_1_06f588b245.png"
+                  },
+                  "medium": {
+                    "name": "medium_banner-home-1.png",
+                    "hash": "medium_banner_home_1_06f588b245",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 750,
+                    "height": 500,
+                    "size": 726.17,
+                    "path": null,
+                    "url": "/uploads/medium_banner_home_1_06f588b245.png"
+                  },
+                  "small": {
+                    "name": "small_banner-home-1.png",
+                    "hash": "small_banner_home_1_06f588b245",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 500,
+                    "height": 334,
+                    "size": 357.15,
+                    "path": null,
+                    "url": "/uploads/small_banner_home_1_06f588b245.png"
+                  }
+                },
+                "hash": "banner_home_1_06f588b245",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 2522.28,
+                "url": "/uploads/banner_home_1_06f588b245.png",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-03-15T13:12:25.480Z",
+                "updatedAt": "2022-03-15T13:12:25.480Z"
+              }
+            }
+          }
+        },
+        {
+          "id": 2,
+          "title": "sadasd",
+          "subtitle": "adssadadasdasd",
+          "outlinedButton": {
+            "id": 6,
+            "text": "alo",
+            "link": "google.com"
+          },
+          "filledButton": {
+            "id": 5,
+            "text": "ola",
+            "link": "google.com"
+          },
+          "cover": {
+            "data": {
+              "id": 13,
+              "attributes": {
+                "name": "istockphoto-637294178-170667a.jpg",
+                "alternativeText": "istockphoto-637294178-170667a.jpg",
+                "caption": "istockphoto-637294178-170667a.jpg",
+                "width": 509,
+                "height": 339,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_istockphoto-637294178-170667a.jpg",
+                    "hash": "thumbnail_istockphoto_637294178_170667a_2f2266a24c",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "width": 234,
+                    "height": 156,
+                    "size": 6.12,
+                    "path": null,
+                    "url": "/uploads/thumbnail_istockphoto_637294178_170667a_2f2266a24c.jpg"
+                  },
+                  "small": {
+                    "name": "small_istockphoto-637294178-170667a.jpg",
+                    "hash": "small_istockphoto_637294178_170667a_2f2266a24c",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "width": 500,
+                    "height": 333,
+                    "size": 17.09,
+                    "path": null,
+                    "url": "/uploads/small_istockphoto_637294178_170667a_2f2266a24c.jpg"
+                  }
+                },
+                "hash": "istockphoto_637294178_170667a_2f2266a24c",
+                "ext": ".jpg",
+                "mime": "image/jpeg",
+                "size": 17.35,
+                "url": "/uploads/istockphoto_637294178_170667a_2f2266a24c.jpg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-02-21T00:53:50.906Z",
+                "updatedAt": "2022-02-21T00:53:50.906Z"
+              }
+            }
+          }
+        }
+      ],
+      "aboutUs": {
+        "id": 1,
+        "text": "Há 12 anos, o escritório Rossi & Dorneles surgiu a partir da afinidade das sócias com a área de atuação que já vinham desenvolvendo e adquirindo experiência, ao longo de 20 anos de trabalho em serviços prestados em escritórios renomados e no próprio Judiciário.\n\nO objetivo do escritório é estabelecer, junto com o cliente, a solução mais adequada para as suas demandas, na busca do melhor resultado possível, com acolhimento e agilidade.",
+        "title": {
+          "id": 3,
+          "subtitle": "QUEM SOMOS",
+          "title": "Conheça a  Rossi & Dorneles"
+        },
+        "bottomImage": {
+          "data": {
+            "id": 28,
+            "attributes": {
+              "name": "mosaic-bottom.png",
+              "alternativeText": "mosaic-bottom.png",
+              "caption": "mosaic-bottom.png",
+              "width": 384,
+              "height": 248,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_mosaic-bottom.png",
+                  "hash": "thumbnail_mosaic_bottom_dd47d1e40c",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "width": 242,
+                  "height": 156,
+                  "size": 86.58,
+                  "path": null,
+                  "url": "/uploads/thumbnail_mosaic_bottom_dd47d1e40c.png"
+                }
+              },
+              "hash": "mosaic_bottom_dd47d1e40c",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 157.26,
+              "url": "/uploads/mosaic_bottom_dd47d1e40c.png",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:17:26.571Z",
+              "updatedAt": "2022-03-15T13:17:26.571Z"
+            }
+          }
+        },
+        "leftImage": {
+          "data": {
+            "id": 27,
+            "attributes": {
+              "name": "mosaic-left.png",
+              "alternativeText": "mosaic-left.png",
+              "caption": "mosaic-left.png",
+              "width": 215,
+              "height": 325,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_mosaic-left.png",
+                  "hash": "thumbnail_mosaic_left_59d3778b65",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "width": 103,
+                  "height": 156,
+                  "size": 45.61,
+                  "path": null,
+                  "url": "/uploads/thumbnail_mosaic_left_59d3778b65.png"
+                }
+              },
+              "hash": "mosaic_left_59d3778b65",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 137.74,
+              "url": "/uploads/mosaic_left_59d3778b65.png",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:17:26.568Z",
+              "updatedAt": "2022-03-15T13:17:26.568Z"
+            }
+          }
+        },
+        "rightImage": {
+          "data": {
+            "id": 29,
+            "attributes": {
+              "name": "mosaic-right.png",
+              "alternativeText": "mosaic-right.png",
+              "caption": "mosaic-right.png",
+              "width": 457,
+              "height": 343,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_mosaic-right.png",
+                  "hash": "thumbnail_mosaic_right_be63f87227",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "width": 208,
+                  "height": 156,
+                  "size": 85.58,
+                  "path": null,
+                  "url": "/uploads/thumbnail_mosaic_right_be63f87227.png"
+                }
+              },
+              "hash": "mosaic_right_be63f87227",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 223.87,
+              "url": "/uploads/mosaic_right_be63f87227.png",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:17:26.603Z",
+              "updatedAt": "2022-03-15T13:17:26.603Z"
+            }
+          }
+        }
+      },
+      "carousel": {
+        "id": 1,
+        "images": {
+          "data": [
+            {
+              "id": 16,
+              "attributes": {
+                "name": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
+                "alternativeText": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
+                "caption": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
+                "width": 389,
+                "height": 280,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
+                    "hash": "thumbnail_lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "width": 217,
+                    "height": 156,
+                    "size": 4.99,
+                    "path": null,
+                    "url": "/uploads/thumbnail_lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827.webp"
+                  }
+                },
+                "hash": "lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "size": 10.56,
+                "url": "/uploads/lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827.webp",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-02-21T00:53:51.206Z",
+                "updatedAt": "2022-02-21T00:53:51.206Z"
+              }
+            },
+            {
+              "id": 15,
+              "attributes": {
+                "name": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
+                "alternativeText": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
+                "caption": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
+                "width": 250,
+                "height": 167,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
+                    "hash": "thumbnail_stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61",
+                    "ext": ".webp",
+                    "mime": "image/webp",
+                    "width": 234,
+                    "height": 156,
+                    "size": 5.03,
+                    "path": null,
+                    "url": "/uploads/thumbnail_stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61.webp"
+                  }
+                },
+                "hash": "stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61",
+                "ext": ".webp",
+                "mime": "image/webp",
+                "size": 6.11,
+                "url": "/uploads/stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61.webp",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-02-21T00:53:51.203Z",
+                "updatedAt": "2022-02-21T00:53:51.203Z"
+              }
+            }
+          ]
+        }
+      },
+      "ourTeam": {
+        "id": 1,
+        "members": [
+          {
+            "id": 1,
+            "name": "Roberta Höher Dorneles",
+            "bio": "Advogada especialista em Direito do Consumidor que atua na resolução de conflitos. Adora conhecer novos lugares e ler bons livros.",
+            "photo": {
+              "data": {
+                "id": 26,
+                "attributes": {
+                  "name": "roberta.jpeg",
+                  "alternativeText": "roberta.jpeg",
+                  "caption": "roberta.jpeg",
+                  "width": 4928,
+                  "height": 3264,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_roberta.jpeg",
+                      "hash": "thumbnail_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 236,
+                      "height": 156,
+                      "size": 9.58,
+                      "path": null,
+                      "url": "/uploads/thumbnail_roberta_b41b21de38.jpeg"
+                    },
+                    "large": {
+                      "name": "large_roberta.jpeg",
+                      "hash": "large_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 1000,
+                      "height": 662,
+                      "size": 83.04,
+                      "path": null,
+                      "url": "/uploads/large_roberta_b41b21de38.jpeg"
+                    },
+                    "medium": {
+                      "name": "medium_roberta.jpeg",
+                      "hash": "medium_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 750,
+                      "height": 497,
+                      "size": 54.4,
+                      "path": null,
+                      "url": "/uploads/medium_roberta_b41b21de38.jpeg"
+                    },
+                    "small": {
+                      "name": "small_roberta.jpeg",
+                      "hash": "small_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 500,
+                      "height": 331,
+                      "size": 29.51,
+                      "path": null,
+                      "url": "/uploads/small_roberta_b41b21de38.jpeg"
+                    }
+                  },
+                  "hash": "roberta_b41b21de38",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "size": 1165.49,
+                  "url": "/uploads/roberta_b41b21de38.jpeg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:12:25.522Z",
+                  "updatedAt": "2022-03-15T13:12:25.522Z"
+                }
+              }
+            }
+          },
+          {
+            "id": 2,
+            "name": "Solange Rossi",
+            "bio": "Advogada especialista em Direito do Trabalho, com mais de 20 anos de atuação. Ama pets, um bom café e o tradicional chimarrão. ",
+            "photo": {
+              "data": {
+                "id": 24,
+                "attributes": {
+                  "name": "solange.jpeg",
+                  "alternativeText": "solange.jpeg",
+                  "caption": "solange.jpeg",
+                  "width": 4928,
+                  "height": 3264,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_solange.jpeg",
+                      "hash": "thumbnail_solange_76835b5844",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 236,
+                      "height": 156,
+                      "size": 7.8,
+                      "path": null,
+                      "url": "/uploads/thumbnail_solange_76835b5844.jpeg"
+                    },
+                    "large": {
+                      "name": "large_solange.jpeg",
+                      "hash": "large_solange_76835b5844",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 1000,
+                      "height": 662,
+                      "size": 84.25,
+                      "path": null,
+                      "url": "/uploads/large_solange_76835b5844.jpeg"
+                    },
+                    "medium": {
+                      "name": "medium_solange.jpeg",
+                      "hash": "medium_solange_76835b5844",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 750,
+                      "height": 497,
+                      "size": 52.93,
+                      "path": null,
+                      "url": "/uploads/medium_solange_76835b5844.jpeg"
+                    },
+                    "small": {
+                      "name": "small_solange.jpeg",
+                      "hash": "small_solange_76835b5844",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 500,
+                      "height": 331,
+                      "size": 26.87,
+                      "path": null,
+                      "url": "/uploads/small_solange_76835b5844.jpeg"
+                    }
+                  },
+                  "hash": "solange_76835b5844",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "size": 1312.93,
+                  "url": "/uploads/solange_76835b5844.jpeg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:12:25.463Z",
+                  "updatedAt": "2022-03-15T13:12:25.463Z"
+                }
+              }
+            }
+          }
+        ],
+        "title": {
+          "id": 4,
+          "subtitle": "NOSSA EQUIPE",
+          "title": "Conheça as Sócias"
+        }
+      },
+      "occupationAreas": {
+        "id": 1,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": {
+          "data": {
+            "id": 20,
+            "attributes": {
+              "name": "areas-img.png",
+              "alternativeText": "areas-img.png",
+              "caption": "areas-img.png",
+              "width": 456,
+              "height": 600,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_areas-img.png",
+                  "hash": "thumbnail_areas_img_a8f8a79614",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "width": 119,
+                  "height": 156,
+                  "size": 21.44,
+                  "path": null,
+                  "url": "/uploads/thumbnail_areas_img_a8f8a79614.png"
+                },
+                "small": {
+                  "name": "small_areas-img.png",
+                  "hash": "small_areas_img_a8f8a79614",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "width": 380,
+                  "height": 500,
+                  "size": 182.43,
+                  "path": null,
+                  "url": "/uploads/small_areas_img_a8f8a79614.png"
+                }
+              },
+              "hash": "areas_img_a8f8a79614",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": 165.98,
+              "url": "/uploads/areas_img_a8f8a79614.png",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:12:24.381Z",
+              "updatedAt": "2022-03-15T13:12:24.381Z"
+            }
+          }
+        },
+        "title": {
+          "id": 5,
+          "subtitle": "NOSSOS SERVIÇOS",
+          "title": "Áreas de Atuação"
+        }
+      },
+      "callToAction": {
+        "id": 1,
+        "text": "Atendemos a sua demanda de forma 100% online.",
+        "longText": "Escritório especializado em Direito do Trabalho, Direito Civil e Direito Previdenciário. "
+      },
+      "recentPosts": {
+        "id": 1,
+        "title": {
+          "id": 6,
+          "subtitle": "POSTS RECENTES DO BLOG",
+          "title": "Notícias e Artigos"
+        }
+      }
+    }
+  },
+  "meta": {}
+}

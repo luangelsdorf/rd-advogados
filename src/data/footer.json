@@ -1,0 +1,20 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "createdAt": "2022-03-15T13:28:40.039Z",
+      "updatedAt": "2022-03-15T23:11:25.843Z",
+      "callout": "Se você precisa resolver algo saiba que o nosso objetivo é facilitar a sua vida",
+      "contact": {
+        "id": 1,
+        "text": "Para entrar em contato com nossos profissionais utilize o formulário.\n\nNossa equipe de atendimento retornará a sua mensagem o mais breve possível.",
+        "title": {
+          "id": 2,
+          "subtitle": "NOSSOS CONTATOS",
+          "title": "Fale Conosco"
+        }
+      }
+    }
+  },
+  "meta": {}
+}
