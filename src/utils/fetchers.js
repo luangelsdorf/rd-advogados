@@ -1,7 +1,8 @@
+import env from "./env";
 import * as queries from "./queries";
 
 export async function fetchAPI(endpoint = '', param = '') {
-  if (process.env.ENV === 'dev') {
+  if (env === 'dev') {
     const data = require(`../../src/data/${param}.json`);
     return data;
   } else {

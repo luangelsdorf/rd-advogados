@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import env from '../../utils/env';
 
 export default function BannerSuperior({ title, subtitle, btn, post, bannerClass, content }) {
-  const [active, setActive] = useState(content[0]);
+  const [active, setActive] = useState(btn ? content[0] : null);
   const [direction, setDirection] = useState('left');
+
+  console.log(env);
 
   let displayBtn
   if (btn) {
@@ -43,8 +45,8 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
       banner.classList.remove('swipe-right');
       banner.classList.remove('swipe-left');
     });
-    document.getElementById(active.id).classList.add(`swipe-${direction}`);
-    document.getElementById(active.id).classList.add('active');
+    document.getElementById(active?.id)?.classList?.add(`swipe-${direction}`);
+    document.getElementById(active?.id)?.classList?.add('active');
   }, [active])
 
   return (
@@ -67,24 +69,44 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
       }
 
       {
-        content.map(banner => {
-          return (
-            <div className="banner" id={banner.id} key={`b-${banner.id}`}>
-              <img src={process.env.NEXT_PUBLIC_API_URL + banner.cover.data.attributes.url} alt="" />
-              <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
-                <div id="banner-content">
-                  <strong className="playfair fs-72 d-block mb-4 break-spaces">{banner.title}</strong>
-                  <span className="lh-24 d-block mb-4 break-spaces">{banner.subtitle}</span>
-                  <div className="d-flex gap-3 flex-wrap">
-                    <a href={banner.filledButton.link} className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
-                    <a href={banner.outlinedButton.link} className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a>
+        btn ? (
+          content.map(banner => {
+            return (
+              <div className="banner" id={banner.id} key={`b-${banner.id}`}>
+                {
+                  env === 'dev' ? (
+                    <img src={`${process.env.NEXT_PUBLIC_API_URL}/${banner.cover.data.attributes.name}`} alt="" />
+                  ) : (
+                    <img src={process.env.NEXT_PUBLIC_API_URL + banner.cover.data.attributes.url} alt="" />
+                  )
+                }
+                <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
+                  <div id="banner-content">
+                    <strong className="playfair fs-72 d-block mb-4 break-spaces">{banner.title}</strong>
+                    <span className="lh-24 d-block mb-4 break-spaces">{banner.subtitle}</span>
+                    <div className="d-flex gap-3 flex-wrap">
+                      <a href={banner.filledButton.link} className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
+                      <a href={banner.outlinedButton.link} className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a>
+                    </div>
                   </div>
                 </div>
               </div>
+            )
+          })
+        ) : (
+          <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
+            <div id="banner-content">
+              <strong className="playfair fs-72 d-block mb-4 break-spaces">{title}</strong>
+              <span className="lh-24 d-block mb-4 break-spaces">{subtitle}</span>
+              <div className="d-flex gap-3 flex-wrap">
+                <a href="#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{'Conheça Nossos Serviços'}</a>
+                <a href="#sobre-nos" className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>Veja Quem Somos</a>
+              </div>
             </div>
-          )
-        })
+          </div>
+        )
       }
+
     </div>
   )
 }

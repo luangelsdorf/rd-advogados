@@ -28,7 +28,11 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
       <FixedWhats />
       <TopHeader />
       <FixedHeader />
-      <BannerSuperior bannerClass="banner-areas" title={'Áreas de Atuação'} subtitle={'Advocacia especializada em solucionar problemas com os melhores resultados.'} btn={false} />
+      <BannerSuperior
+        bannerClass="banner-areas"
+        title={'Áreas de Atuação'}
+        subtitle={'Advocacia especializada em solucionar problemas com os melhores resultados.'}
+        btn={false} />
 
       <HeadContent page="areas" title={`${area.title} - RD Advogados`} />
       <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">

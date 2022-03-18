@@ -25,8 +25,6 @@ export default function Home({ home, footer, infos }) {
 			<FixedHeader />
 			<BannerSuperior
 				content={home.data.attributes.heroSlides}
-				title={'Advocacia Especializada'}
-				subtitle={'Com base em nossa experiência, o foco é encontrar a melhor solução para as questões dos clientes.'}
 				btn={true}
 			/>
 
