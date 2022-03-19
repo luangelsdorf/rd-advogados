@@ -42,6 +42,7 @@ body {
   font-family: var(--body);
   color: var(--text);
   font-size: medium;
+  overflow-x: hidden;
 }
 
 p {
@@ -837,11 +838,6 @@ footer {
 
 /* breakpoint sm */
 @media (max-width: 576px) {
-  .line-title::after,
-  .line-title::before {
-    display: none;
-  }
-
   .fs-20 {
     font-size: 16px !important;
   }
@@ -966,14 +962,6 @@ footer {
 
   .line-title {
     margin-left: 0;
-  }
-  .line-title::after {
-    content: "";
-    width: 70px;
-    height: 2px;
-    position: absolute;
-    right: -85px;
-    background-color: var(--orange);
   }
 
   #nossa-equipe::before {

@@ -5,8 +5,6 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
   const [active, setActive] = useState(btn ? content[0] : null);
   const [direction, setDirection] = useState('left');
 
-  console.log(env);
-
   let displayBtn
   if (btn) {
     displayBtn = 'inline-flex'

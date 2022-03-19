@@ -1,26 +1,42 @@
 import React from 'react';
+import Img from '../Img';
 
-export default function SobreNos({ textos }) {
+export default function SobreNos({ content }) {
+
+  console.log(content.leftImage.data.attributes);
 
   return (
     <div className="container-fluid px-0 flex-center" id="sobre-nos">
       <div className="container px-4 px-sm-0">
-        <div className="row align-items-center">
+        <div className="row g-5 align-items-center">
           <div className="col-12 col-xl-5 text-center text-xl-start">
-            <span className="line-title w-max-content">{'QUEM SOMOS'}</span>
-            <strong className="playfair fs-44 d-block mb-3 break-spaces">{'Conheça a \nRossi & Dorneles'}</strong>
-            <img src="/img/mosaic.png" className="img-fluid d-block d-xl-none sobre-nos-img" alt="Mosaico" />
+            <span className="line-title w-max-content">{content.title.subtitle}</span>
+            <strong className="playfair fs-44 d-block mb-3 break-spaces mx-auto mx-xl-0">{content.title.title}</strong>
             <div className="sobre-nos-text">
-              <p className="mb-4">Há 12 anos, o escritório Rossi & Dorneles surgiu a partir da afinidade das sócias com a área de atuação que já vinham desenvolvendo e adquirindo experiência, ao longo de 20 anos de trabalho em serviços prestados em escritórios renomados e no próprio Judiciário.</p>
-              <p>O objetivo do escritório é estabelecer,  junto com o cliente, a solução mais adequada para as suas demandas, na busca do melhor resultado possível, com acolhimento e agilidade.</p>
+              <p>{content.text}</p>
             </div>
             <a href="#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">
               {'Conheça As Sócias'}
             </a>
           </div>
 
-          <div className="col-12 col-xl-6 offset-1 position-relative">
-            <img src="/img/mosaic.png" className="img-fluid d-none d-xl-block" alt="Mosaico" />
+          <div className="col-12 col-xl-7 position-relative">
+            <div className="mosaic-wrapper">
+              <div className="d-flex justify-content-center justify-content-xl-end align-items-center align-items-xl-start">
+                <div className="d-flex flex-column">
+                  <img className="decor-top d-none d-md-block" height="24" width="24" src="/img/decorations/square.svg" alt="" />
+                  <Img className="left-img" src={content.leftImage.data.attributes} alt="" />
+                </div>
+                <div className="d-flex align-items-end">
+                  <Img className="right-img" src={content.rightImage.data.attributes} alt="" />
+                </div>
+              </div>
+              <div className="d-flex justify-content-center justify-content-xl-end bottom">
+                <img className="d-none d-md-block" width="137" height="137" src="img/logo.svg" alt="" />
+                <Img className="bottom-img" src={content.bottomImage.data.attributes} alt="" />
+                <img className="img-fluid d-none d-md-block" src="/img/decorations/triangle.svg" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
