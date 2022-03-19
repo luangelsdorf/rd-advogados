@@ -6,7 +6,7 @@ export default function Img({ src, alt, className }) {
     return (
       <img className={className} src={`${process.env.NEXT_PUBLIC_API_URL}/${src.name}`} alt={alt} />
     )
-  } else[
+  } else {
     <img className={className} src={process.env.NEXT_PUBLIC_API_URL + src.url} alt={alt} />
-  ]
+  }
 }
