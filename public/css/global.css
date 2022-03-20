@@ -540,7 +540,8 @@ a:hover {
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .fixed-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 4;
   background-image: none;
@@ -878,7 +879,7 @@ footer {
   }
 
   #banner-superior {
-    height: 580px;
+    height: 720px;
   }
   #sobre-nos {
     padding-top: 75px;

@@ -313,7 +313,7 @@
               "data": {
                 "id": 26,
                 "attributes": {
-                  "name": "roberta.jpeg",
+                  "name": "roberta.png",
                   "alternativeText": "roberta.jpeg",
                   "caption": "roberta.jpeg",
                   "width": 4928,
@@ -463,7 +463,7 @@
               "data": {
                 "id": 29,
                 "attributes": {
-                  "name": "solange.jpeg",
+                  "name": "solange.png",
                   "alternativeText": "mosaic-right.png",
                   "caption": "mosaic-right.png",
                   "width": 457,
@@ -508,7 +508,7 @@
               "data": {
                 "id": 26,
                 "attributes": {
-                  "name": "roberta.jpeg",
+                  "name": "roberta.png",
                   "alternativeText": "roberta.jpeg",
                   "caption": "roberta.jpeg",
                   "width": 4928,
@@ -581,7 +581,7 @@
               "data": {
                 "id": 24,
                 "attributes": {
-                  "name": "solange.jpeg",
+                  "name": "solange.png",
                   "alternativeText": "solange.jpeg",
                   "caption": "solange.jpeg",
                   "width": 4928,
