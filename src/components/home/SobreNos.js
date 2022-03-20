@@ -3,8 +3,6 @@ import Img from '../Img';
 
 export default function SobreNos({ content }) {
 
-  console.log(content.leftImage.data.attributes);
-
   return (
     <div className="container-fluid px-0 flex-center" id="sobre-nos">
       <div className="container px-4 px-sm-0">

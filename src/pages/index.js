@@ -30,7 +30,7 @@ export default function Home({ home, footer, infos }) {
 
 			<div className="container-fluid p-0 position-relative home">
 				<SobreNos content={home.data.attributes.aboutUs} />
-				<Galeria />
+				<Galeria content={home.data.attributes.carousel.gallery} />
 				<NossaEquipe />
 				<Areas />
 				<CallToAction />

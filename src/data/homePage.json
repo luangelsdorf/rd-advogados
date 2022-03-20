@@ -3,7 +3,7 @@
     "id": 1,
     "attributes": {
       "createdAt": "2022-03-15T22:49:13.334Z",
-      "updatedAt": "2022-03-16T17:22:02.957Z",
+      "updatedAt": "2022-03-20T13:12:37.461Z",
       "heroSlides": [
         {
           "id": 1,
@@ -90,8 +90,8 @@
         },
         {
           "id": 2,
-          "title": "sadasd",
-          "subtitle": "adssadadasdasd",
+          "title": "Título de exemplo",
+          "subtitle": "Se você precisa resolver algo saiba que o nosso objetivo é facilitar a sua vida",
           "outlinedButton": {
             "id": 6,
             "text": "alo",
@@ -266,76 +266,236 @@
       },
       "carousel": {
         "id": 1,
-        "images": {
-          "data": [
-            {
-              "id": 16,
-              "attributes": {
-                "name": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
-                "alternativeText": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
-                "caption": "lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
-                "width": 389,
-                "height": 280,
-                "formats": {
-                  "thumbnail": {
-                    "name": "thumbnail_lawyers-discussing-contract-papers-sitting-260nw-1926492269.webp",
-                    "hash": "thumbnail_lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827",
-                    "ext": ".webp",
-                    "mime": "image/webp",
-                    "width": 217,
-                    "height": 156,
-                    "size": 4.99,
-                    "path": null,
-                    "url": "/uploads/thumbnail_lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827.webp"
-                  }
-                },
-                "hash": "lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827",
-                "ext": ".webp",
-                "mime": "image/webp",
-                "size": 10.56,
-                "url": "/uploads/lawyers_discussing_contract_papers_sitting_260nw_1926492269_5bd025c827.webp",
-                "previewUrl": null,
-                "provider": "local",
-                "provider_metadata": null,
-                "createdAt": "2022-02-21T00:53:51.206Z",
-                "updatedAt": "2022-02-21T00:53:51.206Z"
-              }
-            },
-            {
-              "id": 15,
-              "attributes": {
-                "name": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
-                "alternativeText": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
-                "caption": "stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
-                "width": 250,
-                "height": 167,
-                "formats": {
-                  "thumbnail": {
-                    "name": "thumbnail_stock-photo-male-lawyer-working-with-contract-papers-and-wooden-gavel-on-tabel-in-courtroom-justice-and-law-1029430792.webp",
-                    "hash": "thumbnail_stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61",
-                    "ext": ".webp",
-                    "mime": "image/webp",
-                    "width": 234,
-                    "height": 156,
-                    "size": 5.03,
-                    "path": null,
-                    "url": "/uploads/thumbnail_stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61.webp"
-                  }
-                },
-                "hash": "stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61",
-                "ext": ".webp",
-                "mime": "image/webp",
-                "size": 6.11,
-                "url": "/uploads/stock_photo_male_lawyer_working_with_contract_papers_and_wooden_gavel_on_tabel_in_courtroom_justice_and_law_1029430792_c2e304cd61.webp",
-                "previewUrl": null,
-                "provider": "local",
-                "provider_metadata": null,
-                "createdAt": "2022-02-21T00:53:51.203Z",
-                "updatedAt": "2022-02-21T00:53:51.203Z"
+        "gallery": [
+          {
+            "id": 1,
+            "name": "img 1",
+            "image": {
+              "data": {
+                "id": 28,
+                "attributes": {
+                  "name": "mosaic-bottom.png",
+                  "alternativeText": "mosaic-bottom.png",
+                  "caption": "mosaic-bottom.png",
+                  "width": 384,
+                  "height": 248,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_mosaic-bottom.png",
+                      "hash": "thumbnail_mosaic_bottom_dd47d1e40c",
+                      "ext": ".png",
+                      "mime": "image/png",
+                      "width": 242,
+                      "height": 156,
+                      "size": 86.58,
+                      "path": null,
+                      "url": "/uploads/thumbnail_mosaic_bottom_dd47d1e40c.png"
+                    }
+                  },
+                  "hash": "mosaic_bottom_dd47d1e40c",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 157.26,
+                  "url": "/uploads/mosaic_bottom_dd47d1e40c.png",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:17:26.571Z",
+                  "updatedAt": "2022-03-15T13:17:26.571Z"
+                }
               }
             }
-          ]
-        }
+          },
+          {
+            "id": 2,
+            "name": "img 2",
+            "image": {
+              "data": {
+                "id": 26,
+                "attributes": {
+                  "name": "roberta.jpeg",
+                  "alternativeText": "roberta.jpeg",
+                  "caption": "roberta.jpeg",
+                  "width": 4928,
+                  "height": 3264,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_roberta.jpeg",
+                      "hash": "thumbnail_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 236,
+                      "height": 156,
+                      "size": 9.58,
+                      "path": null,
+                      "url": "/uploads/thumbnail_roberta_b41b21de38.jpeg"
+                    },
+                    "large": {
+                      "name": "large_roberta.jpeg",
+                      "hash": "large_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 1000,
+                      "height": 662,
+                      "size": 83.04,
+                      "path": null,
+                      "url": "/uploads/large_roberta_b41b21de38.jpeg"
+                    },
+                    "medium": {
+                      "name": "medium_roberta.jpeg",
+                      "hash": "medium_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 750,
+                      "height": 497,
+                      "size": 54.4,
+                      "path": null,
+                      "url": "/uploads/medium_roberta_b41b21de38.jpeg"
+                    },
+                    "small": {
+                      "name": "small_roberta.jpeg",
+                      "hash": "small_roberta_b41b21de38",
+                      "ext": ".jpeg",
+                      "mime": "image/jpeg",
+                      "width": 500,
+                      "height": 331,
+                      "size": 29.51,
+                      "path": null,
+                      "url": "/uploads/small_roberta_b41b21de38.jpeg"
+                    }
+                  },
+                  "hash": "roberta_b41b21de38",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "size": 1165.49,
+                  "url": "/uploads/roberta_b41b21de38.jpeg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:12:25.522Z",
+                  "updatedAt": "2022-03-15T13:12:25.522Z"
+                }
+              }
+            }
+          },
+          {
+            "id": 3,
+            "name": "img 3",
+            "image": {
+              "data": {
+                "id": 27,
+                "attributes": {
+                  "name": "mosaic-left.png",
+                  "alternativeText": "mosaic-left.png",
+                  "caption": "mosaic-left.png",
+                  "width": 215,
+                  "height": 325,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_mosaic-left.png",
+                      "hash": "thumbnail_mosaic_left_59d3778b65",
+                      "ext": ".png",
+                      "mime": "image/png",
+                      "width": 103,
+                      "height": 156,
+                      "size": 45.61,
+                      "path": null,
+                      "url": "/uploads/thumbnail_mosaic_left_59d3778b65.png"
+                    }
+                  },
+                  "hash": "mosaic_left_59d3778b65",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 137.74,
+                  "url": "/uploads/mosaic_left_59d3778b65.png",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:17:26.568Z",
+                  "updatedAt": "2022-03-15T13:17:26.568Z"
+                }
+              }
+            }
+          },
+          {
+            "id": 4,
+            "name": "img 4",
+            "image": {
+              "data": {
+                "id": 29,
+                "attributes": {
+                  "name": "mosaic-right.png",
+                  "alternativeText": "mosaic-right.png",
+                  "caption": "mosaic-right.png",
+                  "width": 457,
+                  "height": 343,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_mosaic-right.png",
+                      "hash": "thumbnail_mosaic_right_be63f87227",
+                      "ext": ".png",
+                      "mime": "image/png",
+                      "width": 208,
+                      "height": 156,
+                      "size": 85.58,
+                      "path": null,
+                      "url": "/uploads/thumbnail_mosaic_right_be63f87227.png"
+                    }
+                  },
+                  "hash": "mosaic_right_be63f87227",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 223.87,
+                  "url": "/uploads/mosaic_right_be63f87227.png",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:17:26.603Z",
+                  "updatedAt": "2022-03-15T13:17:26.603Z"
+                }
+              }
+            }
+          },
+          {
+            "id": 4,
+            "name": "img 4",
+            "image": {
+              "data": {
+                "id": 29,
+                "attributes": {
+                  "name": "solange.jpeg",
+                  "alternativeText": "mosaic-right.png",
+                  "caption": "mosaic-right.png",
+                  "width": 457,
+                  "height": 343,
+                  "formats": {
+                    "thumbnail": {
+                      "name": "thumbnail_mosaic-right.png",
+                      "hash": "thumbnail_mosaic_right_be63f87227",
+                      "ext": ".png",
+                      "mime": "image/png",
+                      "width": 208,
+                      "height": 156,
+                      "size": 85.58,
+                      "path": null,
+                      "url": "/uploads/thumbnail_mosaic_right_be63f87227.png"
+                    }
+                  },
+                  "hash": "mosaic_right_be63f87227",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "size": 223.87,
+                  "url": "/uploads/mosaic_right_be63f87227.png",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "createdAt": "2022-03-15T13:17:26.603Z",
+                  "updatedAt": "2022-03-15T13:17:26.603Z"
+                }
+              }
+            }
+          }
+        ]
       },
       "ourTeam": {
         "id": 1,
