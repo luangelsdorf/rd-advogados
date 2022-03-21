@@ -306,7 +306,7 @@
 }
 
 #banner-superior {
-  height: calc(100vh - 6px);
+  height: calc(100vh - -85px);
   background-image: var(--green-left), var(--green-top), var(--black-left);
   background-repeat: no-repeat;
   background-size: cover;
