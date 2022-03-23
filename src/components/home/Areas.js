@@ -1,18 +1,25 @@
 import React from 'react';
 
-export default function Areas({ areas, textos }) {
+export default function Areas({ content }) {
+
+  console.log(content);
 
   return (
     <div className="container-fluid" id="areas-de-atuacao">
       <div className="container">
         <div className="row g-5">
           <div className="col-12 col-xl-5 offset-xl-1">
-            <img src="/img/areas-img.png" alt="Image" className="img-fluid" />
+            <div className="areas-img-container">
+              <img src="/img/areas-image.png" alt="Image" className="" />
+              <div className="overlay-90" />
+              <div className="overlay-60" />
+              <img src="/img/logo.svg" alt="" className="areas-logo" />
+            </div>
           </div>
           <div className="col-12 col-xl-5">
-            <span className="line-title w-max-content text-dourado">{'NOSSOS SERVIÇOS'}</span>
-            <strong className="playfair fs-44 d-block break-spaces">{'Áreas de Atuação'}</strong>
-            <span className="areas-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span className="line-title w-max-content text-dourado mt-3">{content.title.subtitle}</span>
+            <strong className="playfair fs-44 d-block break-spaces">{content.title.title}</strong>
+            <span className="areas-text">{content.description}</span>
             <div className="our-services">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex">
