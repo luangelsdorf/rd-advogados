@@ -16,7 +16,6 @@ import CallToAction from "../components/home/CallToAction";
 import { fetchAPI } from "../utils/fetchers";
 
 export default function Home({ home, footer, infos }) {
-
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
@@ -33,7 +32,7 @@ export default function Home({ home, footer, infos }) {
 				<Galeria content={home.data.attributes.carousel.gallery} />
 				<NossaEquipe content={home.data.attributes.ourTeam} />
 				<Areas content={home.data.attributes.occupationAreas} />
-				<CallToAction />
+				<CallToAction content={home.data.attributes.callToAction} />
 				<Recentes />
 			</div>
 

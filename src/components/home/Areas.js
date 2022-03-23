@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default function Areas({ content }) {
-
-  console.log(content);
-
   return (
     <div className="container-fluid" id="areas-de-atuacao">
       <div className="container">
