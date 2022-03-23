@@ -94,12 +94,12 @@
           "subtitle": "Se você precisa resolver algo saiba que o nosso objetivo é facilitar a sua vida",
           "outlinedButton": {
             "id": 6,
-            "text": "alo",
+            "text": "Botão 1",
             "link": "google.com"
           },
           "filledButton": {
             "id": 5,
-            "text": "ola",
+            "text": "Botão 2",
             "link": "google.com"
           },
           "cover": {

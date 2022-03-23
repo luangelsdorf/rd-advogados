@@ -2,14 +2,23 @@ import React from 'react';
 import PostCard from "./PostCard";
 import { formatCategories, formatDate } from "../../../public/js/modules";
 import Link from 'next/link'
+import qs from 'qs';
 
-export default function Recentes({ posts, textos }) {
+export default function Recentes({ content, posts }) {
+
+  const q = qs.stringify({
+    sort: ['createdAt:desc'],
+  }, {
+    encode: false,
+  });
+
+  console.log(q);
 
   return (
     <div className="container-fluid flex-center flex-column px-0" id="recentes">
       <div className="flex-center flex-column recentes-title">
-        <span className="d-block text-dourado mb-3">{'POSTS RECENTES DO BLOG'}</span>
-        <strong className="playfair text-escuro fs-44">{'Notícias e Artigos'}</strong>
+        <span className="d-block text-dourado mb-3">{content.title.subtitle}</span>
+        <strong className="playfair text-escuro fs-44">{content.title.title}</strong>
       </div>
       <div className="container">
         <div className="row gy-5 justify-content-center justify-content-md-start">

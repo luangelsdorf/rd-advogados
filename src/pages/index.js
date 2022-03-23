@@ -15,7 +15,7 @@ import Galeria from "../components/home/Galeria";
 import CallToAction from "../components/home/CallToAction";
 import { fetchAPI } from "../utils/fetchers";
 
-export default function Home({ home, footer, infos }) {
+export default function Home({ home, footer, infos, posts }) {
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
@@ -33,7 +33,7 @@ export default function Home({ home, footer, infos }) {
 				<NossaEquipe content={home.data.attributes.ourTeam} />
 				<Areas content={home.data.attributes.occupationAreas} />
 				<CallToAction content={home.data.attributes.callToAction} />
-				<Recentes />
+				<Recentes content={home.data.attributes.recentPosts} posts={posts} />
 			</div>
 
 			<BannerInferior />
@@ -48,10 +48,11 @@ export async function getStaticProps() {
 	const home = await fetchAPI('home-site', 'homePage');
 	const footer = await fetchAPI('rodape', 'footer');
 	const infos = await fetchAPI('info', 'info');
+	/* const posts = await fetchAPI('posts', 'posts'); */
 
 	return {
 		props: {
-			home, footer, infos
+			home, footer, infos,
 		}
 	}
 }
