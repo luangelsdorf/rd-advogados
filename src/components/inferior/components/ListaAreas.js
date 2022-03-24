@@ -1,8 +1,15 @@
 import React from 'react';
 import Link from "next/link";
 
-export default function ListaAreas({ textos, areas }) {
+export default function ListaAreas({ areas }) {
 
+  const civilAreas = areas.data.attributes.civilLaw.civilLawServices;
+	const laborAreas = areas.data.attributes.laborLaw.laborLawServices;
+	const pensionAreas = areas.data.attributes.pensionLaw.pensionLawServices;
+	const array = civilAreas.concat(laborAreas).concat(pensionAreas);
+  array.splice(6, 1);
+  array.splice(2, 1);
+  array.splice(2, 1);
 
   const occAreas = [
     {
@@ -87,8 +94,8 @@ export default function ListaAreas({ textos, areas }) {
     },
   ]
 
-  const half1 = occAreas.slice(0, occAreas.length / 2);
-  const half2 = occAreas.slice(occAreas.length / 2);
+  const half1 = array.slice(0, occAreas.length / 2);
+  const half2 = array.slice(occAreas.length / 2);
 
   return (
     <div className="text-white px-3">
