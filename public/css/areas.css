@@ -8,8 +8,8 @@
   display: inline-block;
 }
 
-.area-text p {
-  margin-bottom: 24px;
+.area-text p, .area-text li {
+  color: var(--granite);
 }
 
 .list-group-item {

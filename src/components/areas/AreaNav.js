@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import slugify from 'slugify';
 
 export default function AreaNav({ areas, handleClick }) {
 
@@ -34,9 +35,9 @@ export default function AreaNav({ areas, handleClick }) {
           {
             areas.direitoTrab.map(area => {
               return (
-                <li key={area.slug}>
-                  <Link scroll={false} href={`/areas-de-atuacao/${area.slug}`}>
-                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${area.slug}`}>
+                <li key={slugify(area.title, {lower: true})}>
+                  <Link scroll={false} href={`/areas-de-atuacao/${slugify(area.title, {lower: true})}`}>
+                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${slugify(area.title, {lower: true})}`}>
                       <span>{area.title}</span>
                     </a>
                   </Link>
@@ -58,9 +59,9 @@ export default function AreaNav({ areas, handleClick }) {
           {
             areas.direitoCivil.map(area => {
               return (
-                <li key={area.slug}>
-                  <Link scroll={false} href={`/areas-de-atuacao/${area.slug}`}>
-                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${area.slug}`}>
+                <li key={slugify(area.title, {lower: true})}>
+                  <Link scroll={false} href={`/areas-de-atuacao/${slugify(area.title, {lower: true})}`}>
+                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${slugify(area.title, {lower: true})}`}>
                       <span>{area.title}</span>
                     </a>
                   </Link>
@@ -82,9 +83,9 @@ export default function AreaNav({ areas, handleClick }) {
           {
             areas.direitoPrev.map(area => {
               return (
-                <li key={area.slug}>
-                  <Link scroll={false} href={`/areas-de-atuacao/${area.slug}`}>
-                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${area.slug}`}>
+                <li key={slugify(area.title, {lower: true})}>
+                  <Link scroll={false} href={`/areas-de-atuacao/${slugify(area.title, {lower: true})}`}>
+                    <a onClick={handler} className={`d-inline-flex justify-content-between align-items-center ${slugify(area.title, {lower: true})}`}>
                       <span>{area.title}</span>
                     </a>
                   </Link>

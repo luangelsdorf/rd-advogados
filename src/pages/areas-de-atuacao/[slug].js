@@ -11,17 +11,18 @@ import FixedWhats from "../../components/FixedWhats";
 import { hideNavigation } from "../../../public/js/modules";
 import areasDoc from '../../data.json';
 import AreaNav from '../../components/areas/AreaNav';
+import { fetchAPI } from '../../utils/fetchers';
 
-export default function AreaPage({ area, areasDoc, textos, contact }) {
+export default function AreaPage({ area, resAreas, footer, infos }) {
 
   function handleNavClick() {
     hideNavigation(document.getElementById('navbarNav'))
   }
 
   const sortedAreas = {};
-  sortedAreas.direitoTrab = areasDoc.slice(0, 5)
-  sortedAreas.direitoCivil = areasDoc.slice(5, 10)
-  sortedAreas.direitoPrev = areasDoc.slice(10)
+  sortedAreas.direitoTrab = resAreas.data.attributes.laborLaw.laborLawServices
+  sortedAreas.direitoCivil = resAreas.data.attributes.civilLaw.civilLawServices
+  sortedAreas.direitoPrev = resAreas.data.attributes.pensionLaw.pensionLawServices
 
   return (
     <>
@@ -77,36 +78,53 @@ export default function AreaPage({ area, areasDoc, textos, contact }) {
         </div>
       </div>
 
-      <BannerInferior />
-      <SubFooter />
-      <Footer />
+      <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
+      <SubFooter
+        socialMedia={infos.data.attributes.socialMedia}
+        content={footer.data.attributes.callout}
+        areas={resAreas}
+      />
+      <Footer socialMedia={infos.data.attributes.socialMedia} />
     </>
   )
 }
 
 export async function getStaticPaths() {
-  const paths = areasDoc.map((area) => ({
-    params: { slug: area.slug },
-  }))
+  const slugify = require('slugify');
+
+  const res = await fetchAPI('areas-de-atuacao', 'areas');
+  const civilAreas = res.data.attributes.civilLaw.civilLawServices;
+  const laborAreas = res.data.attributes.laborLaw.laborLawServices;
+  const pensionAreas = res.data.attributes.pensionLaw.pensionLawServices;
+  const areas = civilAreas.concat(laborAreas).concat(pensionAreas);
+
+  const paths = areas.map(area => {
+    return {
+      params: {
+        slug: slugify(area.title, { lower: true })
+      }
+    }
+  })
 
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const area = areasDoc.find(area => area.slug === params.slug);
+  const slugify = require('slugify');
 
-  /* const resAll = await fetch(`${process.env.API_URL}/servicos`)
-  const areas = await resAll.json()
+  const resAreas = await fetchAPI('areas-de-atuacao', 'areas');
+  const civilAreas = resAreas.data.attributes.civilLaw.civilLawServices;
+  const laborAreas = resAreas.data.attributes.laborLaw.laborLawServices;
+  const pensionAreas = resAreas.data.attributes.pensionLaw.pensionLawServices;
+  const areas = civilAreas.concat(laborAreas).concat(pensionAreas);
 
-  const resText = await fetch(`${process.env.API_URL}/areas-de-atuacao`)
-  const textos = await resText.json()
-
-  const resRedes = await fetch(`${process.env.API_URL}/contatos`)
-  const contact = await resRedes.json() */
+  const area = areas.find(area => slugify(area.title, { lower: true }) === params.slug);
+  const footer = await fetchAPI('rodape', 'footer');
+  const infos = await fetchAPI('info', 'info');
 
   return {
     props: {
-      area, areasDoc, /* textos, contact */
+      area, resAreas, footer, infos
     },
     revalidate: 1
   }

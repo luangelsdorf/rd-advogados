@@ -14,9 +14,21 @@ import FixedWhats from "../../src/components/FixedWhats";
 import Galeria from "../components/home/Galeria";
 import CallToAction from "../components/home/CallToAction";
 import { fetchAPI } from "../utils/fetchers";
+import slugify from 'slugify';
 
 export default function Home({ home, footer, infos, posts, areas }) {
-	console.log(areas.data.attributes);
+
+	async function jooj() {
+		const asd = await fetchAPI('areas-de-atuacao', 'areas');
+  const civilAreas = asd.data.attributes.civilLaw.civilLawServices;
+	const laborAreas = asd.data.attributes.laborLaw.laborLawServices;
+	const pensionAreas = asd.data.attributes.pensionLaw.pensionLawServices;
+	const array = civilAreas.concat(laborAreas).concat(pensionAreas);
+  console.log(array);
+	};
+
+	jooj()
+
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
