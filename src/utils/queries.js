@@ -62,3 +62,10 @@ export const info = qs.stringify({
   encode: false,
   encodeValuesOnly: true,
 });
+
+export const posts = qs.stringify({
+  sort: ['createdAt:desc'],
+  populate: '*',
+}, {
+  encode: false,
+});

@@ -33,7 +33,7 @@ export default function Home({ home, footer, infos, posts }) {
 				<NossaEquipe content={home.data.attributes.ourTeam} />
 				<Areas content={home.data.attributes.occupationAreas} />
 				<CallToAction content={home.data.attributes.callToAction} />
-				<Recentes content={home.data.attributes.recentPosts} posts={posts} />
+				<Recentes content={home.data.attributes.recentPosts} posts={posts.data} />
 			</div>
 
 			<BannerInferior />
@@ -48,11 +48,11 @@ export async function getStaticProps() {
 	const home = await fetchAPI('home-site', 'homePage');
 	const footer = await fetchAPI('rodape', 'footer');
 	const infos = await fetchAPI('info', 'info');
-	/* const posts = await fetchAPI('posts', 'posts'); */
+	const posts = await fetchAPI('posts', 'posts');
 
 	return {
 		props: {
-			home, footer, infos,
+			home, footer, infos, posts
 		}
 	}
 }

@@ -478,14 +478,31 @@ a:hover {
   padding-left: 30px;
 }
 
+.post-card-body small {
+  color: var(--carbon);
+}
+
 .post-card-overlay {
   position: relative;
   overflow: hidden;
   height: 250px;
 }
+.post-card-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.3) 100%);
+}
 
 .post-card-overlay:hover img {
   transform: scale(1.15);
+}
+
+.post-card-overlay img {
+  transition: all 300ms ease;
 }
 
 .categoria {
@@ -500,6 +517,7 @@ a:hover {
   bottom: 0;
   left: 30px;
   transition: 250ms ease-in-out;
+  z-index: 1;
 }
 
 .categoria:hover {
@@ -508,7 +526,7 @@ a:hover {
 }
 
 .post-title-link {
-  color: var(--dark-green) !important;
+  color: var(--granite) !important;
   transition: all 250ms ease-in-out;
 }
 
