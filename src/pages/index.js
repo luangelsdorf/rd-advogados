@@ -36,8 +36,8 @@ export default function Home({ home, footer, infos, posts }) {
 				<Recentes content={home.data.attributes.recentPosts} posts={posts.data} />
 			</div>
 
-			<BannerInferior />
-			<SubFooter />
+			<BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
+			<SubFooter socialMedia={infos.data.attributes.socialMedia} content={footer.data.attributes.callout} />
 			<Footer />
 		</>
 	)
