@@ -4,7 +4,6 @@ import ListaAreas from "./components/ListaAreas";
 import NewsLetter from "./components/NewsLetter";
 
 export default function SubFooter({ content, socialMedia }) {
-  console.log(socialMedia);
   return (
     <div className="sub-footer">
       <div className="container">

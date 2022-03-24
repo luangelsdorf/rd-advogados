@@ -38,7 +38,7 @@ export default function Home({ home, footer, infos, posts }) {
 
 			<BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
 			<SubFooter socialMedia={infos.data.attributes.socialMedia} content={footer.data.attributes.callout} />
-			<Footer />
+			<Footer socialMedia={infos.data.attributes.socialMedia} />
 		</>
 	)
 }
