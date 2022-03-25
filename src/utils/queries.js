@@ -70,3 +70,9 @@ export const posts = qs.stringify({
 }, {
   encode: false,
 });
+
+export const categories = qs.stringify({
+  populate: '*',
+}, {
+  encode: false,
+});

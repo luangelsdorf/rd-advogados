@@ -15,14 +15,6 @@ import env from '../../utils/env';
 
 export default function AreaPage({ area, resAreas, footer, infos }) {
   const content = resAreas.data.attributes;
-  const imgName = content.hero.cover.data.attributes.name;
-  const imgURL = content.hero.cover.data.attributes.url;
-  let url;
-  env === 'dev' ? url = imgName : url = imgURL;
-
-  const bgImage = `#banner-superior { background-image: linear-gradient(rgba(33, 82, 87, 0.5) 100%, transparent),
-  linear-gradient(#0f4143 100%, transparent),
-  url("${env === 'dev' ? '/img/' : ''}${url}")}`;
 
   function handleNavClick() {
     hideNavigation(document.getElementById('navbarNav'))
@@ -43,7 +35,6 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
         title={content.hero.title}
         subtitle={content.hero.text}
         btn={false}
-        bgImage={bgImage}
         image={content.hero.cover.data.attributes}
       />
 
