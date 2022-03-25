@@ -13,8 +13,9 @@ import { formatCategories, filterPosts, formatDate } from "../../../public/js/mo
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import postsDoc from '../../posts.json';
+import { fetchAPI } from '../../utils/fetchers';
 
-export default function Blog({ posts, textos, areas, contact, cat }) {
+export default function Blog({ footer, infos, posts, areas }) {
 
   const categories = [
     {
@@ -86,33 +87,26 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
 
       <Pagination />
 
-      <BannerInferior />
-      <SubFooter />
-      <Footer />
+      <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
+			<SubFooter
+				socialMedia={infos.data.attributes.socialMedia}
+				content={footer.data.attributes.callout}
+				areas={areas}
+			/>
+			<Footer socialMedia={infos.data.attributes.socialMedia} />
     </>
   )
 }
-/* 
+
 export async function getStaticProps() {
-  const responsePosts = await fetch(`${process.env.API_URL}/posts`)
-  const posts = await responsePosts.json()
-
-  const resText = await fetch(`${process.env.API_URL}/blog`)
-  const textos = await resText.json()
-
-  const resAreas = await fetch(`${process.env.API_URL}/servicos`)
-  const areas = await resAreas.json()
-
-  const resRedes = await fetch(`${process.env.API_URL}/contatos`)
-  const contact = await resRedes.json()
-
-  const resCat = await fetch(`${process.env.API_URL}/categorias`)
-  const cat = await resCat.json()
+  const footer = await fetchAPI('rodape', 'footer');
+	const infos = await fetchAPI('info', 'info');
+  const posts = await fetchAPI('posts', 'posts');
+  const areas = await fetchAPI('areas-de-atuacao', 'areas');
 
   return {
     props: {
-      posts, textos, areas, contact, cat
-    },
-    revalidate: 1
+      footer, infos, posts, areas
+    }
   }
-} */
+}

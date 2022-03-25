@@ -11,14 +11,15 @@ import Link from 'next/link';
 import FixedWhats from "../../components/FixedWhats";
 import { formatCategories, formatDate } from "../../../public/js/modules";
 import { useRouter } from "next/router";
-import postList from '../../posts.json'
+import { fetchAPI } from "../../utils/fetchers";
+import Img from "../../components/Img";
 
-export default function Post({ post, posts, areas, contact }) {
+export default function Post({ post, posts, footer, infos, areas }) {
   let quantity = [0, 1, 2]
   let router = useRouter()
   let url = router.asPath
-  let img = post.cover
-  let desc = post.body
+  let img = post.attributes.cover
+  let desc = post.attributes.body
   let ogTags = {
     url: url,
     img: img,
@@ -57,7 +58,7 @@ export default function Post({ post, posts, areas, contact }) {
 
   return (
     <>
-      <HeadContentPost tags={ogTags} post={true} title={`${post.title} - RD Advogados`} page="post" />
+      <HeadContentPost tags={ogTags} post={true} title={`${post.attributes.title} - RD Advogados`} page="post" />
       <FixedWhats />
       <TopHeader />
       <FixedHeader />
@@ -68,16 +69,16 @@ export default function Post({ post, posts, areas, contact }) {
           <div className="col-1" />
 
           <div className="col-10">
-            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: '600px' }}>{post.title}</strong>
+            <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{ maxWidth: '600px' }}>{post.attributes.title}</strong>
             <div className="flex-center" id="post-date-row">
               <svg width="12" height="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" className="fs-13 text-white mb-1 mx-2 svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
               <span className="post-date fs-13 text-white">10 de março de 2022</span>
             </div>
             <div>
               <div className="img-placeholder mx-auto">
-                <img src={post.cover} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                <Img src={post.attributes.cover.data.attributes} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
               </div>
-              <div className="fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{ __html: post.body }} />
+              <div className="fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{ __html: post.attributes.body }} />
               <div className="fs-20">
                 <strong className="d-block">Gostou do conteúdo?</strong>
                 <span className="d-block">Compartilhe nas Redes Sociais:</span>
@@ -143,24 +144,36 @@ export default function Post({ post, posts, areas, contact }) {
 
       </div>
 
-      <BannerInferior />
-      <SubFooter />
-      <Footer />
+      <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
+      <SubFooter
+        socialMedia={infos.data.attributes.socialMedia}
+        content={footer.data.attributes.callout}
+        areas={areas}
+      />
+      <Footer socialMedia={infos.data.attributes.socialMedia} />
     </>
   )
 }
 
 
 export async function getStaticPaths() {
-  const paths = postList.map((post) => ({
-    params: { id: post.id },
-  }))
+  const posts = await fetchAPI('posts', 'posts');
+  const paths = posts.data.map(post => {
+    return {
+      params: { id: post.id.toString() }
+    }
+  })
 
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const post = postList.find(post => post.id === params.id)
+  const posts = await fetchAPI('posts', 'posts');
+  const post = posts.data.find(post => post.id.toString() === params.id);
+
+  const footer = await fetchAPI('rodape', 'footer');
+  const infos = await fetchAPI('info', 'info');
+  const areas = await fetchAPI('areas-de-atuacao', 'areas');
 
   /* const resp = await fetch(`${process.env.API_URL}/posts`)
   const posts = await resp.json()
@@ -173,7 +186,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      post,/*  posts, areas, contact */
+      post, posts, footer, infos, areas
     },
     revalidate: 1
   }

@@ -17,18 +17,6 @@ import { fetchAPI } from "../utils/fetchers";
 import slugify from 'slugify';
 
 export default function Home({ home, footer, infos, posts, areas }) {
-
-	async function jooj() {
-		const asd = await fetchAPI('areas-de-atuacao', 'areas');
-  const civilAreas = asd.data.attributes.civilLaw.civilLawServices;
-	const laborAreas = asd.data.attributes.laborLaw.laborLawServices;
-	const pensionAreas = asd.data.attributes.pensionLaw.pensionLawServices;
-	const array = civilAreas.concat(laborAreas).concat(pensionAreas);
-  console.log(array);
-	};
-
-	jooj()
-
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
@@ -66,7 +54,7 @@ export async function getStaticProps() {
 	const footer = await fetchAPI('rodape', 'footer');
 	const infos = await fetchAPI('info', 'info');
 	const posts = await fetchAPI('posts', 'posts');
-	const areas = await fetchAPI('areas-de-atuacao', 'areas')
+	const areas = await fetchAPI('areas-de-atuacao', 'areas');
 
 	return {
 		props: {
