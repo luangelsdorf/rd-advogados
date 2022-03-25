@@ -5,7 +5,7 @@ export default function Areas({ content }) {
     <div className="container-fluid" id="areas-de-atuacao">
       <div className="container">
         <div className="row g-5">
-          <div className="col-12 col-xl-5 offset-xl-1">
+          <div className="col-12 col-xl-5 offset-xl-1 d-flex justify-content-center flex-column">
             <div className="areas-img-container">
               <img src="/img/areas-image.png" alt="Image" className="" />
               <div className="overlay-90" />
@@ -13,7 +13,7 @@ export default function Areas({ content }) {
               <img src="/img/logo.svg" alt="" className="areas-logo" />
             </div>
           </div>
-          <div className="col-12 col-xl-5">
+          <div className="col-12 col-xl-5 d-flex justify-content-center flex-column">
             <span className="line-title w-max-content text-dourado mt-3">{content.title.subtitle}</span>
             <strong className="playfair fs-44 d-block break-spaces">{content.title.title}</strong>
             <span className="areas-text">{content.description}</span>

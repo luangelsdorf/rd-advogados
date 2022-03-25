@@ -32,7 +32,11 @@
 }
 
 .our-services > div {
-  padding: 20px 0;
+  padding: 40px 0;
+}
+
+.our-services > div:last-child {
+  padding-bottom: 0;
 }
 
 .our-services > div:first-child {
@@ -64,7 +68,7 @@
 
 .areas-img-container img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 .areas-img-container img:first-child {
