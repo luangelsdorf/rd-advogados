@@ -14,7 +14,8 @@ export default function Recentes({ content, posts }) {
       <div className="container">
         <div className="row gy-5 justify-content-center justify-content-md-start">
           {
-            posts.map(post => {
+            posts.map((post, index) => {
+              if (index === 3) return;
               return (
                 <PostCard
                   key={post.id}

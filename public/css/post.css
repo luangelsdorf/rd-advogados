@@ -8,6 +8,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -85px;
+  margin-top: 80px;
 }
 
 .top-header {
@@ -58,6 +59,14 @@ img {
   color: var(--granite);
 }
 
+.post-body a {
+  color: var(--orange);
+}
+
+.post-body a:hover {
+  text-decoration: underline;
+}
+
 .img-placeholder {
   margin-top: 70px;
   margin-bottom: 70px;
@@ -66,18 +75,27 @@ img {
   background-color: #9b9b9b;
 }
 
+@media (max-width: 768px) {
+  .img-placeholder {
+    height: 300px;
+  }
+}
+
 .social-btn-post {
   display: inline-flex !important;
   align-items: center !important;
-  margin-top: 15px;
   font-size: 13px !important;
   color: #fff !important;
 }
 
+.share {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
 .twitter-btn {
   background-color: #00a2f5 !important;
-  margin-right: 15px;
-  margin-left: 15px;
 }
 
 .facebook-btn {

@@ -94,7 +94,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           })
         ) : (
           <>
-            <Img src={image} alt="" className="hero-img" />
+            { title ? <Img src={image} alt="" className="hero-img" /> : null }
             <div className="overlay-100" />
             <div className="overlay-50" />
             <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
