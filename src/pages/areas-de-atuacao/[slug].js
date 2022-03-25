@@ -9,11 +9,20 @@ import SubFooter from "../../components/inferior/SubFooter";
 import Footer from "../../components/inferior/Footer";
 import FixedWhats from "../../components/FixedWhats";
 import { hideNavigation } from "../../../public/js/modules";
-import areasDoc from '../../data.json';
 import AreaNav from '../../components/areas/AreaNav';
 import { fetchAPI } from '../../utils/fetchers';
+import env from '../../utils/env';
 
 export default function AreaPage({ area, resAreas, footer, infos }) {
+  const content = resAreas.data.attributes;
+  const imgName = content.hero.cover.data.attributes.name;
+  const imgURL = content.hero.cover.data.attributes.url;
+  let url;
+  env === 'dev' ? url = imgName : url = imgURL;
+
+  const bgImage = `#banner-superior { background-image: linear-gradient(rgba(33, 82, 87, 0.5) 100%, transparent),
+  linear-gradient(#0f4143 100%, transparent),
+  url("${env === 'dev' ? '/img/' : ''}${url}")}`;
 
   function handleNavClick() {
     hideNavigation(document.getElementById('navbarNav'))
@@ -31,9 +40,12 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
       <FixedHeader />
       <BannerSuperior
         bannerClass="banner-areas"
-        title={'Áreas de Atuação'}
-        subtitle={'Advocacia especializada em solucionar problemas com os melhores resultados.'}
-        btn={false} />
+        title={content.hero.title}
+        subtitle={content.hero.text}
+        btn={false}
+        bgImage={bgImage}
+        image={content.hero.cover.data.attributes}
+      />
 
       <HeadContent page="areas" title={`${area.title} - RD Advogados`} />
       <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">
@@ -41,7 +53,7 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
         <div className="container px-5 px-sm-0">
           <div className="row">
             <div className="col-4 d-none d-md-block">
-              <strong className="d-block text-granite playfair ps-3 fs-24 mb-4">Áreas de Atuação</strong>
+              <strong className="d-block text-granite playfair fs-24 mb-4">Áreas de Atuação</strong>
               <AreaNav areas={sortedAreas} />
             </div>
             <div className="col-12 col-md-8 flex-center flex-column">

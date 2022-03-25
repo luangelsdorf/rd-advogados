@@ -3,11 +3,79 @@
     "id": 1,
     "attributes": {
       "createdAt": "2022-03-14T11:27:19.379Z",
-      "updatedAt": "2022-03-15T23:15:21.634Z",
+      "updatedAt": "2022-03-24T23:14:25.547Z",
       "hero": {
         "id": 2,
         "title": "Áreas de Atuação",
-        "text": "Advocacia especializada em solucionar problemas com os melhores resultados."
+        "text": "Advocacia especializada em solucionar problemas com os melhores resultados.",
+        "cover": {
+          "data": {
+            "id": 21,
+            "attributes": {
+              "name": "banner-areas.jpeg",
+              "alternativeText": "banner-areas.jpeg",
+              "caption": "banner-areas.jpeg",
+              "width": 1920,
+              "height": 974,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_banner-areas.jpeg",
+                  "hash": "thumbnail_banner_areas_5610095197",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 245,
+                  "height": 124,
+                  "size": 5.27,
+                  "path": null,
+                  "url": "/uploads/thumbnail_banner_areas_5610095197.jpeg"
+                },
+                "large": {
+                  "name": "large_banner-areas.jpeg",
+                  "hash": "large_banner_areas_5610095197",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 1000,
+                  "height": 507,
+                  "size": 41.92,
+                  "path": null,
+                  "url": "/uploads/large_banner_areas_5610095197.jpeg"
+                },
+                "medium": {
+                  "name": "medium_banner-areas.jpeg",
+                  "hash": "medium_banner_areas_5610095197",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 750,
+                  "height": 380,
+                  "size": 27.19,
+                  "path": null,
+                  "url": "/uploads/medium_banner_areas_5610095197.jpeg"
+                },
+                "small": {
+                  "name": "small_banner-areas.jpeg",
+                  "hash": "small_banner_areas_5610095197",
+                  "ext": ".jpeg",
+                  "mime": "image/jpeg",
+                  "width": 500,
+                  "height": 254,
+                  "size": 14.82,
+                  "path": null,
+                  "url": "/uploads/small_banner_areas_5610095197.jpeg"
+                }
+              },
+              "hash": "banner_areas_5610095197",
+              "ext": ".jpeg",
+              "mime": "image/jpeg",
+              "size": 85.31,
+              "url": "/uploads/banner_areas_5610095197.jpeg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2022-03-15T13:12:24.393Z",
+              "updatedAt": "2022-03-15T13:12:24.393Z"
+            }
+          }
+        }
       },
       "cta": {
         "id": 1,
@@ -60,7 +128,7 @@
           {
             "id": 10,
             "title": "Revisão de Contratos Bancários",
-            "description": "<p>É comum a existência de cláusulas abusivas em contratos, especialmente contratos bancários de empréstimo ou financiamento de veículos, tais como</p><p><br></p><ul><li>juros abusivos;</li><li>cobrança de seguros;</li><li>taxas ilegais.</li></ul><p>Através da revisão do contrato é possível pedir a devolução dos valores pagos indevidamente pelas instituições bancárias.</p><p><br></p><p>O nosso escritório faz uma análise minuciosa do contrato, esclarecendo ao cliente se há vantagem no ajuizamento de ação judicial.</p>"
+            "description": "<p>É comum a existência de cláusulas abusivas em contratos, especialmente contratos bancários de empréstimo ou financiamento de veículos, tais como</p><p><br></p><ul><li>juros abusivos;</li><li>cobrança de seguros;</li><li>taxas ilegais.</li></ul><p><br></p><p>Através da revisão do contrato é possível pedir a devolução dos valores pagos indevidamente pelas instituições bancárias.</p><p><br></p><p>O nosso escritório faz uma análise minuciosa do contrato, esclarecendo ao cliente se há vantagem no ajuizamento de ação judicial.</p>"
           },
           {
             "id": 11,
@@ -96,5 +164,7 @@
       }
     }
   },
-  "meta": {}
+  "meta": {
+    
+  }
 }

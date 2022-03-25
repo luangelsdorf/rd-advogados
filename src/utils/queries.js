@@ -3,6 +3,7 @@ import qs from 'qs';
 export const areas = qs.stringify({
   populate: [
     'hero',
+    'hero.cover',
     'cta',
     'laborLaw.laborLawServices',
     'civilLaw.civilLawServices',

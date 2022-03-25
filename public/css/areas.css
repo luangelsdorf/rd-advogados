@@ -8,7 +8,8 @@
   display: inline-block;
 }
 
-.area-text p, .area-text li {
+.area-text p,
+.area-text li {
   color: var(--granite);
 }
 
@@ -31,9 +32,46 @@ ul {
 }
 
 #banner-superior {
-  height: 550px;
-  background-size: cover;
-  background-image: url("/img/banner-areas.png");
+  height: 424px;
+  margin-top: 125px;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -100px;
+  z-index: -2;
+  filter: grayscale();
+}
+.overlay-100,
+.overlay-50 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-100 {
+  background-color: var(--dark-green);
+  opacity: 1;
+  mix-blend-mode: multiply;
+}
+
+.overlay-50 {
+  background-color: var(--green);
+  opacity: 0.5;
+  mix-blend-mode: normal;
+}
+
+@media (max-width: 768px) {
+  #banner-superior {
+    margin-top: 80px;
+  }
 }
 
 .banner-areas {
