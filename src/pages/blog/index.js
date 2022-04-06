@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TopHeader from "../../../src/components/superior/TopHeader";
 import FixedHeader from "../../../src/components/superior/FixedHeader";
 import BannerSuperior from "../../../src/components/superior/BannerSuperior";
@@ -7,18 +7,23 @@ import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 import HeadContent from "../../../src/components/HeadContent";
 import PostCard from "../../../src/components/home/PostCard";
-import Pagination from "../../../src/components/blog/Pagination";
 import FixedWhats from "../../../src/components/FixedWhats";
 import { formatCategories, filterPosts, formatDate, getExcerpt } from "../../../public/js/modules";
 import { useRouter } from "next/router";
-import Link from 'next/link';
-import postsDoc from '../../posts.json';
 import { fetchAPI } from '../../utils/fetchers';
 
 export default function Blog({ footer, infos, posts, areas, blog, categories }) {
   const postList = posts.data;
   const [shownPosts, setShownPosts] = useState(posts.data);
   const content = blog.data.attributes;
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.categoria) {
+      setShownPosts(filterPosts(postList, router.query.categoria));
+    }
+  }, [router.query.categoria]);
 
   return (
     <>
@@ -76,6 +81,11 @@ export default function Blog({ footer, infos, posts, areas, blog, categories }) 
                   />
                 )
               })
+            }
+            {
+              shownPosts.length === 0 ? (
+                <h1 className="text-dourado">Não há nenhuma publicação com essa categoria.</h1>
+              ) : null
             }
           </div>
         </div>

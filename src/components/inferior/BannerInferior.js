@@ -1,10 +1,15 @@
 import React from 'react';
 import FaleConosco from "./components/FaleConosco";
 import Form from "./components/Form";
+import Img from '../Img';
 
 export default function BannerInferior({ content, infos }) {
+  console.log(content);
   return (
     <div id="banner-inferior">
+      <Img src={content.background.data.attributes} alt="Banner" className="contact-background" />
+      <div className="overlay-100" />
+      <div className="overlay-50" />
       <div className="container px-4 pm-sm-0">
         <div className="row gy-5 align-items-center">
           <div className="col-xl-1" />

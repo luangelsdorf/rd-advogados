@@ -15,13 +15,6 @@ export function formatDate(dateString) {
 
 export function filterPosts(postList, value) {
   const filteredPostList = postList.filter(post => hasCategory(post.attributes.categories.data, value));
-  console.log(filteredPostList);
-
-  /* const filtered = postList[0].attributes.categories.data.filter(cat =>cat.attributes.slug === value);
-  console.log(filtered); */
-
-  /* postList[0].attributes.categories.data.filter(c => console.log(c.attributes.slug === 'noticia')) */
-
   return filteredPostList;
 }
 

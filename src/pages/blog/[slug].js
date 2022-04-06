@@ -15,7 +15,6 @@ import { fetchAPI } from "../../utils/fetchers";
 import Img from "../../components/Img";
 
 export default function Post({ post, posts, footer, infos, areas }) {
-  console.log(post);
   let router = useRouter()
   let url = router.asPath
   let img = post.attributes.cover

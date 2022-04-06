@@ -13,6 +13,74 @@
           "subtitle": "NOSSOS CONTATOS",
           "title": "Fale Conosco"
         }
+      },
+      "background": {
+        "data": {
+          "id": 33,
+          "attributes": {
+            "name": "banner-contact.jpeg",
+            "alternativeText": "banner-contact.jpeg",
+            "caption": "banner-contact.jpeg",
+            "width": 1920,
+            "height": 1275,
+            "formats": {
+              "thumbnail": {
+                "name": "thumbnail_banner-contact.jpeg",
+                "hash": "thumbnail_banner_contact_b896e4f889",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "width": 235,
+                "height": 156,
+                "size": 11.05,
+                "path": null,
+                "url": "/uploads/thumbnail_banner_contact_b896e4f889.jpeg"
+              },
+              "large": {
+                "name": "large_banner-contact.jpeg",
+                "hash": "large_banner_contact_b896e4f889",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "width": 1000,
+                "height": 664,
+                "size": 127.7,
+                "path": null,
+                "url": "/uploads/large_banner_contact_b896e4f889.jpeg"
+              },
+              "medium": {
+                "name": "medium_banner-contact.jpeg",
+                "hash": "medium_banner_contact_b896e4f889",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "width": 750,
+                "height": 498,
+                "size": 77.14,
+                "path": null,
+                "url": "/uploads/medium_banner_contact_b896e4f889.jpeg"
+              },
+              "small": {
+                "name": "small_banner-contact.jpeg",
+                "hash": "small_banner_contact_b896e4f889",
+                "ext": ".jpeg",
+                "mime": "image/jpeg",
+                "width": 500,
+                "height": 332,
+                "size": 38.13,
+                "path": null,
+                "url": "/uploads/small_banner_contact_b896e4f889.jpeg"
+              }
+            },
+            "hash": "banner_contact_b896e4f889",
+            "ext": ".jpeg",
+            "mime": "image/jpeg",
+            "size": 150.86,
+            "url": "/uploads/banner_contact_b896e4f889.jpeg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2022-04-05T23:22:52.157Z",
+            "updatedAt": "2022-04-05T23:22:52.157Z"
+          }
+        }
       }
     }
   },

@@ -424,6 +424,29 @@ a:hover {
   background-color: rgba(15, 65, 67, 0.5); /* --dark-green */
 }
 
+.overlay-100,
+.overlay-50 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-100 {
+  z-index: -2;
+  background-color: var(--dark-green);
+  opacity: 1;
+  mix-blend-mode: multiply;
+}
+
+.overlay-50 {
+  z-index: -1;
+  background-color: var(--green);
+  opacity: 0.5;
+  mix-blend-mode: normal;
+}
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -639,14 +662,21 @@ a:hover {
   position: relative;
   padding-top: 110px;
   padding-bottom: 110px;
-  /* background-image: url("/img/banner-inferior.png"); */
-  background-image: linear-gradient(rgba(33, 82, 87, 0.5) 100%, transparent), linear-gradient(#0f4143 100%, transparent),
-    url("/img/contact-background.png");
-  background-blend-mode: normal, multiply, normal;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
+}
+
+.contact-background {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale();
+  z-index: -5;
 }
 
 .consulta-header {
