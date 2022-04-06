@@ -17,7 +17,6 @@ export default function Recentes({ content, posts }) {
             posts.map((post, index) => {
               if (index === 3) return;
               const catList = post.attributes.categories.data;
-              console.log(catList[0].attributes);
               return (
                 <PostCard
                   key={post.id}

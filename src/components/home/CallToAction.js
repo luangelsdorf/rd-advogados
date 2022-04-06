@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CallToAction({ content }) {
   return (
-    <section id="cta" className="mx-3">
+    <section id="chamada" className="mx-3">
       <div className="container bg-dourado px-4 px-lg-0">
         <div className="row gap-4">
           <div className="col-12 col-xl-6 offset-xl-1">

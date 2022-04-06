@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import env from '../../utils/env';
 import Img from '../Img';
 
 export default function BannerSuperior({ title, subtitle, btn, post, bannerClass, content, image }) {
+  console.log(content);
   const [active, setActive] = useState(btn ? content[0] : null);
   const [direction, setDirection] = useState('left');
 
@@ -84,8 +86,10 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
                     <strong className="playfair fs-72 d-block mb-4 break-spaces">{banner.title}</strong>
                     <span className="lh-24 d-block mb-4 break-spaces">{banner.subtitle}</span>
                     <div className="d-flex gap-3 flex-wrap">
-                      <a href={banner.filledButton.link} className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
-                      <a href={banner.outlinedButton.link} className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a>
+                      <Link href={banner.filledButton.section}>
+                        <a className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a></Link>
+                      <Link href={banner.outlinedButton.section}>
+                        <a className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a></Link>
                     </div>
                   </div>
                 </div>
@@ -94,7 +98,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           })
         ) : (
           <>
-            { title ? <Img src={image} alt="" className="hero-img" /> : null }
+            {title ? <Img src={image} alt="" className="hero-img" /> : null}
             <div className="overlay-100" />
             <div className="overlay-50" />
             <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>

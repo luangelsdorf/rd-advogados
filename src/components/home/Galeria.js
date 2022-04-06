@@ -22,7 +22,7 @@ export default function Galeria({ content }) {
   }, [])
 
   return (
-    <section className="gallery">
+    <section className="gallery" id="galeria">
       <div className="container">
         <div className="row" ref={row}>
           {
