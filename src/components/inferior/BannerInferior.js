@@ -4,7 +4,6 @@ import Form from "./components/Form";
 import Img from '../Img';
 
 export default function BannerInferior({ content, infos }) {
-  console.log(content);
   return (
     <div id="banner-inferior">
       <Img src={content.background.data.attributes} alt="Banner" className="contact-background" />

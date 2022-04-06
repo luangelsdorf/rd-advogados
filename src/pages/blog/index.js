@@ -69,11 +69,12 @@ export default function Blog({ footer, infos, posts, areas, blog, categories }) 
           <div className="row justify-content-center justify-content-md-start gy-5">
             {
               shownPosts?.map(post => {
+                const catList = post.attributes.categories.data;
                 return (
                   <PostCard
                     key={post.id}
                     img={post.attributes.cover.data.attributes}
-                    category={post.attributes.categories.data[0].attributes.title}
+                    category={catList.length < 1 ? '' : catList[0].attributes}
                     date={formatDate(post.attributes.createdAt)}
                     href={`/blog/${post.attributes.slug}`}
                     title={post.attributes.title}
@@ -113,6 +114,7 @@ export async function getStaticProps() {
   return {
     props: {
       footer, infos, posts, areas, blog, categories
-    }
+    },
+    revalidate: 10,
   }
 }

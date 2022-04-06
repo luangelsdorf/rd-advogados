@@ -9,7 +9,13 @@ export default function PostCard(props) {
       <div>
         <div className="post-card-overlay">
           <Img src={props.img} className="w-100 h-100 object-fit-cover" alt="Card Img" />
-          <a className="categoria cursor-pointer px-3">{props.category}</a>
+          {
+            props.category === '' ? null : (
+              <Link href={`/blog?categoria=${props.category.slug}`}>
+                <a className="categoria cursor-pointer px-3">{props.category.title}</a>
+              </Link>
+            )
+          }
         </div>
         <div className="post-card-body flex-center">
           <div>

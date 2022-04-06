@@ -16,11 +16,13 @@ export default function Recentes({ content, posts }) {
           {
             posts.map((post, index) => {
               if (index === 3) return;
+              const catList = post.attributes.categories.data;
+              console.log(catList[0].attributes);
               return (
                 <PostCard
                   key={post.id}
                   img={post.attributes.cover.data.attributes}
-                  category={post.attributes.categories.data[0].attributes.title}
+                  category={catList.length < 1 ? '' : catList[0].attributes}
                   date={formatDate(post.attributes.createdAt)}
                   href={`/blog/${post.attributes.slug}`}
                   title={post.attributes.title}

@@ -123,11 +123,12 @@ export default function Post({ post, posts, footer, infos, areas }) {
           {
             posts.data.map((post, index) => {
               if (index === 3) return;
+              const catList = post.attributes.categories.data;
               return (
                 <PostCard
                   key={post.id}
                   img={post.attributes.cover.data.attributes}
-                  category={post.attributes.categories.data[0].attributes.title}
+                  category={catList.length < 1 ? '' : catList[0].attributes}
                   date={formatDate(post.attributes.createdAt)}
                   href={`/blog/${post.attributes.slug}`}
                   title={post.attributes.title}
@@ -160,30 +161,27 @@ export async function getStaticPaths() {
     }
   })
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({ params }) {
   const posts = await fetchAPI('posts', 'posts');
   const post = posts.data.find(post => post.attributes.slug === params.slug);
+  
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
 
   const footer = await fetchAPI('rodape', 'footer');
   const infos = await fetchAPI('info', 'info');
   const areas = await fetchAPI('areas-de-atuacao', 'areas');
 
-  /* const resp = await fetch(`${process.env.API_URL}/posts`)
-  const posts = await resp.json()
-
-  const resAreas = await fetch(`${process.env.API_URL}/servicos`)
-  const areas = await resAreas.json()
-
-  const resRedes = await fetch(`${process.env.API_URL}/contatos`)
-  const contact = await resRedes.json() */
-
   return {
     props: {
       post, posts, footer, infos, areas
     },
-    revalidate: 1
+    revalidate: 10
   }
 }

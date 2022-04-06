@@ -51,6 +51,7 @@ export const homeBlog = qs.stringify({
 export const footer = qs.stringify({
   populate: [
     'contact.title',
+    'background'
   ],
 }, {
   encode: false,

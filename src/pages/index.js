@@ -59,27 +59,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			home, footer, infos, posts, areas
-		}
+		},
+		revalidate: 10
 	}
 }
-
-/* export async function getStaticProps() {
-	const responseAreas = await fetch(`${process.env.API_URL}/servicos`)
-	const areas = await responseAreas.json()
-
-	const responsePosts = await fetch(`${process.env.API_URL}/posts`)
-	const posts = await responsePosts.json()
-
-	const responseTextos = await fetch(`${process.env.API_URL}/inicio`)
-	const textos = await responseTextos.json()
-
-	const responseContact = await fetch(`${process.env.API_URL}/contatos`)
-	const contact = await responseContact.json()
-
-	return {
-		props: {
-			areas, posts, textos, contact
-		},
-		revalidate: 1
-	}
-} */

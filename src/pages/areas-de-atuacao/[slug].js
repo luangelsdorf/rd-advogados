@@ -129,6 +129,6 @@ export async function getStaticProps({ params }) {
     props: {
       area, resAreas, footer, infos
     },
-    revalidate: 1
+    revalidate: 10
   }
 }
