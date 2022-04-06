@@ -290,6 +290,7 @@
 
 .member-photo img {
   width: 100%;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -310,8 +311,16 @@
 }
 
 @media (max-width: 768px) {
+  #areas-de-atuacao {
+    margin: 10px 0;
+  }
+
   .member-text {
     padding: 32px 44px;
+  }
+
+  .member-photo img {
+    height: 400px;
   }
 }
 

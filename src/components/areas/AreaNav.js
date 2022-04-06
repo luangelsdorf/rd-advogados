@@ -22,7 +22,7 @@ export default function AreaNav({ areas, handleClick }) {
   const handler = handleClick ?? null;
 
   return (
-    <div className="category-list">
+    <div className="category-list" id="navegacao">
       <div className="area-category">
         <h5>
           <a className="text-dourado" data-bs-toggle="collapse" href="#trab">

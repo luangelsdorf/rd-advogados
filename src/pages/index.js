@@ -32,7 +32,7 @@ export default function Home({ home, footer, infos, posts, areas }) {
 				<SobreNos content={home.data.attributes.aboutUs} />
 				<Galeria content={home.data.attributes.carousel.gallery} />
 				<NossaEquipe content={home.data.attributes.ourTeam} />
-				<Areas content={home.data.attributes.occupationAreas} />
+				<Areas content={home.data.attributes.occupationAreas} areas={areas} />
 				<CallToAction content={home.data.attributes.callToAction} />
 				<Recentes content={home.data.attributes.recentPosts} posts={posts.data} />
 			</div>

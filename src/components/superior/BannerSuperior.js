@@ -4,7 +4,6 @@ import env from '../../utils/env';
 import Img from '../Img';
 
 export default function BannerSuperior({ title, subtitle, btn, post, bannerClass, content, image }) {
-  console.log(content);
   const [active, setActive] = useState(btn ? content[0] : null);
   const [direction, setDirection] = useState('left');
 

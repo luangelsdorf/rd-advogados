@@ -187,3 +187,7 @@ li::before {
   color: var(--orange);
   font-weight: bold;
 }
+
+#navegacao {
+  scroll-margin: 225px;
+}
