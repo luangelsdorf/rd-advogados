@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function FixedWhats({ area, phone }) {
-  const message = `Olá, gostaria de falar com um advogado${area ? ` sobre ${area}` : ''}.`
+  const message = encodeURI(`Olá, gostaria de falar com um advogado${area ? ` sobre ${area}` : ''}.`);
 
   return (
     <a href={`https://api.whatsapp.com/send?phone=${phone}&text=${message}`} className="whats-btn btn-primary">

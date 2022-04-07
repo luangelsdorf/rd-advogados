@@ -20,7 +20,7 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
     hideNavigation(document.getElementById('navbarNav'))
   }
 
-  const message = `Olá, gostaria de falar com um advogado sobre ${area.title}`;
+  const message = encodeURI(`Olá, gostaria de falar com um advogado sobre ${area.title}`);
 
   const sortedAreas = {};
   sortedAreas.direitoTrab = resAreas.data.attributes.laborLaw.laborLawServices
