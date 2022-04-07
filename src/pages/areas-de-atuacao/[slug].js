@@ -20,6 +20,8 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
     hideNavigation(document.getElementById('navbarNav'))
   }
 
+  const message = `Olá, gostaria de falar com um advogado sobre ${area.title}`;
+
   const sortedAreas = {};
   sortedAreas.direitoTrab = resAreas.data.attributes.laborLaw.laborLawServices
   sortedAreas.direitoCivil = resAreas.data.attributes.civilLaw.civilLawServices
@@ -27,7 +29,7 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
 
   return (
     <>
-      <FixedWhats />
+      <FixedWhats phone={infos.data.attributes.whatsapp} />
       <TopHeader />
       <FixedHeader />
       <BannerSuperior
@@ -72,7 +74,12 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
                       </strong>
                       <small>Clique para falar conosco no WhatsApp</small>
                     </div>
-                    <a href="#banner-inferior" className="btn btn-secondary btn-h-50">Fale com um Advogado</a>
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=${infos.data.attributes.whatsapp}&text=${message}`}
+                      className="btn btn-secondary btn-h-50"
+                    >
+                      Fale com um Advogado
+                    </a>
                   </div>
                 </div>
               </div>

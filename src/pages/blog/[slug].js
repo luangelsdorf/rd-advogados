@@ -58,7 +58,7 @@ export default function Post({ post, posts, footer, infos, areas }) {
   return (
     <>
       <HeadContentPost tags={ogTags} post={true} title={`${post.attributes.title} - RD Advogados`} page="post" />
-      <FixedWhats />
+      <FixedWhats phone={infos.data.attributes.whatsapp} />
       <TopHeader />
       <FixedHeader />
       <BannerSuperior btn={false} />

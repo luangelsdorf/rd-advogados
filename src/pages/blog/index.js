@@ -29,7 +29,7 @@ export default function Blog({ footer, infos, posts, areas, blog, categories }) 
     <>
       <HeadContent title="Blog - RD Advogados" page="blog" />
 
-      <FixedWhats />
+      <FixedWhats phone={infos.data.attributes.whatsapp} />
       <TopHeader />
       <FixedHeader />
       <BannerSuperior

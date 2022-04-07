@@ -20,7 +20,7 @@ export default function Home({ home, footer, infos, posts, areas }) {
 	return (
 		<>
 			<HeadContent title="RD Advogados" page="home" />
-			<FixedWhats />
+			<FixedWhats phone={infos.data.attributes.whatsapp} />
 			<TopHeader />
 			<FixedHeader />
 			<BannerSuperior
