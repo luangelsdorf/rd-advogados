@@ -276,6 +276,11 @@ h5 {
   color: var(--orange);
 }
 
+.btn:disabled {
+  background-color: var(--carbon) !important;
+  border-color: var(--carbon);
+}
+
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
   background-color: var(--dark-orange);
@@ -386,11 +391,11 @@ a:hover {
 .form-control {
   background-color: var(--snow);
   border-color: var(--gray);
-  color: var(--carbon) !important;
+  color: var(--granite) !important;
 }
 
 .form-control::placeholder {
-  color: var(--carbon);
+  color: var(--granite);
 }
 
 .form-control:focus {
@@ -400,7 +405,7 @@ a:hover {
 .form-select {
   background-color: var(--snow);
   border-color: var(--gray);
-  color: var(--carbon);
+  color: var(--granite);
   height: 58px;
 }
 

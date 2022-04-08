@@ -1,22 +1,15 @@
 require('dotenv').config()
 
-export default function (req, res) {
+export default async function (req, res) {
   if (req.method === 'POST') {
-    let nodemailer = require('nodemailer')
-    const transporter = nodemailer.createTransport({
-      port: 465,
-      host: "smtp.gmail.com",
-      auth: {
-        user: process.env.email,
-        pass: process.env.password,
-      },
-      secure: true,
-    });
 
-    const mailData = {
-      from: process.env.email,
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+    const message = {
+      from: process.env.SENDER_EMAIL,
       to: 'luanferreira2136@gmail.com',
-      subject: `Nova Mensagem | Formulário Site BRC`,
+      subject: `Nova Mensagem | Website R&D Advogados`,
       text: `Mensagem: ${req.body.message} | Enviado de ${req.body.email}`,
       html: `
                 <div>Você recebeu uma nova mensagem no seu site. Confira as informações abaixo:</div>
@@ -27,16 +20,9 @@ export default function (req, res) {
               `
     }
 
-    transporter.sendMail(mailData, (err, info) => {
-      if (err)
-        console.log(err)
-      else
-        console.log(info);
-    })
-    res.send('success');
-
-
-  } else {
-    res.status(405).send('405 - Method Not Allowed.')
+    await sgMail.send(message);
+    return res.status(200).end();
   }
+
+  return res.status(404).end();
 }

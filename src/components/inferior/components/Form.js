@@ -92,7 +92,7 @@ export default function Form({ areas, contact }) {
           </div>
 
           <div className="d-flex flex-wrap justify-content-between">
-            <button className="btn btn-primary msg-btn btn-h-45 w-max-content" id="submit-btn" type="submit">
+            <button className="btn btn-primary msg-btn btn-h-45 w-max-content" id="submit-btn" type="submit" disabled={submitted}>
               <span className="d-inline-block">{'Enviar Mensagem'}<img src="/img/seta.svg" alt="Seta" /></span>
             </button>
 
