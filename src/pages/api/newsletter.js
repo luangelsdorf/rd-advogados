@@ -6,7 +6,7 @@ export default async (req, res) => {
 
     const message = {
       from: process.env.SENDER_EMAIL,
-      to: 'luanferreira2136@gmail.com',
+      to: process.env.SENDER_EMAIL,
       subject: 'Nova Inscrição | Website R&D Advogados',
       text: 'Esta foi enviada do seu website.',
       html: `

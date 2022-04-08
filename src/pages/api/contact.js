@@ -8,7 +8,7 @@ export default async function (req, res) {
 
     const message = {
       from: process.env.SENDER_EMAIL,
-      to: 'luanferreira2136@gmail.com',
+      to: process.env.SENDER_EMAIL,
       subject: `Nova Mensagem | Website R&D Advogados`,
       text: `Mensagem: ${req.body.message} | Enviado de ${req.body.email}`,
       html: `
