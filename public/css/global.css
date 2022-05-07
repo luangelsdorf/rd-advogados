@@ -825,6 +825,14 @@ a:hover {
   border-bottom: 1px solid var(--green);
 }
 
+.list-title span {
+  font-size: 18px;
+}
+
+.list-title a {
+  font-size: 14px;
+}
+
 .newsletter {
   height: 240px;
   background-color: var(--green);
@@ -833,6 +841,13 @@ a:hover {
   align-items: center;
   padding-left: 37px;
   padding-right: 37px;
+  margin-left: 72px !important;
+}
+
+@media (max-width: 1200px) {
+  .newsletter {
+    margin-left: 0 !important;
+  }
 }
 
 .newsletter > div > span {

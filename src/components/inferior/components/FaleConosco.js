@@ -4,7 +4,7 @@ export default function FaleConosco({ content, infos }) {
   return (
     <>
       <span className="line-title w-max-content">{content.title.subtitle}</span>
-      <div className="d-flex flex-column text-white align-items-center align-items-md-start">
+      <div className="d-flex flex-column text-white align-items-center align-items-xl-start">
         <strong className="playfair fs-44">{content.title.title}</strong>
         <span className=" contato-text" style={{ display: 'inlineBlock', maxWidth: '310px' }}>
           <p>{content.text}</p>
