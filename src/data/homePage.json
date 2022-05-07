@@ -12,12 +12,12 @@
           "outlinedButton": {
             "id": 4,
             "text": "Veja Quem Somos",
-            "link": "/#sobre-nos"
+            "section": "/#sobre-nos"
           },
           "filledButton": {
             "id": 3,
             "text": "Conheça Nossos Serviços",
-            "link": "/#areas-de-atuacao"
+            "section": "/#areas-de-atuacao"
           },
           "cover": {
             "data": {
@@ -95,12 +95,12 @@
           "outlinedButton": {
             "id": 6,
             "text": "Botão 1",
-            "link": "google.com"
+            "section": "/#sobre-nos"
           },
           "filledButton": {
             "id": 5,
             "text": "Botão 2",
-            "link": "google.com"
+            "section": "/#areas-de-atuacao"
           },
           "cover": {
             "data": {
@@ -503,7 +503,7 @@
           {
             "id": 1,
             "name": "Roberta Höher Dorneles",
-            "bio": "Advogada especialista em Direito do Consumidor que atua na resolução de conflitos. Adora conhecer novos lugares e ler bons livros.",
+            "bio": "Advogada especialista em Direito do Consumidor e Diretos Fundamentais pela UFRGS.\n\nTem vasta experiência nas áreas de responsabilidade civil, contratos e direito do consumidor.\n\nAtua na resolução de conflitos tanto na área extrajudicial quanto judicial.",
             "photo": {
               "data": {
                 "id": 26,
@@ -576,7 +576,7 @@
           {
             "id": 2,
             "name": "Solange Rossi",
-            "bio": "Advogada especialista em Direito do Trabalho, com mais de 20 anos de atuação. Ama pets, um bom café e o tradicional chimarrão. ",
+            "bio": "Atuante em processos trabalhistas desde 1998, é formada em Direito pela Unisinos e Pós Graduada em Direito e Processo do Trabalho pela Ulbra.\n\nAcumula vasta experiência em processos trabalhistas, assessorando tanto empresas, quanto empregados.\n\nCom escritório próprio desde 2009, traz na bagagem além da Especialidade em Direito do Trabalho, ampla experiência na prática processual, em audiências e em sustentação oral na fase recursal.",
             "photo": {
               "data": {
                 "id": 24,
