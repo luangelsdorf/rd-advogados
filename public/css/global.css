@@ -797,6 +797,12 @@ a:hover {
   background-color: var(--dark-green);
 }
 
+.sub-footer li::before {
+  content: "- ";
+  color: var(--orange);
+  font-weight: bold;
+}
+
 .qualidades {
   margin-top: 30px;
   margin-bottom: 30px;
