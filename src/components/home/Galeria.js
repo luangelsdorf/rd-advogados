@@ -15,7 +15,7 @@ export default function Galeria({ content }) {
       { transform: `translate3d(calc(-33.33% / 2), 0, 0)` },
       { transform: `translate3d(calc(-${translateValue}%), 0, 0)` },
     ], {
-      duration: 15000,
+      duration: 30000,
       iterations: Infinity,
       easing: 'linear',
     })
