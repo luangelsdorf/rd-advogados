@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import slugify from 'slugify';
+import Img from '../Img';
 
 export default function Areas({ content, areas }) {
   const areasList = areas.data.attributes;
-  const labor = slugify(areasList.laborLaw.laborLawServices[0].title, { lower: true })
-  const civil = slugify(areasList.civilLaw.civilLawServices[0].title, { lower: true })
-  const pension = slugify(areasList.pensionLaw.pensionLawServices[0].title, { lower: true })
+  const labor = slugify(areasList.laborLaw.laborLawServices[0].title, { lower: true });
+  const civil = slugify(areasList.civilLaw.civilLawServices[0].title, { lower: true });
+  const pension = slugify(areasList.pensionLaw.pensionLawServices[0].title, { lower: true });
 
   return (
     <div className="container-fluid" id="areas-de-atuacao">
@@ -14,7 +15,7 @@ export default function Areas({ content, areas }) {
         <div className="row g-5">
           <div className="col-12 col-xl-5 offset-xl-1 d-flex justify-content-center flex-column">
             <div className="areas-img-container">
-              <img src="/img/areas-image.png" alt="Image" className="" />
+              <Img src={content.image.data.attributes} alt="Foto do Escritório" />
               <div className="overlay-90" />
               <div className="overlay-60" />
               <img src="/img/logo.svg" alt="" className="areas-logo" />
