@@ -21,8 +21,8 @@ export default function Home({ home, footer, infos, posts, areas }) {
 		<>
 			<HeadContent title="RD Advogados" page="home" />
 			<FixedWhats phone={infos.data.attributes.whatsapp} />
-			<TopHeader />
-			<FixedHeader />
+			<TopHeader infos={infos.data.attributes} />
+      <FixedHeader infos={infos.data.attributes} />
 			<BannerSuperior
 				content={home.data.attributes.heroSlides}
 				btn={true}
@@ -33,7 +33,7 @@ export default function Home({ home, footer, infos, posts, areas }) {
 				<Galeria content={home.data.attributes.carousel.gallery} />
 				<NossaEquipe content={home.data.attributes.ourTeam} />
 				<Areas content={home.data.attributes.occupationAreas} areas={areas} />
-				<CallToAction content={home.data.attributes.callToAction} />
+				<CallToAction content={home.data.attributes.callToAction} infos={infos.data.attributes} />
 				<Recentes content={home.data.attributes.recentPosts} posts={posts.data} />
 			</div>
 

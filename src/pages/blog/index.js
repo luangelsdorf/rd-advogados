@@ -30,8 +30,8 @@ export default function Blog({ footer, infos, posts, areas, blog, categories }) 
       <HeadContent title="Blog - RD Advogados" page="blog" />
 
       <FixedWhats phone={infos.data.attributes.whatsapp} />
-      <TopHeader />
-      <FixedHeader />
+      <TopHeader infos={infos.data.attributes} />
+      <FixedHeader infos={infos.data.attributes} />
       <BannerSuperior
         bannerClass="banner-blog"
         title={content.hero.title}

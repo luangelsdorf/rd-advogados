@@ -59,8 +59,8 @@ export default function Post({ post, posts, footer, infos, areas }) {
     <>
       <HeadContentPost tags={ogTags} post={true} title={`${post.attributes.title} - RD Advogados`} page="post" />
       <FixedWhats phone={infos.data.attributes.whatsapp} />
-      <TopHeader />
-      <FixedHeader />
+      <TopHeader infos={infos.data.attributes} />
+      <FixedHeader infos={infos.data.attributes} />
       <BannerSuperior btn={false} />
 
       <div className="container post-container position-relative">

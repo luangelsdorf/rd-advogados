@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from 'react';
 
-export default function FixedHeader({ contact }) {
+export default function FixedHeader({ infos }) {
 
   function handleScroll() {
     if (window.scrollY > 165) {
@@ -59,9 +59,11 @@ export default function FixedHeader({ contact }) {
               </Link>
             </div>
           </div>
-          <Link href="#banner-inferior">
-            <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">{'Fale com um Advogado'}</a>
-          </Link>
+          <a
+            href={`https://api.whatsapp.com/send?phone=${infos.whatsapp}&text=Olá, gostaria de falar com um advogado.`}
+            className="btn btn-primary hover-claro d-none d-xl-inline-flex px-3 btn-h-40">
+            Fale com um Advogado
+          </a>
         </div>
       </nav>
     </header>

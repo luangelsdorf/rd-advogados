@@ -30,8 +30,8 @@ export default function AreaPage({ area, resAreas, footer, infos }) {
   return (
     <>
       <FixedWhats phone={infos.data.attributes.whatsapp} />
-      <TopHeader />
-      <FixedHeader />
+      <TopHeader infos={infos.data.attributes} />
+      <FixedHeader infos={infos.data.attributes} />
       <BannerSuperior
         bannerClass="banner-areas"
         title={content.hero.title}
