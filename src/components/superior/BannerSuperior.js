@@ -21,21 +21,29 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
     displayContainer = 'flex'
   }
 
+  function nextSlide() {
+    setDirection('left')
+    let newActive = content[content.indexOf(active) + 1];
+    if (newActive === undefined) {
+      newActive = content[0]
+    }
+    setActive(newActive);
+  }
+
+  function prevSlide() {
+    setDirection('right');
+    let newActive = content[content.indexOf(active) - 1];
+    if (newActive === undefined) {
+      newActive = content[content.length - 1];
+    }
+    setActive(newActive);
+  }
+
   function handleClick(e) {
     if (e.currentTarget.classList.contains('left')) {
-      setDirection('right');
-      let newActive = content[content.indexOf(active) - 1];
-      if (newActive === undefined) {
-        newActive = content[content.length - 1];
-      }
-      setActive(newActive);
+      prevSlide();
     } else {
-      setDirection('left')
-      let newActive = content[content.indexOf(active) + 1];
-      if (newActive === undefined) {
-        newActive = content[0]
-      }
-      setActive(newActive);
+      nextSlide();
     }
   }
 
@@ -47,12 +55,20 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
     });
     document.getElementById(active?.id)?.classList?.add(`swipe-${direction}`);
     document.getElementById(active?.id)?.classList?.add('active');
-  }, [active])
+  }, [active]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 10100);
+
+    return () => clearInterval(interval);
+  }, [active]);
 
   return (
     <div className="container-fluid p-0 position-relative d-flex justify-content-center" id="banner-superior">
       {
-        btn ? (
+        btn && content.length > 1 ? (
           <>
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="24" width="33.9411" height="33.9411" transform="rotate(-45 0 24)" fill="white" /><path d="M24.5147 32.485L16.0294 23.9998L33 23.9998L24.5147 32.485Z" fill="#E49B67" /><path d="M16.9053 23.6248L32.0652 23.6248L24.4853 16.0448L16.9053 23.6248Z" fill="#E49B67" stroke="#E49B67" strokeWidth="0.75" /></svg>
 
@@ -86,9 +102,11 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
                     <span className="lh-24 d-block mb-4 break-spaces">{banner.subtitle}</span>
                     <div className="d-flex gap-3 flex-wrap">
                       <Link href={banner.filledButton.section}>
-                        <a className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a></Link>
+                        <a className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{banner.filledButton.text}</a>
+                      </Link>
                       <Link href={banner.outlinedButton.section}>
-                        <a className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a></Link>
+                        <a className={`btn btn-transparent btn-h-50 d-${displayBtn}`}>{banner.outlinedButton.text}</a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -97,7 +115,9 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           })
         ) : (
           <>
-            {title ? <Img src={image} alt="" className="hero-img" /> : null}
+            {
+              title ? <Img src={image} alt="" className="hero-img" /> : null
+            }
             <div className="overlay-100" />
             <div className="overlay-50" />
             <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
@@ -113,7 +133,6 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           </>
         )
       }
-
     </div>
   )
 }
