@@ -2,14 +2,21 @@ import React from 'react';
 
 export default function Footer({ socialMedia }) {
 	return (
-		<footer className="flex-center justify-content-between justify-content-md-center w-100">
-			<div className="container-md align-items-center justify-content-center d-md-flex d-none">
+		<footer className="flex-center justify-content-center w-100">
+			<div className="container-md align-items-center justify-content-center d-md-flex d-none position-relative">
+				<a id="logo-abarca" href="https://abarca.net.br" target="_blank" rel="noopener noreferrer">
+					<img height="30" width="30" src="/img/abarca.svg" alt="Logo da Abarca - Comunicação Integrada" />
+				</a>
 				<span className="text-white fs-13 text-center d-md-inline-block d-none">Copyright © 2022 - Rossi & Dorneles Advogados</span>
 			</div>
 
-			<span className="text-white fs-10 text-center d-inline-block d-md-none">Copyright © 2022 - RD Advogados</span>
+			<a style={{flex: 1}} id="logo-abarca-m" className="d-md-none" href="https://abarca.net.br" target="_blank" rel="noopener noreferrer">
+				<img height="30" width="30" src="/img/abarca.svg" alt="Logo da Abarca - Comunicação Integrada" />
+			</a>
 
-			<div className="d-flex d-flex d-md-none">
+			<span className="text-white fs-10 text-center d-inline-block d-md-none">Copyright © 2022 <br /> RD Advogados</span>
+
+			<div className="d-flex d-flex d-md-none justify-content-end" style={{flex: 1}}>
 				<a href={socialMedia.facebook} className="social-btn me-2">
 					<svg height="14" width="14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" className="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path className="icon" fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
 				</a>

@@ -214,7 +214,7 @@ h5 {
 
 .whats-btn {
   position: fixed;
-  bottom: 60px;
+  bottom: 100px;
   right: 30px;
   height: 60px;
   width: 60px;
@@ -900,13 +900,20 @@ footer {
   background-color: var(--green);
 }
 
-#logo-newMoon {
-  color: #003057 !important;
-  transition: all 250ms ease;
+#logo-abarca,
+#logo-abarca-m {
+  display: block;
 }
 
-#logo-newMoon:hover {
-  color: #fff !important;
+#logo-abarca {
+  position: absolute;
+  left: 12px;
+  transition: transform 300ms ease-out;
+}
+
+#logo-abarca:hover,
+#logo-abarca-m:hover {
+  transform: translateY(-8px);
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Mobile -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
