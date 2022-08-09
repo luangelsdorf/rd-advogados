@@ -11,6 +11,7 @@ export default function Analytics() {
         src="https://www.googletagmanager.com/gtag/js?id=G-706931M3ZV"
       />
       <Script
+        id="gtag-analytics-4"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -30,6 +31,7 @@ export default function Analytics() {
         src="https://www.googletagmanager.com/gtag/js?id=UA-236876044-1"
       />
       <Script
+        id="gtag-universal-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -44,6 +46,7 @@ export default function Analytics() {
 
       {/* Google Tag Manager */}
       <Script
+        id="tag-manager"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -63,6 +66,7 @@ export default function Analytics() {
         src="https://www.googletagmanager.com/gtag/js?id=AW-722406054"
       />
       <Script
+        id="google-ads"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
