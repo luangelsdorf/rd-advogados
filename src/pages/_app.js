@@ -3,7 +3,9 @@ import '../../public/css/global.css';
 import React, { useEffect } from "react";
 import { useRouter } from 'next/router';
 import { homePage } from "../../public/js/pages";
+import Analytics from '../components/Analytics';
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
+import * as gtag from '../utils/gtag'
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -40,12 +42,23 @@ export default function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    const handleRouteChange = url => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
   return (
     <Layout>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
 
   )
