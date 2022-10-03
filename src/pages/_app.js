@@ -6,6 +6,7 @@ import { homePage } from "../../public/js/pages";
 import Analytics from '../components/Analytics';
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
 import * as gtag from '../utils/gtag'
+import env from '../utils/env';
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -58,7 +59,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
-      <Analytics />
+      {env !== 'dev' && <Analytics />}
     </Layout>
 
   )

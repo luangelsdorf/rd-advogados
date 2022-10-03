@@ -2,16 +2,17 @@
   --heading: "DM Sans", sans-serif;
   --body: "Nunito Sans", sans-serif;
 
-  --title-lg: normal normal 500 44px/60px var(--heading), sans-serif;
-  --title-md: normal normal 500 32px/44px var(--heading), sans-serif;
-  --title-sm: normal normal 500 24px/36px var(--heading), sans-serif;
-  --title-xs: normal normal 500 20px/30px var(--heading), sans-serif;
-  --title-lb: normal normal 500 18px/24px var(--heading), sans-serif;
+  --title-xl: 500 72px var(--heading);
+  --title-lg: 500 44px/60px var(--heading);
+  --title-md: 500 32px/44px var(--heading);
+  --title-sm: 500 24px/36px var(--heading);
+  --title-xs: 500 20px/30px var(--heading);
+  --title-lb: 500 18px/24px var(--heading);
 
-  --body-lg: normal normal 400 20px/32px var(--body), sans-serif;
-  --body-md: normal normal 400 16px/26px var(--body), sans-serif;
-  --body-sm: normal normal 400 14px/24px var(--body), sans-serif;
-  --body-xs: normal normal 400 12px/18px var(--body), sans-serif;
+  --body-lg: 400 20px/32px var(--body);
+  --body-md: 400 16px/26px var(--body);
+  --body-sm: 400 14px/24px var(--body);
+  --body-xs: 400 12px/18px var(--body);
 
   /* Brand Colors */
   --green: #215257;
@@ -40,18 +41,38 @@ html {
 
 body {
   font-family: var(--body);
-  color: var(--text);
-  font-size: medium;
+  color: var(--granite);
   overflow-x: hidden;
 }
 
 p {
   margin: 0;
+  font: var(--body-md);
 }
 
+h1 {
+  font: var(--title-xl);
+}
+h2 {
+  font: var(--title-lg);
+}
+h3 {
+  font: var(--title-md);
+}
+h4 {
+  font: var(--title-sm);
+}
 h5 {
-  font-size: 18px;
-  line-height: 24px;
+  font: var(--title-xs);
+}
+h6 {
+  font: var(--title-lb);
+}
+
+.caption {
+  font: var(--body-xs);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* Utilities */

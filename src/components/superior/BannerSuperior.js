@@ -89,13 +89,7 @@ export default function BannerSuperior({ title, subtitle, btn, post, bannerClass
           content.map(banner => {
             return (
               <div className="banner" id={banner.id} key={`b-${banner.id}`}>
-                {
-                  env === 'dev' ? (
-                    <img src={`${process.env.NEXT_PUBLIC_API_URL}/${banner.cover.data.attributes.name}`} alt="" />
-                  ) : (
-                    <img src={process.env.NEXT_PUBLIC_API_URL + banner.cover.data.attributes.url} alt="" />
-                  )
-                }
+                <Img src={banner.cover.data.attributes} alt="" />
                 <div className={`${bannerClass} container px-5 px-sm-0 text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
                   <div id="banner-content">
                     <strong className="playfair fs-72 d-block mb-4 break-spaces">{banner.title}</strong>

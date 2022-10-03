@@ -24,11 +24,11 @@ export default function AreaNav({ areas, handleClick }) {
   return (
     <div className="category-list" id="navegacao">
       <div className="area-category">
-        <h5>
+        <h6>
           <a className="text-dourado" data-bs-toggle="collapse" href="#trab">
             Direito Trabalhista
           </a>
-        </h5>
+        </h6>
       </div>
       <div className="collapse services" id="trab">
         <ul>
@@ -48,11 +48,11 @@ export default function AreaNav({ areas, handleClick }) {
         </ul>
       </div>
       <div className="area-category">
-        <h5>
+        <h6>
           <a className="text-dourado" data-bs-toggle="collapse" href="#civil">
             Direito Civil
           </a>
-        </h5>
+        </h6>
       </div>
       <div className="collapse services" id="civil">
         <ul>
@@ -72,11 +72,11 @@ export default function AreaNav({ areas, handleClick }) {
         </ul>
       </div>
       <div className="area-category">
-        <h5>
+        <h6>
           <a className="text-dourado" data-bs-toggle="collapse" href="#prev">
             Direito Previdenciário
           </a>
-        </h5>
+        </h6>
       </div>
       <div className="collapse services" id="prev">
         <ul>
