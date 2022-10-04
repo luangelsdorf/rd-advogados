@@ -2,12 +2,12 @@
   --heading: "DM Sans", sans-serif;
   --body: "Nunito Sans", sans-serif;
 
-  --title-xl: 500 72px var(--heading);
-  --title-lg: 500 44px/60px var(--heading);
-  --title-md: 500 32px/44px var(--heading);
-  --title-sm: 500 24px/36px var(--heading);
-  --title-xs: 500 20px/30px var(--heading);
-  --title-lb: 500 18px/24px var(--heading);
+  --title-xl: 600 72px var(--heading);
+  --title-lg: 600 44px/60px var(--heading);
+  --title-md: 600 32px/44px var(--heading);
+  --title-sm: 600 24px/36px var(--heading);
+  --title-xs: 600 20px/30px var(--heading);
+  --title-lb: 600 18px/24px var(--heading);
 
   --body-lg: 400 20px/32px var(--body);
   --body-md: 400 16px/26px var(--body);
@@ -71,6 +71,7 @@ h6 {
 
 .caption {
   font: var(--body-xs);
+  color: var(--orange);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
