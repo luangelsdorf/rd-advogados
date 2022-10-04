@@ -1,0 +1,34 @@
+.card {
+  background-color: var(--snow);
+  padding: 36px 32px 40px 32px;
+  min-height: 280px;
+
+  .profile {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    img {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .review {
+    display: flex;
+    align-items: baseline;
+
+    .date {
+      color: var(--steel);
+      font: var(--body-xs);
+      margin-left: 8px;
+    }
+  }
+
+  .quote {
+    margin-top: 16px;
+    font: var(--body-sm);
+  }
+}
