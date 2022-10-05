@@ -1,0 +1,147 @@
+@use "../../../styles/scss/mixins";
+
+.section {
+  margin-top: 160px;
+  margin-bottom: 200px;
+
+  :global(.container-fluid) {
+    padding: 0;
+    .cta {
+      width: 100%;
+      & > div {
+        flex-grow: 1;
+      }
+    }
+
+    .firstSection::after {
+      content: none;
+    }
+
+    .secondSection {
+      & > div {
+        text-align: right;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+
+  @include mixins.md {
+    flex-wrap: wrap;
+
+    .firstSection {
+      text-align: center;
+      h3 {
+        white-space: normal;
+      }
+      &::after {
+        content: none;
+      }
+    }
+
+    .secondSection {
+      padding: 36px 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.orange {
+  .firstSection {
+    background-color: var(--dark-orange);
+
+    &::after {
+      background-image: url("/img/decorations/detail-orange.svg");
+    }
+  }
+  .secondSection {
+    background-color: var(--orange);
+  }
+
+  :global(.container-fluid) {
+    .secondSection {
+      background-color: var(--dark-orange);
+    }
+  }
+}
+
+.green {
+  .firstSection {
+    background-color: var(--green);
+
+    &::after {
+      background-image: url("/img/decorations/detail-green.svg");
+    }
+  }
+  .secondSection {
+    background-color: var(--dark-green);
+  }
+
+  :global(.container-fluid) {
+    .firstSection {
+      background-color: var(--dark-green);
+    }
+  }
+}
+
+.firstSection {
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+
+  & > div {
+    white-space: break-spaces;
+    padding: 64px 70px 64px 60px;
+
+    h3 {
+      margin-bottom: 32px;
+    }
+
+    p {
+      max-width: 485px;
+      color: var(--white);
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 56px;
+    width: 56px;
+    position: absolute;
+    right: -26px;
+  }
+}
+
+.secondSection {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  color: var(--snow);
+
+  & > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 34px;
+
+    h5 {
+      max-width: 336px;
+      margin-bottom: 0;
+    }
+
+    a {
+      svg {
+        color: var(--orange) !important;
+        margin-right: 12px;
+      }
+    }
+  }
+}
