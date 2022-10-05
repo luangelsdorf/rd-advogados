@@ -1,0 +1,71 @@
+.collage {
+  position: relative;
+  width: max-content;
+
+  .mask {
+    position: absolute;
+    background-color: var(--gray);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.collage.orange {
+  .mask {
+    left: 32px;
+    bottom: 32px;
+    width: 488px;
+    height: 600px;
+  }
+}
+
+.collage.green {
+  .mask {
+    left: 32px;
+    bottom: 32px;
+    width: 728px;
+    height: 486px;
+  }
+}
+
+.decoration {
+  max-width: 100%;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    z-index: 2;
+    max-width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: var(--snow);
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+}
+
+.orange .logo {
+  top: 48px;
+  right: -50px;
+}
+.green .logo {
+  top: -51px;
+  right: -50px;
+}
