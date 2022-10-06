@@ -7,11 +7,11 @@ export default function Collage({ style, image }) {
     <div className={`${styles.collage} ${styles[style]}`}>
       <div className={styles.mask}>
         <Img src={image} />
+        <div className={styles.logo}>
+          <img src="/img/logo.svg" />
+        </div>
       </div>
       <img className={styles.decoration} src={`/img/decorations/bg-mosaic-${style}.png`} />
-      <div className={styles.logo}>
-        <img src="/img/logo.svg" />
-      </div>
     </div>
   )
 }

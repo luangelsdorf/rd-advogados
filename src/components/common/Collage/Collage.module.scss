@@ -1,11 +1,9 @@
 .collage {
   position: relative;
-  width: max-content;
 
   .mask {
     position: absolute;
     background-color: var(--gray);
-    overflow: hidden;
 
     img {
       width: 100%;
@@ -19,8 +17,8 @@
   .mask {
     left: 32px;
     bottom: 32px;
-    width: 488px;
-    height: 600px;
+    max-width: 488px;
+    max-height: 600px;
   }
 }
 
@@ -28,8 +26,8 @@
   .mask {
     left: 32px;
     bottom: 32px;
-    width: 728px;
-    height: 486px;
+    max-width: 728px;
+    max-height: 486px;
   }
 }
 
@@ -55,7 +53,7 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    background-color: var(--snow);
+    background-color: var(--white);
     transform: rotate(45deg);
     z-index: 1;
   }

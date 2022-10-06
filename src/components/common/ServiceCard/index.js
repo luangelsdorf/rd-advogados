@@ -3,9 +3,6 @@ import Img from 'src/components/Img';
 import styles from './ServiceCard.module.scss';
 
 export default function ServiceCard({ icon, title, description, length, size }) {
-  if (title === 'Revisão de Contratos Bancários') {
-    console.log({ icon, title, description, size });
-  }
 
   let sizingClass;
   switch (size) {

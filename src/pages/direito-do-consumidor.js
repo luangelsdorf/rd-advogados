@@ -1,6 +1,8 @@
 import React from 'react'
 import ServiceCard from 'src/components/common/ServiceCard';
 import HeadContent from 'src/components/HeadContent'
+import AboutUs from 'src/components/landing-page/AboutUs';
+import CallToAction from 'src/components/landing-page/CallToAction';
 import LandingBanner from 'src/components/landing-page/LandingBanner';
 import Services from 'src/components/landing-page/Services';
 import FixedHeader from 'src/components/superior/FixedHeader';
@@ -8,7 +10,7 @@ import TopHeader from 'src/components/superior/TopHeader';
 import { fetchAPI } from 'src/utils/fetchers';
 
 export default function DireitoDoConsumidor({ page, footer, infos, posts, areas }) {
-  /* console.log(page.data.attributes.hero); */
+  /* console.log(page.data.attributes); */
   return (
     <>
       <HeadContent title="Direito do Consumidor - RD Advogados" />
@@ -29,6 +31,8 @@ export default function DireitoDoConsumidor({ page, footer, infos, posts, areas 
           ))
         }
       </Services>
+      <CallToAction content={page.data.attributes.cta} color="green" />
+      <AboutUs content={page.data.attributes.about} type="narrow" wppText="Fale com a Roberta" />
     </>
   )
 }

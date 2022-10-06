@@ -1,0 +1,32 @@
+.section {
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h2 {
+      font: var(--title-md);
+    }
+
+    h5 {
+      margin: 34px 0;
+    }
+
+    p {
+      white-space: break-spaces;
+    }
+
+    a {
+      margin-top: 40px;
+      border: 1px solid var(--orange);
+      width: max-content;
+      &:hover {
+        color: var(--orange);
+      }
+      svg {
+        color: var(--orange) !important;
+      }
+    }
+  }
+}
