@@ -1,0 +1,22 @@
+.section {
+  margin-top: 96px;
+
+  hgroup {
+    align-items: center;
+  }
+
+  h2 {
+    max-width: 624px;
+  }
+
+  .text {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  :global(.container) {
+    margin-top: 56px;
+  }
+}
