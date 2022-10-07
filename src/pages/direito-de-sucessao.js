@@ -13,7 +13,7 @@ import FixedHeader from 'src/components/superior/FixedHeader';
 import TopHeader from 'src/components/superior/TopHeader';
 import { fetchAPI } from 'src/utils/fetchers';
 
-export default function DireitoDoConsumidor({ page, footer, infos, areas }) {
+export default function DireitoDeSucessao({ page, footer, infos, areas }) {
   /* console.log(page.data.attributes); */
   return (
     <>

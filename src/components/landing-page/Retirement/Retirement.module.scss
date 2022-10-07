@@ -1,0 +1,59 @@
+@use '../../../styles/scss/mixins';
+
+.section {
+  position: relative;
+  margin: 160px 0;
+
+  @include mixins.sm {
+    text-align: center;
+
+    hgroup {
+      text-align: center !important;
+    }
+  }
+
+  .firstSection {
+    h2 {
+      font: var(--title-md);
+    }
+
+    & > p {
+      margin-top: 32px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      top: 0;
+      left: 53%;
+      background: var(--orange);
+
+      @include mixins.lg {
+        content: none;
+      }
+    }
+  }
+
+  .secondSection {
+    .list {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        list-style: square inside url("/img/decorations/list-marker.svg");
+      }
+    }
+  }
+}
+
+.firstSection,
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
