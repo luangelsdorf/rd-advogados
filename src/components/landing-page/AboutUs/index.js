@@ -4,8 +4,7 @@ import WhatsAppButton from 'src/components/common/WhatsAppButton';
 import Title from 'src/components/Title';
 import styles from './AboutUs.module.scss';
 
-export default function AboutUs({ content, type, wppText }) {
-  /* console.log(content); */
+export default function AboutUs({ content, type, wppText, phone }) {
   let imgSizingClass, textSizingClass;
 
   switch (type) {
@@ -31,7 +30,7 @@ export default function AboutUs({ content, type, wppText }) {
               <Title title={content.title.title} overline={content.title.subtitle} align="left" spacing={24} />
               {content.introText && <h5>{content.introText}</h5>}
               <p>{content.text}</p>
-              <WhatsAppButton variant="secondary">
+              <WhatsAppButton variant="secondary" phone={phone}>
                 {wppText}
               </WhatsAppButton>
             </div>

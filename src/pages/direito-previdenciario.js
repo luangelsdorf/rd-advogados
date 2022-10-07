@@ -21,7 +21,7 @@ export default function DireitoPrevidenciario({ page, footer, infos, areas }) {
       <TopHeader infos={infos.data.attributes} />
       <FixedHeader infos={infos.data.attributes} />
 
-      <LandingBanner content={page.data.attributes.hero} area="previdencia" size="short" />
+      <LandingBanner content={page.data.attributes.hero} area="previdencia" size="short" phone={infos.data.attributes.whatsapp} />
       <Services content={page.data.attributes.services}>
         {
           page.data.attributes.services.serviceCards.map(card => (
@@ -37,8 +37,8 @@ export default function DireitoPrevidenciario({ page, footer, infos, areas }) {
         }
       </Services>
       <Retirement content={page.data.attributes.retirement} />
-      <CallToAction content={page.data.attributes.cta} color="orange" />
-      <AboutUs content={page.data.attributes.about} type="wide" wppText="Fale Conosco" />
+      <CallToAction content={page.data.attributes.cta} color="orange" phone={infos.data.attributes.whatsapp} />
+      <AboutUs content={page.data.attributes.about} type="wide" wppText="Fale Conosco" phone={infos.data.attributes.whatsapp} />
       <Testimonials content={page.data.attributes.testimonials} cardSize="6" />
 
       <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />

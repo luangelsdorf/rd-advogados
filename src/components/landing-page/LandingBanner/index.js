@@ -4,14 +4,14 @@ import styles from './LandingBanner.module.scss';
 import WhatsAppButton from 'src/components/common/WhatsAppButton';
 import Square from 'public/img/decorations/square-sm.svg'
 
-export default function LandingBanner({ content, size, area }) {
+export default function LandingBanner({ content, size, area, phone }) {
 
   const TextContent = () => (
     <div className={styles.textContent}>
       <p>{content.subtitle}</p>
       <h1>{content.title}</h1>
       <div className={styles.contact}>
-        <WhatsAppButton variant="primary">Fale com um Advogado</WhatsAppButton>
+        <WhatsAppButton phone={phone} variant="primary">Fale com um Advogado</WhatsAppButton>
       </div>
     </div>
   );

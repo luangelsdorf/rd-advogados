@@ -22,7 +22,7 @@ export default function DireitoDoTrabalho({ page, footer, infos, areas }) {
       <TopHeader infos={infos.data.attributes} />
       <FixedHeader infos={infos.data.attributes} />
 
-      <LandingBanner content={page.data.attributes.hero} area="trabalhista" size="long" />
+      <LandingBanner content={page.data.attributes.hero} area="trabalhista" size="long" phone={infos.data.attributes.whatsapp} />
       <CommonCases content={page.data.attributes.commonCases} style={{paddingTop: '95px'}} />
       <Services content={page.data.attributes.services} page="trabalhista">
         {
@@ -38,8 +38,8 @@ export default function DireitoDoTrabalho({ page, footer, infos, areas }) {
           ))
         }
       </Services>
-      <CallToAction content={page.data.attributes.cta} color="green" />
-      <AboutUs content={page.data.attributes.about} type="narrow" wppText="Fale com a Solange no WhatsApp" />
+      <CallToAction content={page.data.attributes.cta} color="green" phone={infos.data.attributes.whatsapp} />
+      <AboutUs content={page.data.attributes.about} type="narrow" wppText="Fale com a Solange no WhatsApp" phone={infos.data.attributes.whatsapp} />
       <Testimonials content={page.data.attributes.testimonials} cardSize="6" />
 
       <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />

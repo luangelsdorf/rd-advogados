@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './CallToAction.module.scss';
 import WhatsApp from 'public/img/icons/whatsapp-brands.svg';
+import WhatsAppButton from 'src/components/common/WhatsAppButton';
 
-export default function CallToAction({ content, container = 'container', color = 'orange' }) {
+export default function CallToAction({ content, container = 'container', color = 'orange', phone }) {
   return (
     <section className={`${styles.section} ${styles[color]}`}>
       <div className={container}>
@@ -16,10 +17,9 @@ export default function CallToAction({ content, container = 'container', color =
           <div className={styles.secondSection}>
             <div>
               <h5>{content.ctaText}</h5>
-              <a href="#" className="btn btn-secondary">
-                <WhatsApp width="24" height="24" />
-                <span>Fale no WhatsApp Agora</span>
-              </a>
+              <WhatsAppButton phone={phone} variant="secondary">
+                Fale no WhatsApp Agora
+              </WhatsAppButton>
             </div>
           </div>
         </div>

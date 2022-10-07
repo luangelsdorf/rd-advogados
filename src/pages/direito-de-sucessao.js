@@ -14,14 +14,13 @@ import TopHeader from 'src/components/superior/TopHeader';
 import { fetchAPI } from 'src/utils/fetchers';
 
 export default function DireitoDeSucessao({ page, footer, infos, areas }) {
-  /* console.log(page.data.attributes); */
   return (
     <>
       <HeadContent title="Direito de Sucessão - RD Advogados" />
       <TopHeader infos={infos.data.attributes} />
       <FixedHeader infos={infos.data.attributes} />
 
-      <LandingBanner content={page.data.attributes.hero} area="sucessorio" size="short" />
+      <LandingBanner content={page.data.attributes.hero} area="sucessorio" size="short" phone={infos.data.attributes.whatsapp} />
       <Services content={page.data.attributes.services}>
         {
           page.data.attributes.services.serviceCards.map(card => (
@@ -36,8 +35,8 @@ export default function DireitoDeSucessao({ page, footer, infos, areas }) {
           ))
         }
       </Services>
-      <CallToAction content={page.data.attributes.cta} color="orange" container="container-fluid" />
-      <AboutUs content={page.data.attributes.about} type="wide" wppText="Fale Conosco" />
+      <CallToAction content={page.data.attributes.cta} color="orange" container="container-fluid" phone={infos.data.attributes.whatsapp} />
+      <AboutUs content={page.data.attributes.about} type="wide" wppText="Fale Conosco" phone={infos.data.attributes.whatsapp} />
       <Testimonials content={page.data.attributes.testimonials} cardSize="6" />
 
       <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />

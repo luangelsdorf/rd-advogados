@@ -21,7 +21,7 @@ export default function DireitoDoConsumidor({ page, footer, infos, areas }) {
       <TopHeader infos={infos.data.attributes} />
       <FixedHeader infos={infos.data.attributes} />
 
-      <LandingBanner content={page.data.attributes.hero} area="consumidor" size="long" />
+      <LandingBanner content={page.data.attributes.hero} area="consumidor" size="long" phone={infos.data.attributes.whatsapp} />
       <Services content={page.data.attributes.services} style={{ paddingTop: '95px' }}>
         {
           page.data.attributes.services.serviceCards.map(card => (
@@ -35,8 +35,8 @@ export default function DireitoDoConsumidor({ page, footer, infos, areas }) {
           ))
         }
       </Services>
-      <CallToAction content={page.data.attributes.cta} color="green" />
-      <AboutUs content={page.data.attributes.about} type="narrow" wppText="Fale com a Roberta" />
+      <CallToAction content={page.data.attributes.cta} color="green" phone={infos.data.attributes.whatsapp} />
+      <AboutUs content={page.data.attributes.about} type="narrow" wppText="Fale com a Roberta" phone={infos.data.attributes.whatsapp} />
       <Testimonials content={page.data.attributes.testimonials} cardSize="4" />
 
       <BannerInferior content={footer.data.attributes} infos={infos.data.attributes} />
