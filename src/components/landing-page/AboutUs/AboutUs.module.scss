@@ -1,9 +1,25 @@
+@use '../../../styles/scss/mixins';
+
 .section {
+  padding-bottom: 80px;
+  
+  @include mixins.lg {
+    text-align: center;
+
+    hgroup {
+      text-align: center !important;
+    }
+  }
+
   .textContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+
+    @include mixins.lg {
+      align-items: center;
+    }
 
     h2 {
       font: var(--title-md);

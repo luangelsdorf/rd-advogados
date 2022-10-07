@@ -1,5 +1,11 @@
+@use '../../../styles/scss/mixins';
+
 .section {
-  margin-top: 96px;
+  margin-top: calc(95px + 96px);
+
+  @include mixins.lg {
+    margin-top: calc(340px + 96px);
+  }
 
   hgroup {
     align-items: center;

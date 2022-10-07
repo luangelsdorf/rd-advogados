@@ -20,7 +20,7 @@ export default function AboutUs({ content, type, wppText }) {
   return (
     <section className={styles.section}>
       <div className="container">
-        <div className="row">
+        <div className="row gy-5">
           <div className="col-12 col-lg-5 offset-lg-1">
             <Collage image={content.image.data.attributes} style="orange" />
           </div>
