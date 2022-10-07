@@ -1,4 +1,4 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .section {
   margin-top: calc(95px + 96px);
@@ -24,5 +24,11 @@
 
   :global(.container) {
     margin-top: 56px;
+  }
+}
+
+.trabalhista {
+  @include mixins.lg {
+    margin-top: revert;
   }
 }

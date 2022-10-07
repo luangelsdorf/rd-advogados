@@ -88,7 +88,7 @@
     font-size: 56px;
     font-weight: 500;
 
-    @include mixins.sm {
+    @include mixins.md {
       font-size: 36px;
     }
   }
