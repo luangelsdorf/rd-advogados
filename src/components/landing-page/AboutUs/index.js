@@ -6,14 +6,16 @@ import styles from './AboutUs.module.scss';
 
 export default function AboutUs({ content, type, wppText }) {
   /* console.log(content); */
-  let sizingClass;
+  let imgSizingClass, textSizingClass;
 
   switch (type) {
     case 'wide':
-      sizingClass = 'asd'
+      imgSizingClass = 'col-12 col-lg-7';
+      textSizingClass = 'col-12 col-lg-4 offset-lg-1';
       break;
     case 'narrow':
-      sizingClass = 'asd'
+      imgSizingClass = 'col-12 col-lg-5 offset-lg-1';
+      textSizingClass = 'col-12 col-lg-4 offset-lg-1';
       break;
   }
 
@@ -21,13 +23,13 @@ export default function AboutUs({ content, type, wppText }) {
     <section className={styles.section}>
       <div className="container">
         <div className="row gy-5">
-          <div className="col-12 col-lg-5 offset-lg-1">
-            <Collage image={content.image.data.attributes} style="orange" />
+          <div className={imgSizingClass}>
+            <Collage image={content.image.data.attributes} style={type === 'wide' ? 'green' : 'orange'} />
           </div>
-          <div className="col-12 col-lg-4 offset-lg-1">
+          <div className={textSizingClass}>
             <div className={styles.textContent}>
               <Title title={content.title.title} overline={content.title.subtitle} align="left" spacing={24} />
-              <h5>{content.introText}</h5>
+              {content.introText && <h5>{content.introText}</h5>}
               <p>{content.text}</p>
               <WhatsAppButton variant="secondary">
                 {wppText}

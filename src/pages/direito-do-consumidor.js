@@ -13,7 +13,7 @@ import FixedHeader from 'src/components/superior/FixedHeader';
 import TopHeader from 'src/components/superior/TopHeader';
 import { fetchAPI } from 'src/utils/fetchers';
 
-export default function DireitoDoConsumidor({ page, footer, infos, posts, areas }) {
+export default function DireitoDoConsumidor({ page, footer, infos, areas }) {
   /* console.log(page.data.attributes); */
   return (
     <>
@@ -55,12 +55,11 @@ export async function getStaticProps() {
   const page = await fetchAPI('lp-direito-do-consumidor');
   const footer = await fetchAPI('rodape');
   const infos = await fetchAPI('info');
-  const posts = await fetchAPI('posts');
   const areas = await fetchAPI('areas-de-atuacao');
 
   return {
     props: {
-      page, footer, infos, posts, areas
+      page, footer, infos, areas
     },
     revalidate: 10
   }
